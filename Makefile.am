@@ -21,6 +21,8 @@ TARGETS_COMMON =		\
 	$(PREFIX1).t1x.bin	\
 	$(PREFIX1).t2x.bin	\
 	$(PREFIX1).t3x.bin	\
+	$(PREFIX1).autoseq.bin	\
+	$(PREFIX1).revautoseq.bin	\
 	$(PREFIX2).automorf.bin	\
 	$(PREFIX2).prob		\
 	$(PREFIX2).rlx.bin	\
@@ -30,8 +32,9 @@ TARGETS_COMMON =		\
 	$(PREFIX2).autopgen.bin	\
 	$(PREFIX2).t1x.bin	\
 	$(PREFIX2).t2x.bin	\
-	$(PREFIX2).t3x.bin
-
+	$(PREFIX2).t3x.bin	\
+	$(PREFIX2).autoseq.bin	\
+	$(PREFIX2).revautoseq.bin
 
 # This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
 @ap_include@
@@ -111,6 +114,22 @@ $(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
 
 $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 	cg-comp $< $@
+
+###############################################################################
+## Lexical sequences
+###############################################################################
+
+$(PREFIX1).autoseq.bin: $(BASENAME).$(PREFIX1).lsx
+	lsx-comp lr $< $@
+
+$(PREFIX2).autoseq.bin: $(BASENAME).$(PREFIX2).lsx
+	lsx-comp lr $< $@
+
+$(PREFIX1).revautoseq.bin: $(BASENAME).$(PREFIX1).lsx
+	lsx-comp rl $< $@
+
+$(PREFIX2).revautoseq.bin: $(BASENAME).$(PREFIX2).lsx
+	lsx-comp rl $< $@
 
 ###############################################################################
 ## Bilingual dictionaries

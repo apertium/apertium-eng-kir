@@ -4,31 +4,101 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="pron">
+      <cat-item tags="prn.*"/>
+    </def-cat>
+    <def-cat n="verb">
+      <cat-item tags="vblex.*"/>
+	 </def-cat>
+    <def-cat n="det">
+      <cat-item tags="det.*"/>
+	 </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
+    <def-attr n="a_pos">
+      <attr-item tags="v"/>
+      <attr-item tags="n"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="adv"/>
+	 </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="abl"/>
     </def-attr>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3sp"/>
+	 </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_num">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+	 <def-attr n="a_detdef">
+      <attr-item tags="ind"/>
+      <attr-item tags="def"/>
+      <attr-item tags="dem"/>
+      <attr-item tags="itg"/>
+	 </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="acc-or-nom"/>
+    <def-var n="poss"/>
   </section-def-vars>
 
-  <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
-    </def-macro>
-  </section-def-macros>
+	<section-def-macros>
+
+		<def-macro n="test" npar="1">
+			<let>
+				<var n="number"/>
+				<lit v=""/>
+			</let>
+		</def-macro>
+
+		<def-macro n="acc-def" npar="1">
+			<choose>
+				<when>
+					<test>
+						<equal>
+							<clip pos="3" side="sl" part="a_detdef"/>
+							<lit-tag v="ind"/>
+						</equal>
+					</test>
+					<let>
+						<var n="acc-or-nom"/>
+						<lit-tag v="nom"/>
+					</let>
+				</when>
+				<otherwise>
+					<let>
+						<var n="acc-or-nom"/>
+						<lit-tag v="acc"/>
+					</let>
+				</otherwise>
+			</choose>
+		</def-macro>
+
+	</section-def-macros>
 
   <section-rules>
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
@@ -46,6 +116,64 @@
         </out>
       </action>
     </rule>
+
+
+		<rule comment="REGLA: SVO → SOV">
+			<pattern>
+				<pattern-item n="pron"/>
+				<pattern-item n="verb"/>
+				<pattern-item n="det"/>
+				<pattern-item n="nom"/>
+			</pattern>
+			<action>
+				<call-macro n="acc-def">
+					<with-param pos="3"/>
+				</call-macro>
+				<out>
+					<chunk name="SN" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="n"/></tag>
+						</tags>
+						<lu>
+							<concat>
+								<clip pos="1" side="tl" part="whole"/>
+								<lit-tag v="nom"/>
+							</concat>
+						</lu>
+					</chunk>
+					<b />
+					<chunk name="SN" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="n"/></tag>
+							<tag><var n="number"/></tag>
+							<tag><var n="poss"/></tag>
+							<tag><var n="acc-or-nom"/></tag>
+						</tags>
+						<lu>
+							<clip pos="4" side="tl" part="lem"/>
+							<clip pos="4" side="tl" part="a_pos"/>
+							<clip pos="4" side="tl" part="a_num" link-to="2"/>
+							<clip pos="4" side="tl" part="a_poss" link-to="3"/>
+							<clip pos="4" side="tl" part="a_cas" link-to="4"/>
+						</lu>
+					</chunk>
+					<b />
+					<chunk name="SV" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="v"/></tag>
+						</tags>
+						<lu>
+							<concat>
+								<clip pos="2" side="tl" part="whole"/>
+								<clip pos="1" side="tl" part="a_pers"/>
+								<clip pos="1" side="tl" part="a_num"/>
+							</concat>
+						</lu>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
   </section-rules>
 </transfer>
 

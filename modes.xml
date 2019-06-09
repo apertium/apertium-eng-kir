@@ -10,11 +10,14 @@
       </program>
 
 
-      <program name="cg-proc -w">
+      <program name="cg-proc -w -1 -n">
         <file name="eng-kir.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
+      <!-- program name="apertium-tagger -g $2">
         <file name="eng-kir.prob"/>
+      </program -->
+      <program name="lsx-proc">
+        <file name="eng-kir.autoseq.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -34,6 +37,9 @@
       <program name="apertium-postchunk">
         <file name="apertium-eng-kir.eng-kir.t3x"/>
         <file name="eng-kir.t3x.bin"/>
+      </program>
+      <program name="lsx-proc">
+        <file name="kir-eng.revautoseq.bin"/>
       </program>
       <program name="lt-proc $1">
         <file name="eng-kir.autogen.bin"/>
