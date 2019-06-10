@@ -111,6 +111,8 @@
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>throw<b/>away<s n="vblex"/></l><r>ташта<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>take<s n="vblex"/></l><r>ал<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>take<b/>away<s n="vblex"/></l><r>алып<b/>кет<s n="v"/><s n="tv"/></r></p></e>
 
       <!-- ADVERBS -->
 		<e><p><l>away<s n="adv"/></l><r>ары<s n="adv"/></r></p></e>

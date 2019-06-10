@@ -38,7 +38,7 @@
         <file name="apertium-eng-kir.eng-kir.t3x"/>
         <file name="eng-kir.t3x.bin"/>
       </program>
-      <program name="lsx-proc">
+      <program name="lsx-proc" debug-suff="revautoseq">
         <file name="kir-eng.revautoseq.bin"/>
       </program>
       <program name="lt-proc $1">
