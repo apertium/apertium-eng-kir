@@ -229,7 +229,7 @@
 
 		<rule comment="REGLA: Det Nom">
 			<pattern>
-				<pattern-item n="det"/>
+				<pattern-item n="det"/><!-- FIXME: separate rules for non-deleting dets -->
 				<pattern-item n="nom"/>
 			</pattern>
 			<action>

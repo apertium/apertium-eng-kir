@@ -128,6 +128,7 @@
 
       <!-- FUNCTION WORDS -->
 		<e><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
+		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
