@@ -52,10 +52,16 @@
 			<choose>
 				<when>
 					<test>
-						<equal>
-							<clip pos="1" part="a_nbr"/>
-							<lit-tag v="sg"/>
-						</equal>
+						<and>
+							<equal><!-- so we don't remove number from pronouns! -->
+								<clip pos="1" part="lem"/>
+								<lit v="n"/>
+							</equal>
+							<equal>
+								<clip pos="1" part="a_nbr"/>
+								<lit-tag v="sg"/>
+							</equal>
+						</and>
 					</test>
 					<let>
 						<clip pos="1" part="a_nbr"/>
@@ -174,6 +180,9 @@
 				<pattern-item n="SN"/>
 			</pattern>
 			<action>
+				<call-macro n="remove-sg">
+					<with-param pos="1"/>
+				</call-macro>
 				<call-macro n="remove-sg">
 					<with-param pos="3"/>
 				</call-macro>

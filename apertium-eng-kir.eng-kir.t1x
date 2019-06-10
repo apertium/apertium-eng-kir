@@ -246,7 +246,9 @@
 							<tag><lit-tag v="CD"/></tag>
 						</tags>
 						<lu>
-							<clip pos="2" side="tl" part="lem"/>
+							<get-case-from pos="1">
+								<clip pos="2" side="tl" part="lem"/>
+							</get-case-from>
 							<clip pos="2" side="tl" part="a_pos"/>
 							<clip pos="2" side="tl" part="a_num" link-to="3"/>
 							<lit-tag v="4"/>
