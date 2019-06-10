@@ -1,30 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interchunk>
-  <section-def-cats>
-    <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
-    </def-cat>
-  </section-def-cats>
+	<section-def-cats>
+		<def-cat n="SN">
+			<cat-item tags="SN"/>
+			<cat-item tags="SN.*"/>
+		</def-cat>
+		<def-cat n="SV">
+			<cat-item tags="SV"/>
+			<cat-item tags="SV.*"/>
+		</def-cat>
+	</section-def-cats>
 
-  <section-def-attrs>
-    <def-attr n="a_nbr">
-      <attr-item tags="sg"/>
-    </def-attr>
-  </section-def-attrs>
+	<section-def-attrs>
+		<def-attr n="a_nbr">
+			<attr-item tags="sg"/>
+			<attr-item tags="pl"/>
+			<attr-item tags="ND"/>
+		</def-attr>
+		<def-attr n="a_cas">
+			<attr-item tags="CD"/>
+		</def-attr>
+		<def-attr n="a_def">
+			<attr-item tags="def"/>
+			<attr-item tags="ind"/>
+		</def-attr>
+		<def-attr n="a_pers">
+			<attr-item tags="p1"/>
+			<attr-item tags="p2"/>
+			<attr-item tags="p3"/>
+			<attr-item tags="PD"/>
+		</def-attr>
+	</section-def-attrs>
 
   <section-def-vars>
     <def-var n="number"/>
   </section-def-vars>
 
-  <section-def-macros>
-    <def-macro n="test1" npar="1">
-      <let>
-        <var n="number"/>
-        <lit v=""/>
-      </let>
-    </def-macro>
-  </section-def-macros>
+	<section-def-macros>
+		<def-macro n="test1" npar="1">
+			<let>
+				<var n="number"/>
+				<lit v=""/>
+			</let>
+		</def-macro>
+
+		<def-macro n="remove-sg" npar="1">
+			<choose>
+				<when>
+					<test>
+						<equal>
+							<clip pos="1" part="a_nbr"/>
+							<lit-tag v="sg"/>
+						</equal>
+					</test>
+					<let>
+						<clip pos="1" part="a_nbr"/>
+						<lit v=""/>
+					</let>
+				</when>
+			</choose>
+		</def-macro>
+
+		<def-macro n="acc-or-nom-object" npar="1">
+			<choose>
+				<when>
+					<test>
+						<equal>
+							<clip pos="1" part="a_def"/>
+							<lit-tag v="ind"/>
+						</equal>
+					</test>
+					<let>
+						<clip pos="1" part="a_cas"/>
+						<lit-tag v="nom"/>
+					</let>
+				</when>
+				<otherwise>
+					<let>
+						<clip pos="1" part="a_cas"/>
+						<lit-tag v="acc"/>
+					</let>
+				</otherwise>
+			</choose>
+		</def-macro>
+	
+		<def-macro n="subj-verb-agree" npar="2">
+			<choose>
+				<when>
+					<test>
+						<not><equal>
+							<clip pos="1" part="a_pers"/>
+							<lit v=""/>
+						</equal></not>
+					</test>
+					<let>
+						<clip pos="2" part="a_pers"/>
+						<clip pos="1" part="a_pers"/>
+					</let>
+				</when>
+				<otherwise>
+					<let>
+						<clip pos="2" part="a_pers"/>
+						<lit-tag v="p3"/>
+					</let>
+				</otherwise>
+			</choose>
+			<choose>
+				<when>
+					<test>
+						<not><equal>
+							<clip pos="1" part="a_nbr"/>
+							<lit v=""/>
+						</equal></not>
+					</test>
+					<let>
+						<clip pos="2" part="a_nbr"/>
+						<clip pos="1" part="a_nbr"/>
+					</let>
+				</when>
+				<otherwise>
+					<let>
+						<clip pos="2" part="a_nbr"/>
+						<lit-tag v="sg"/>
+					</let>
+				</otherwise>
+			</choose>
+		</def-macro>
+
+	</section-def-macros>
 
   <section-rules>
     <rule comment="REGLA: SN">
@@ -41,6 +144,46 @@
         </out>
       </action>
     </rule>
+
+		<rule comment="REGLA: SVO → SOV">
+			<pattern>
+				<pattern-item n="SN"/>
+				<pattern-item n="SV"/>
+				<pattern-item n="SN"/>
+			</pattern>
+			<action>
+				<call-macro n="remove-sg">
+					<with-param pos="3"/>
+				</call-macro>
+				<call-macro n="acc-or-nom-object">
+					<with-param pos="3"/>
+				</call-macro>
+				<call-macro n="subj-verb-agree">
+					<with-param pos="1"/>
+					<with-param pos="2"/>
+				</call-macro>
+				<out>
+					<chunk>
+						<clip pos="1" part="lem"/>
+						<clip pos="1" part="tags"/>
+						<clip pos="1" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="3" part="lem"/>
+						<clip pos="3" part="tags"/>
+						<clip pos="3" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="2" part="lem"/>
+						<clip pos="2" part="tags"/>
+						<clip pos="2" part="chcontent"/>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
   </section-rules>
 </interchunk>
 
