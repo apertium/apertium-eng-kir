@@ -77,7 +77,7 @@
 				<when>
 					<test>
 						<equal>
-							<clip pos="3" side="sl" part="a_detdef"/>
+							<clip pos="1" side="sl" part="a_detdef"/>
 							<lit-tag v="ind"/>
 						</equal>
 					</test>
