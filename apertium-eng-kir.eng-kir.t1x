@@ -51,6 +51,9 @@
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
     </def-attr>
+    <def-attr n="a_frm">
+      <attr-item tags="frm"/>
+    </def-attr>
 	 <def-attr n="a_detdef">
       <attr-item tags="ind"/>
       <attr-item tags="def"/>
@@ -63,6 +66,7 @@
     <def-var n="number"/>
     <def-var n="definiteness"/>
     <def-var n="poss"/>
+    <def-var n="case"/>
   </section-def-vars>
 
 	<section-def-macros>
@@ -103,20 +107,45 @@
 					<test>
 						<equal>
 							<clip pos="1" side="sl" part="a_cas"/>
+							<lit v=""/>
+						</equal>
+					</test>
+					<let>
+						<var n="case"/>
+						<lit-tag v="CD"/>
+					</let>
+				</when>
+			</choose>
+			<choose>
+				<when>
+					<test>
+						<equal>
+							<clip pos="1" side="sl" part="a_cas"/>
 							<lit-tag v="subj"/>
 						</equal>
 					</test>
 					<let>
-						<clip pos="1" side="sl" part="a_cas"/>
+						<!-- clip pos="1" side="sl" part="a_cas"/ -->
+						<var n="case"/>
 						<lit-tag v="nom"/>
 					</let>
 				</when>
 				<otherwise>
-					<!-- FIXME: should really only do if obj -->
-					<let>
-						<clip pos="1" side="sl" part="a_cas"/>
-						<lit-tag v="acc"/>
-					</let>
+					<choose>
+						<when>
+							<test>
+								<equal>
+									<clip pos="1" side="sl" part="a_cas"/>
+									<lit-tag v="obj"/>
+								</equal>
+							</test>
+							<let>
+								<!-- clip pos="1" side="sl" part="a_cas"/ -->
+								<var n="case"/>
+								<lit-tag v="acc"/>
+							</let>
+						</when>
+					</choose>
 				</otherwise>
 			</choose>
 
@@ -154,6 +183,7 @@
 						<tags>
 							<tag><lit-tag v="SV"/></tag>
 							<tag><lit-tag v="PD"/></tag> <!--FIXME: or <clip pos="1" side="tl" part="a_pers"/> -->
+							<tag><lit-tag v="FD"/></tag> <!--FIXME: or <clip pos="1" side="tl" part="a_pers"/> -->
 							<tag><lit-tag v="ND"/></tag> <!-- FIXME: or <clip pos="1" side="tl" part="a_num"/> -->
 						</tags>
 						<lu>
@@ -161,6 +191,7 @@
 								<clip pos="1" side="tl" part="whole"/>
 								<lit-tag v="2"/>
 								<lit-tag v="3"/>
+								<lit-tag v="4"/>
 							</concat>
 						</lu>
 					</chunk>
@@ -182,12 +213,13 @@
 							<tag><lit-tag v="SN"/></tag>
 							<tag><clip pos="1" side="tl" part="a_pers"/></tag>
 							<tag><clip pos="1" side="tl" part="a_num"/></tag>
-							<tag><clip pos="1" side="sl" part="a_cas"/></tag>
+							<tag><var n="case"/></tag>
+							<tag><clip pos="1" side="tl" part="a_frm"/></tag>
 						</tags>
 						<lu>
 							<concat>
 								<clip pos="1" side="tl" part="whole"/>
-								<clip pos="1" side="sl" part="a_cas" link-to="4"/>
+								<lit-tag v="4"/>
 							</concat>
 						</lu>
 					</chunk>

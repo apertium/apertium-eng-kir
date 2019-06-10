@@ -54,6 +54,8 @@
     <sdef n="du"              c="Dual"/>
     <sdef n="pl"              c="Plural"/>
     <sdef n="sp"              c="Singular / plural"/>
+    
+	 <sdef n="frm"             c="Formal / polite"/>
 
     <sdef n="ind"             c="Indefinite"/>
     <sdef n="def"             c="Definite"/>
@@ -119,6 +121,9 @@
 
       <!-- PRONOUNS -->
 		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
+		<e><p><l>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>сиз<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/><s n="frm"/></r></p></e>
+		<e><p><l>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>сен<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></r></p></e>
+		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>биз<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
 
       <!-- FUNCTION WORDS -->
 		<e><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
