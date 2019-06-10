@@ -257,62 +257,6 @@
 			</action>
 		</rule>
 
-		<!-- rule comment="REGLA: SVO → SOV">
-			<pattern>
-				<pattern-item n="pron"/>
-				<pattern-item n="verb"/>
-				<pattern-item n="det"/>
-				<pattern-item n="nom"/>
-			</pattern>
-			<action>
-				<call-macro n="acc-def">
-					<with-param pos="3"/>
-				</call-macro>
-				<out>
-					<chunk name="SN" case="caseFirstWord">
-						<tags>
-							<tag><lit-tag v="n"/></tag>
-						</tags>
-						<lu>
-							<concat>
-								<clip pos="1" side="tl" part="whole"/>
-								<lit-tag v="nom"/>
-							</concat>
-						</lu>
-					</chunk>
-					<b />
-					<chunk name="SN" case="caseFirstWord">
-						<tags>
-							<tag><lit-tag v="n"/></tag>
-							<tag><var n="number"/></tag>
-							<tag><var n="poss"/></tag>
-							<tag><var n="acc-or-nom"/></tag>
-						</tags>
-						<lu>
-							<clip pos="4" side="tl" part="lem"/>
-							<clip pos="4" side="tl" part="a_pos"/>
-							<clip pos="4" side="tl" part="a_num" link-to="2"/>
-							<clip pos="4" side="tl" part="a_poss" link-to="3"/>
-							<clip pos="4" side="tl" part="a_cas" link-to="4"/>
-						</lu>
-					</chunk>
-					<b />
-					<chunk name="SV" case="caseFirstWord">
-						<tags>
-							<tag><lit-tag v="v"/></tag>
-						</tags>
-						<lu>
-							<concat>
-								<clip pos="2" side="tl" part="whole"/>
-								<clip pos="1" side="tl" part="a_pers"/>
-								<clip pos="1" side="tl" part="a_num"/>
-							</concat>
-						</lu>
-					</chunk>
-				</out>
-			</action>
-		</rule -->
-
   </section-rules>
 </transfer>
 
