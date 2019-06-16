@@ -7,24 +7,38 @@
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
     </def-cat>
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
+    </def-cat>
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
 	 </def-cat>
     <def-cat n="det">
       <cat-item tags="det.*"/>
 	 </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="adj.advl"/>
+      <cat-item tags="adj.advl.*"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
   </section-def-cats>
 
-  <section-def-attrs>
-    <def-attr n="a_pos">
-      <attr-item tags="v"/>
-      <attr-item tags="n"/>
-      <attr-item tags="adj"/>
-      <attr-item tags="adv"/>
-	 </def-attr>
+	<section-def-attrs>
+		<def-attr n="a_pos">
+			<attr-item tags="v"/>
+			<attr-item tags="n"/>
+			<attr-item tags="adj"/>
+			<attr-item tags="adv"/>
+		</def-attr>
+		<def-attr n="a_v-type">
+			<attr-item tags="iv"/>
+			<attr-item tags="tv"/>
+			<attr-item tags="TD"/>
+		</def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
@@ -60,6 +74,13 @@
       <attr-item tags="dem"/>
       <attr-item tags="itg"/>
 	 </def-attr>
+		<def-attr n="a_tense">
+			<attr-item tags="pres"/>
+			<attr-item tags="aor"/>
+			<attr-item tags="past"/>
+			<attr-item tags="ifi"/>
+			<attr-item tags="fut"/>
+		</def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -151,6 +172,23 @@
 
 		</def-macro>
 
+		<def-macro n="verb-fix-tense" npar="1">
+			<choose>
+				<when>
+					<test>
+						<equal>
+							<clip pos="1" side="sl" part="a_tense"/>
+							<lit-tag v="pres"/>
+						</equal>
+					</test>
+					<let>
+						<clip pos="1" side="tl" part="a_tense"/>
+						<lit-tag v="aor"/>
+					</let>
+				</when>
+			</choose>
+		</def-macro>
+
 	</section-def-macros>
 
   <section-rules>
@@ -178,6 +216,9 @@
 				<pattern-item n="verb"/>
 			</pattern>
 			<action>
+				<call-macro n="verb-fix-tense">
+					<with-param pos="1"/>
+				</call-macro>
 				<out>
 					<chunk name="v" case="caseFirstWord">
 						<tags>
@@ -193,6 +234,32 @@
 								<lit-tag v="3"/>
 								<lit-tag v="4"/>
 							</concat>
+						</lu>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
+		<rule comment="REGLA: Pr SV">
+			<pattern>
+				<pattern-item n="pr"/>
+				<pattern-item n="verb"/>
+			</pattern>
+			<action>
+				<out>
+					<chunk name="v" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="SV"/></tag>
+							<tag><lit-tag v="PD"/></tag> <!--FIXME: or <clip pos="1" side="tl" part="a_pers"/> -->
+							<tag><lit-tag v="FD"/></tag> <!--FIXME: or <clip pos="1" side="tl" part="a_pers"/> -->
+							<tag><lit-tag v="ND"/></tag> <!-- FIXME: or <clip pos="1" side="tl" part="a_num"/> -->
+						</tags>
+						<lu>
+							<clip pos="2" side="tl" part="lem"/>
+							<clip pos="2" side="tl" part="a_pos"/>
+							<clip pos="2" side="tl" part="a_v-type"/>
+							<lit-tag v="ger_past"/>
+							<lit-tag v="acc"/>
 						</lu>
 					</chunk>
 				</out>
@@ -253,6 +320,52 @@
 							<clip pos="2" side="tl" part="a_num" link-to="3"/>
 							<lit-tag v="4"/>
 							<lit-tag v="5"/>
+						</lu>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
+		<rule comment="REGLA: Det Nom">
+			<pattern>
+				<pattern-item n="nom"/>
+			</pattern>
+			<action>
+				<out>
+					<chunk name="n" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="SN"/></tag>
+							<tag><lit-tag v="ind"/></tag>
+							<tag><clip pos="1" side="tl" part="a_num"/></tag>
+							<tag><clip pos="1" side="tl" part="a_poss"/></tag>
+							<tag><lit-tag v="CD"/></tag>
+						</tags>
+						<lu>
+							<get-case-from pos="1">
+								<clip pos="1" side="tl" part="lem"/>
+							</get-case-from>
+							<clip pos="1" side="tl" part="a_pos"/>
+							<clip pos="1" side="tl" part="a_num" link-to="3"/>
+							<lit-tag v="4"/>
+							<lit-tag v="5"/>
+						</lu>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
+		<rule comment="REGLA: Adv">
+			<pattern>
+				<pattern-item n="adv"/>
+			</pattern>
+			<action>
+				<out>
+					<chunk name="adv" case="caseFirstWord">
+						<tags>
+							<tag><lit-tag v="SAdv"/></tag>
+						</tags>
+						<lu>
+							<clip pos="1" side="tl" part="whole"/>
 						</lu>
 					</chunk>
 				</out>

@@ -9,6 +9,10 @@
 			<cat-item tags="SV"/>
 			<cat-item tags="SV.*"/>
 		</def-cat>
+		<def-cat n="SAdv">
+			<cat-item tags="SAdv"/>
+			<cat-item tags="SAdv.*"/>
+		</def-cat>
 	</section-def-cats>
 
 	<section-def-attrs>
@@ -198,6 +202,85 @@
 						<clip pos="1" part="lem"/>
 						<clip pos="1" part="tags"/>
 						<clip pos="1" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="3" part="lem"/>
+						<clip pos="3" part="tags"/>
+						<clip pos="3" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="2" part="lem"/>
+						<clip pos="2" part="tags"/>
+						<clip pos="2" part="chcontent"/>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
+		<rule comment="REGLA: SVO → SOV">
+			<pattern>
+				<pattern-item n="SN"/>
+				<pattern-item n="SV"/>
+				<pattern-item n="SV"/>
+			</pattern>
+			<action>
+				<call-macro n="remove-sg">
+					<with-param pos="1"/>
+				</call-macro>
+				<call-macro n="subj-verb-agree">
+					<with-param pos="1"/>
+					<with-param pos="2"/>
+				</call-macro>
+				<out>
+					<chunk>
+						<clip pos="1" part="lem"/>
+						<clip pos="1" part="tags"/>
+						<clip pos="1" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="3" part="lem"/>
+						<clip pos="3" part="tags"/>
+						<clip pos="3" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="2" part="lem"/>
+						<clip pos="2" part="tags"/>
+						<clip pos="2" part="chcontent"/>
+					</chunk>
+				</out>
+			</action>
+		</rule>
+
+		<rule comment="REGLA: SVAdvO → SOAdvV">
+			<pattern>
+				<pattern-item n="SN"/>
+				<pattern-item n="SV"/>
+				<pattern-item n="SAdv"/>
+				<pattern-item n="SV"/>
+			</pattern>
+			<action>
+				<call-macro n="remove-sg">
+					<with-param pos="1"/>
+				</call-macro>
+				<call-macro n="subj-verb-agree">
+					<with-param pos="1"/>
+					<with-param pos="2"/>
+				</call-macro>
+				<out>
+					<chunk>
+						<clip pos="1" part="lem"/>
+						<clip pos="1" part="tags"/>
+						<clip pos="1" part="chcontent"/>
+					</chunk>
+					<b/>
+					<chunk>
+						<clip pos="4" part="lem"/>
+						<clip pos="4" part="tags"/>
+						<clip pos="4" part="chcontent"/>
 					</chunk>
 					<b/>
 					<chunk>
