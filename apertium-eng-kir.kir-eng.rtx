@@ -1,5 +1,7 @@
 number = (ND sg) sg pl ND ;
 case = nom acc dat gen loc abl ;
+tense = (aor pres) past ;
+person = (PD p3) p1 p2 p3 ;
 
 city = Нарын ;
 
@@ -7,12 +9,13 @@ NP: _.case ;
 Vp: _ ;
 VP: _ ;
 np: _ ;
-n: _.number ;
+n: _.number.person.number ;
 v: _ ;
-vaux: _ ;
+vaux: _.tense.person ;
 
 NP ->	0: np.*.$case { 1 } |
-      1: $city@np.top.loc [$case=loc] { in@prep _ 1 } |
+      1: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
+                                { at@prep _ 1 } |
       2: n.nom n.px3sp.$case { 1 _1 2 } ;
 
 Vp -> 0: NP.loc NP.nom v {1 _1 3 _2 2 } ;

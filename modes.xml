@@ -77,8 +77,8 @@
         <file name="kir-eng.autolex.bin"/>
       </program>
       <program name="rtx-proc">
-        <file name="kir-eng.rtx.bin"/>
         <file name="kir-eng.rtx.bin2"/>
+        <file name="kir-eng.rtx.bin"/>
       </program>
       <program name="lsx-proc" debug-suff="revautoseq">
         <file name="eng-kir.revautoseq.bin"/>
