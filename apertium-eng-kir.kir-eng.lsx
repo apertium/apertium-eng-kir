@@ -1,0 +1,118 @@
+<dictionary type="sequential">
+	<alphabet>АӘБВГҒДЕЁЖЗИІЙКҚЛМНҢОӨПРСТУҰҮФХҺЦЧШЩЬЫЪЭЮЯаәбвгғдеёжзиійкқлмнңоөпрстуұүфхһцчшщьыъэюя</alphabet>
+	<sdefs>
+		<sdef n="adj"/>
+		<sdef n="adv"/>
+		<sdef n="n"/>
+		<sdef n="nom"/>
+		<sdef n="dat"/>
+		<sdef n="v"/>
+		<sdef n="tv"/>
+		<sdef n="iv"/>
+		<sdef n="prc_perf"/>
+		<sdef n="advl"/>
+		<sdef n="det"/>
+		<sdef n="dem"/>
+	</sdefs>
+	<pardefs>
+		<pardef n="adj">
+			<e><i><w/><s n="adj"/><j/></i></e>
+			<e><i><w/><s n="adj"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="SAdv">
+			<e><i><w/><s n="adv"/><j/></i></e>
+		</pardef>
+		<pardef n="n">
+			<e><i><w/><s n="n"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="SN">
+			<e><par n="n"/></e>
+			<e><par n="adj"/><par n="n"/></e>
+			<e><par n="adj"/><par n="adj"/><par n="n"/></e>
+		</pardef>
+	</pardefs>
+	<section id="main" type="standard">
+		<e lm="кабарда" c="хабар ет">
+			<p><l>хабар<b/>ет<s n="v"/></l>
+				<r>хабар<s n="n"/><s n="nom"/><j/>ет<s n="v"/></r></p><i><t/><j/></i>
+		</e>
+		<e lm="абайла" c="абай бол">
+			<p><l>абай<b/>бол<s n="v"/></l>
+				<r>абай<s n="adj"/><j/>бол<s n="v"/></r></p><i><t/><j/></i>
+		</e>
+		<e lm="абайла" c="абай бол">
+			<p><l>абай<b/>бол<s n="v"/></l>
+				<r>абай<s n="adj"/><j/>бол<s n="v"/></r></p><i><t/>+ма<t/><j/></i>
+			<!-- p><l>абай<s n="adj"/><j/>бол<s n="v"/><t/></l>
+				<r>абай<b/>бол<s n="v"/><t/></r></p -->
+		</e>
+		<e lm="сууга бат түш" c="тез шомыл">
+			<p>
+				<l>суу<s n="n"/><s n="dat"/><j/></l>
+				<r></r>
+			</p>
+			<par n="SAdv"/>
+			<p>
+				<l>түш<s n="v"/></l>
+				<r>сууга<b/>түш<s n="v"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="сууга түш" c="шомылда">
+			<p>
+				<l>суу<s n="n"/><s n="dat"/><j/>түш<s n="v"/></l>
+				<r>сууга<b/>түш<s n="v"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="жумуш жаса" c="жұмыс істе">
+			<p>
+				<l>жумуш<s n="n"/><s n="nom"/><j/>жаса<s n="v"/><s n="tv"/></l>
+				<r>жумуш<b/>жаса<s n="v"/><s n="iv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="маал кел" c="уақыт бол">
+			<p>
+				<l>маал<s n="n"/><s n="nom"/><j/>кел<s n="v"/><s n="iv"/></l>
+				<r>маал<b/>кел<s n="v"/><s n="iv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="убакыт кел" c="уақыт бол">
+			<p>
+				<l>убакыт<s n="n"/><s n="nom"/><j/>кел<s n="v"/><s n="iv"/></l>
+				<r>убакыт<b/>кел<s n="v"/><s n="iv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="убакыт бол" c="уақыт бол">
+			<p>
+				<l>убакыт<s n="n"/><s n="nom"/><j/>бол<s n="v"/><s n="iv"/></l>
+				<r>убакыт<b/>бол<s n="v"/><s n="iv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="алып кет" c="take away">
+			<p>
+				<l>ал<s n="v"/><s n="tv"/><s n="prc_perf"/><j/>кет<s n="v"/><s n="iv"/></l>
+				<r>алып<b/>кет<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="жакшы бил" c="be good at">
+			<p>
+				<l>жакшы<s n="adj"/><s n="advl"/><j/>бил<s n="v"/><s n="tv"/></l>
+				<r>жакшы<b/>бил<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="быйыл" c="this year">
+			<p>
+				<l>быйыл<s n="adv"/></l>
+				<r>бул<s n="det"/><s n="dem"/><j/>жыл<s n="n"/><s n="nom"/></r>
+			</p>
+			<i><j/></i>
+		</e>
+	</section>
+</dictionary>

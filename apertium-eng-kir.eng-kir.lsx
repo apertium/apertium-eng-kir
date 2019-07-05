@@ -1,0 +1,97 @@
+<dictionary type="sequential">
+	<alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệfFgGhHiIíjJkKlLmMnNoOóöớpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+	<sdefs>
+		<sdef n="adj"/>
+		<sdef n="adv"/>
+		<sdef n="pr"/>
+		<sdef n="n"/>
+		<sdef n="nom"/>
+		<sdef n="v"/>
+		<sdef n="vblex"/>
+		<sdef n="vbser"/>
+		<sdef n="tv"/>
+		<sdef n="iv"/>
+		<sdef n="det"/>
+		<sdef n="sint"/>
+		<sdef n="advl"/>
+		<sdef n="pres"/>
+	</sdefs>
+
+	<pardefs>
+		<pardef n="adj">
+			<e><i><w/><s n="adj"/><j/></i></e>
+			<e><i><w/><s n="adj"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="adv">
+			<e><i><w/><s n="adv"/><j/></i></e>
+			<e><i><w/><s n="adv"/><t/><j/></i></e>
+			<e><i><w/><s n="adj"/><s n="advl"/><j/></i></e>
+			<e><i><w/><s n="adj"/><s n="advl"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="n">
+			<e><i><w/><s n="n"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="det">
+			<e><i><w/><s n="det"/><t/><j/></i></e>
+		</pardef>
+		<pardef n="SN">
+			<e><par n="n"/></e>
+			<e><par n="adj"/><par n="n"/></e>
+			<e><par n="adj"/><par n="adj"/><par n="n"/></e>
+			<e><par n="det"/><par n="n"/></e>
+			<e><par n="det"/><par n="adj"/><par n="n"/></e>
+			<e><par n="det"/><par n="adj"/><par n="adj"/><par n="n"/></e>
+		</pardef>
+		<pardef n="SAdv">
+			<e><par n="adv"/></e>
+			<!-- e><par n="adv"/><par n="adv"/></e -->
+		</pardef>
+		<pardef n="optSAdv">
+			<e></e>
+			<e><par n="adv"/></e>
+			<e><par n="adv"/><par n="adv"/></e>
+		</pardef>
+	</pardefs>
+
+	<section id="main" type="standard">
+		<e lm="throw away" c="ташта">
+			<p>
+				<l>throw<s n="vblex"/></l>
+				<r>throw<b/>away<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<p>
+				<l>away<s n="adv"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="take away" c="алып кет">
+			<p>
+				<l>take<s n="vblex"/></l>
+				<r>take<b/>away<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<p>
+				<l>away<s n="adv"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="be good at" c="жакшы бил">
+			<p>
+				<l>be<s n="vbser"/></l>
+				<r>be<b/>good<b/>at<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="optSAdv"/>
+			<p>
+				<l>good<s n="adj"/><s n="sint"/><j/></l>
+				<r></r>
+			</p>
+			<i>at<s n="pr"/><j/></i>
+		</e>
+	</section>
+</dictionary>
