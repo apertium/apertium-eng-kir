@@ -12,6 +12,9 @@ np: _ ;
 n: _.number ;
 v: _ ;
 vaux: _.tense.person.number ;
+vbser: _.tense.person.number ;
+
+vaux_thing: lemh.<vaux>.tense.person.number ;
 
 NP ->	0: np.*.$case { 1 } |
       1: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
@@ -20,4 +23,5 @@ NP ->	0: np.*.$case { 1 } |
 
 Vp -> 0: NP.loc NP.nom v {1 _1 3 _2 2 } ;
 
-VP -> 0: v vaux { 2 _1 1 } ;
+VP -> 0: v vaux { 2 _1 1[vaux_thing] } ;
+
