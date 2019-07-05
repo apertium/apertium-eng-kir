@@ -201,7 +201,7 @@
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
 		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
-		<e r="LR"><p><l>a<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
+		<e r="LR"><p><l>a<s n="det"/><s n="ind"/><s n="sg"/></l><r></r></p></e>
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 
       <!-- Prepositions -->
