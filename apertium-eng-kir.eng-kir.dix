@@ -55,8 +55,8 @@
     <sdef n="du"              c="Dual"/>
     <sdef n="pl"              c="Plural"/>
     <sdef n="sp"              c="Singular / plural"/>
-    
-	 <sdef n="frm"             c="Formal / polite"/>
+
+    <sdef n="frm"             c="Formal / polite"/>
 
     <sdef n="ind"             c="Indefinite"/>
     <sdef n="def"             c="Definite"/>
@@ -106,6 +106,18 @@
     <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
   </sdefs>
 
+
+	<pardefs>
+		<pardef n="par__num">
+			<e>
+				<p>
+					<l><s n="num"/></l>
+					<r><s n="num"/></r>
+				</p>
+			</e>
+		</pardef>
+	</pardefs>
+
    <section id="main" type="standard">
       <!-- NOUNS -->
       <e><p><l>house<s n="n"/></l><r>үй<s n="n"/></r></p></e>
@@ -113,12 +125,23 @@
       <e><p><l>teacher<s n="n"/></l><r>мугалим<s n="n"/></r></p></e>
       <e><p><l>bird<s n="n"/></l><r>чымчык<s n="n"/></r></p></e>
       <e><p><l>bird<s n="n"/></l><r>куш<s n="n"/></r></p></e>
-      
-		<!-- ADJECTIVS -->
+      <e><p><l>shyrdaq<s n="n"/></l><r>шырдак<s n="n"/></r></p></e>
+      <e><p><l>festival<s n="n"/></l><r>фестиваль<s n="n"/></r></p></e>
+      <e><p><l>tourist<s n="n"/></l><r>турист<s n="n"/></r></p></e>
+      <e><p><l>time<s n="n"/></l><r>заман<s n="n"/></r></p></e>
+      <e><p><l>time<s n="n"/></l><r>убакыт<s n="n"/></r></p></e>
+      <e><p><l>time<s n="n"/></l><r>жол<s n="n"/></r></p></e>
+      <e><p><l>road<s n="n"/></l><r>жол<s n="n"/></r></p></e>
+      <e><p><l>way<s n="n"/></l><r>жол<s n="n"/></r></p></e>
+      <e><p><l>year<s n="n"/></l><r>жыл<s n="n"/></r></p></e>
+
+		<!-- ADJECTIVES -->
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>жаман<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>начар<s n="adj"/></r></p></e>
-		
+		<e><p><l>foreign<s n="adj"/><s n="sint"/></l><r>чет<b/>элдик<s n="adj"/></r></p></e>
+		<e><p><l>international<s n="adj"/><s n="sint"/></l><r>эл<b/>аралык<s n="adj"/></r></p></e>
+
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>throw<b/>away<s n="vblex"/></l><r>ташта<s n="v"/><s n="tv"/></r></p></e>
@@ -130,11 +153,23 @@
 		<e><p><l>be<b/>good<b/>at<s n="vblex"/></l><r>жакшы<b/>бил<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>be<s n="vbser"/></l><r>бол<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>be<s n="vbser"/></l><r>э<s n="cop"/></r></p></e>
+		<e><p><l>happen<s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>go<g><b/>on</g><s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>come<s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>show<g><b/>up</g><s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
+
+
+		<!-- vaux -->
+		<e><p><l>be<s n="vbser"/></l><r>жат<s n="vaux"/></r></p></e>
+
 
       <!-- ADVERBS -->
 		<e><p><l>away<s n="adv"/></l><r>ары<s n="adv"/></r></p></e>
 		<e><p><l>well<s n="adv"/></l><r>жакшы<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>really<s n="adv"/></l><r>аябай<s n="adv"/></r></p></e>
+		<e><p><l>this<b/>year<s n="adv"/></l><r>быйыл<s n="adv"/></r></p></e>
+		<e><p><l>especially<s n="adv"/></l><r>өзгөчө<s n="adj"/><s n="advl"/></r></p></e>
+		<e><p><l>a<b/>lot<s n="adv"/></l><r>көп<s n="adv"/></r></p></e>
 
       <!-- PRONOUNS -->
 		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
@@ -142,13 +177,30 @@
 		<e><p><l>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>сен<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></r></p></e>
 		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>биз<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
 
+		<!-- NUMBERS -->
+		<e><p><l>one</l><r>бир</r></p><par n="par__num"/></e>
+		<e><p><l>two</l><r>эки</r></p><par n="par__num"/></e>
+		<e><p><l>three</l><r>үч</r></p><par n="par__num"/></e>
+		<e><p><l>four</l><r>төрт</r></p><par n="par__num"/></e>
+		<e><p><l>five</l><r>беш</r></p><par n="par__num"/></e>
+		<e><p><l>six</l><r>алты</r></p><par n="par__num"/></e>
+		<e><p><l>seven</l><r>жети</r></p><par n="par__num"/></e>
+		<e><p><l>eight</l><r>сегиз</r></p><par n="par__num"/></e>
+		<e><p><l>nine</l><r>тогуз</r></p><par n="par__num"/></e>
+		<e><p><l>ten</l><r>он</r></p><par n="par__num"/></e>
+
+		<!-- PROPER NOUNS -->
+		<!-- np.top -->
+		<e><p><l>Naryn<s n="np"/><s n="top"/></l><r>Нарын<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>Tengir<b/>Too<s n="np"/><s n="top"/></l><r>Теңир<b/>Тоо<s n="np"/><s n="top"/></r></p></e>
+
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
-		<e><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
+		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 
       <!-- Prepositions -->
-		<e><p><l>at<s n="pr"/></l><r></r></p></e>
+		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>

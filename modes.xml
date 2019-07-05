@@ -60,11 +60,14 @@
       </program>
 
 
-      <program name="cg-proc -w">
+      <program name="cg-proc -w -1 -n">
         <file name="kir-eng.rlx.bin"/>
       </program>
-      <program name="apertium-tagger -g $2">
+      <!-- program name="apertium-tagger -g $2">
         <file name="kir-eng.prob"/>
+      </program -->
+      <program name="lsx-proc">
+        <file name="kir-eng.autoseq.bin"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -73,17 +76,12 @@
       <program name="lrx-proc -m">
         <file name="kir-eng.autolex.bin"/>
       </program>
-      <program name="apertium-transfer -b">
-        <file name="apertium-eng-kir.kir-eng.t1x"/>
-        <file name="kir-eng.t1x.bin"/>
+      <program name="rtx-proc">
+        <file name="kir-eng.rtx.bin"/>
+        <file name="kir-eng.rtx.bin2"/>
       </program>
-      <program name="apertium-interchunk">
-        <file name="apertium-eng-kir.kir-eng.t2x"/>
-        <file name="kir-eng.t2x.bin"/>
-      </program>
-      <program name="apertium-postchunk">
-        <file name="apertium-eng-kir.kir-eng.t3x"/>
-        <file name="kir-eng.t3x.bin"/>
+      <program name="lsx-proc" debug-suff="revautoseq">
+        <file name="eng-kir.revautoseq.bin"/>
       </program>
       <program name="lt-proc $1">
         <file name="kir-eng.autogen.bin"/>

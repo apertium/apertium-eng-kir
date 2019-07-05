@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
-  <!-- 
-    This rule chooses "energía" as the translation of "power" when it is preceded by "wind". 
-    Add your own rules within <rule> here, using the resources below as a guide 
-  -->
-
-  <rule>
-    <match lemma="wind"/>
-    <match lemma="power" tags="n.*">
-      <select lemma="energía" tags="n.*"/>
-    </match>
-  </rule>
+	<rule>
+		<match tags="num.ord"/>
+		<match lemma="жол" tags="n.*">
+			<select lemma="time" tags="n.*"/>
+		</match>
+	</rule>
 </rules>
 
 <!-- 

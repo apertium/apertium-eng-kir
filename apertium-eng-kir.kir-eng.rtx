@@ -1,0 +1,20 @@
+number = (ND sg) sg pl ND ;
+case = nom acc dat gen loc abl ;
+
+city = Нарын ;
+
+NP: _.case ;
+Vp: _ ;
+VP: _ ;
+np: _ ;
+n: _.number ;
+v: _ ;
+vaux: _ ;
+
+NP ->	0: np.*.$case { 1 } |
+      1: $city@np.top.loc [$case=loc] { in@prep _ 1 } |
+      2: n.nom n.px3sp.$case { 1 _1 2 } ;
+
+Vp -> 0: NP.loc NP.nom v {1 _1 3 _2 2 } ;
+
+VP -> 0: v vaux { 1 _1 2 } ;
