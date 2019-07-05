@@ -9,9 +9,9 @@ NP: _.case ;
 Vp: _ ;
 VP: _ ;
 np: _ ;
-n: _.number.person.number ;
+n: _.number ;
 v: _ ;
-vaux: _.tense.person ;
+vaux: _.tense.person.number ;
 
 NP ->	0: np.*.$case { 1 } |
       1: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
