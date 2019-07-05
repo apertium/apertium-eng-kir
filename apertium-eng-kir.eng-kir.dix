@@ -157,6 +157,8 @@
 		<e><p><l>go<g><b/>on</g><s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>come<s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>show<g><b/>up</g><s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>give<s n="vblex"/></l><r>бер<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>show<s n="vblex"/></l><r>көрсөт<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -197,6 +199,7 @@
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
 		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
+		<e r="LR"><p><l>a<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 
       <!-- Prepositions -->
