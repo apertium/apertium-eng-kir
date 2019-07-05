@@ -6,6 +6,19 @@
 			<select lemma="time" tags="n.*"/>
 		</match>
 	</rule>
+
+	<rule>
+		<match tags="*.abl"/>
+		<match lemma="өт" tags="v.iv.*">
+			<select lemma="pass" tags="vblex.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="өт" tags="v.iv.*">
+			<select lemma="go# on" tags="vblex.*"/>
+		</match>
+	</rule>
+
 </rules>
 
 <!-- 

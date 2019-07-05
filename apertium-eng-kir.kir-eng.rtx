@@ -1,27 +1,46 @@
 number = (ND sg) sg pl ND ;
-case = nom acc dat gen loc abl ;
-tense = (aor pres) past ;
+case = (nom subj) acc dat gen loc abl ;  ! (acc obj) (dat obj)
+prontype = pers dem ;
+tense = (aor pres) ifi past ; ! (ifi past)
+!tenseetc = ifi past aor pres prc_perf prc_ipf ;
 person = (PD p3) p1 p2 p3 ;
+prc = prc_perf prc_ipf prc_irre ;
+transitivity = tv iv ;
+gender = (GD m) m f mf nt ;
+
+en_nouns_mass = bread paper ;
+en_nouns_count = window paper ;
 
 city = Нарын ;
 
 NP: _.case ;
-Vp: _ ;
 VP: _ ;
 np: _ ;
+prn: _.case.person.gender.number ;
+S: _ ;
 n: _.number ;
-v: _ ;
+v: _.tense ;
 vaux: _.tense.person.number ;
-vbser: _.tense.person.number ;
+!vbser: _.tense.person.number ;
 
-vaux_thing: lemh.<vaux>.tense.person.number ;
+!vaux_thing: lemh.<vbser>.tense.person.number ;
 
-NP ->	0: np.*.$case { 1 } |
-      1: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
+NP ->	0: np.$case { 1 } |
+      1: n.$case { 1 } |
+      2: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
                                 { at@prep _ 1 } |
-      2: n.nom n.px3sp.$case { 1 _1 2 } ;
+      3: n.nom n.px3sp.$case { 1 _1 2 } |
+      4: prn.$case { 1 } ;
 
-Vp -> 0: NP.loc NP.nom v {1 _1 3 _2 2 } ;
+VP -> 0: v.$transitivity { 1 } |
+      1: NP.acc v.$transitivity { 2 _1 1 } |
+      2: NP.dat NP.acc v.$transitivity { 3 _2 2 _1 1 } |
+      3: NP.dat NP.nom v.$transitivity { 3 _2 2 _1 1 } ;
 
-VP -> 0: v vaux { 2 _1 1[vaux_thing] } ;
+!v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
+v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
 
+
+S -> 0: NP VP.iv { 1 _1 2 } |
+     1: NP.nom VP.iv { 1 _1 2 } |
+     2: NP.nom VP.tv { 1 _1 2 } ;
