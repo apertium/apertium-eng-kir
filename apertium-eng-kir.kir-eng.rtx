@@ -45,6 +45,7 @@ prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
 v: _.tense ;
+PP: _ ;
 vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
 
