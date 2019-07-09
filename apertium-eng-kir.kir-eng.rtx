@@ -25,6 +25,7 @@ poss > person : px1sg p1, px2sg p2, px3sg p3, px1pl p1, px2pl p2, px3pl p3;
 poss > number : px1sg sg, px2sg sg, px3sg sg, px1pl pl, px2pl pl, px3pl pl;
 tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
+prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
 
 
@@ -56,7 +57,7 @@ VP -> 0: v.$transitivity { 1 } |
 
 !v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
 !v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
-v -> 0: v.$prc vaux.$tense { 2 _1 1 } ;
+v -> 0: v.$transitivity vaux.$tense { 2 _1 1(tense=1.prc) } ;
 
 
 S -> 0: NP VP.iv { 1 _1 2 } |
