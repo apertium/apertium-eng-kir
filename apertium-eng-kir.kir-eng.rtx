@@ -1,7 +1,7 @@
 !!! ATTRIBUTE LISTS !!!
 
 number = (ND sg) sg pl sp ;
-case = (CD subj) acc dat gen loc abl ;
+case = (CD subj) acc dat gen loc abl subj obj ;
 prontype = pers dem ;
 tense = (TD pres) pres aor ifi past ;
 !tenseetc = ifi past aor pres prc_perf prc_ipf ;
@@ -11,7 +11,7 @@ prc = (PTD pprs) prc_perf prc_ipf prc_irre pprs ;  ! select -ing if in doubt
 transitivity = tv iv ;
 gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
-prep_flag = (PRD none) to in at for ;
+prep_flag = (PRD none) to in on at for ;
 
 poss = px1sg px2sg px3sg px1pl px2pl px3pl;
 
@@ -19,6 +19,8 @@ en_nouns_mass = bread paper ;
 en_nouns_count = window paper ;
 
 en_verbs_nopr = believe ;
+en_vaux_ing = be ;
+en_vaux_to = want ;
 
 might_get_pr = loc dat abl gen ;
 
@@ -38,30 +40,33 @@ case > case : nom subj, acc obj, dat obj ;
 !!! PATTERNS !!!
 
 NP: _.case.prep_flag ;
-DP: _.prep_flag ;
+DP: _.case.prep_flag ;
 VP: _ ;
 np: _ ;
 prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
 v: _.tense ;
+vP: _.transitivity.tense ;
 PP: _ ;
 vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
 
 !vaux_thing: lemh.<vbser>.tense.person.number ;
 
-NP ->	0: np.$case { 1 } |
-      1: n.$lem/sl.$case { 1 } |
+NP ->	0: np.$lem/sl.$case/sl { 1 } |
+      1: n.$lem/sl.$case/sl { 1 } |
       2: np.top.loc [$case=loc,$prep_flag=in] (1.lem/sl in city) { 1 } |
-      1: np.top.loc [$case=loc,$prep_flag=on]                    { 1 } |
+      3: np.top.loc [$case=loc,$prep_flag=on]                    { 1 } |
 !      2: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
 !                                { at@prep _ 1 } |
-      3: n.nom n.px3sp.$case { 1 _1 2 } |
-      4: prn.$case { 1 }
+      4: n.nom n.px3sp.$case { 1 _1 2 }
    ;
 
-DP -> 0: NP.prep_flag { the@det.def.sp _ 1 } ;
+DP -> 0: NP.$case.$prep_flag { the@det.def.sp _ 1 } |
+      1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
+      2: prn.$case { 1 }
+   ;
 
 PP -> DP (1.case in might_get_pr)
            { 1 }          ($prep_flag = none)
@@ -71,7 +76,11 @@ PP -> DP (1.case in might_get_pr)
            {on@pr _ 1}    ($prep_flag = on)
    ;
 
-VP -> PP DP.def.prep_flag v.$transitivity { 3 _2 2 _1 1 };
+VP -> PP DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
+      DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
+      DP DP vP { 3 _2 2 _1 1 }
+   ;
+
 
 !      0: v.$transitivity { 1 } |
 !      1: NP.acc v.$transitivity { 2 _1 1 } |
@@ -84,9 +93,14 @@ VP -> PP DP.def.prep_flag v.$transitivity { 3 _2 2 _1 1 };
 
 !v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
 !v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
-v -> 0: v.$transitivity vaux.$tense { 2 _1 1(tense=1.prc) } ;
+
+vP -> 0: v.$transitivity vaux.$tense
+          { 2 _1 1(tense=pprs) } ( 2.lem in en_vaux_ing )
+          { 2(person=1.person,number=1.number) _1 to@pr _1 1(tense=inf) } ( 2.lem in en_vaux_to ) |
+      v.$transitivity { 1 } ;
 
 
-S -> 0: NP VP.iv { 1 _1 2 } |
-     1: NP.nom VP.iv { 1 _1 2 } |
-     2: NP.nom VP.tv { 1 _1 2 } ;
+
+S -> 0: DP VP.iv { 1 _1 2 } |
+     1: DP.nom VP.iv { 1 _1 2 } |
+     2: DP.nom VP.tv { 1 _1 2 } ;
