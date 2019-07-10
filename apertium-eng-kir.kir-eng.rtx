@@ -12,6 +12,8 @@ transitivity = tv iv ;
 gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
 prep_flag = (PRD none) to in on at for ;
+adjlevel = cmp ;
+adjtype = sint ;
 
 poss = px1sg px2sg px3sg px1pl px2pl px3pl;
 
@@ -47,8 +49,10 @@ prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
 v: _.tense ;
+adj: _.adjtype.adjlevel ;
 vP: _.transitivity.tense ;
 PP: _ ;
+AP: _ ;
 vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
 
@@ -63,8 +67,14 @@ NP ->	0: np.$lem/sl.$case/sl { 1 } |
       4: n.nom n.px3sp.$case { 1 _1 2 }
    ;
 
+AP -> adj { 1 } ;
+!|
+ !     AP { 1 } ;
+
 DP -> 0: NP.$case.$prep_flag { the@det.def.sp _ 1 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
+      0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
+      1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
       2: prn.$case { 1 }
    ;
 

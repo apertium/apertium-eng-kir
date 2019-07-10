@@ -141,6 +141,8 @@
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>начар<s n="adj"/></r></p></e>
 		<e><p><l>foreign<s n="adj"/><s n="sint"/></l><r>чет<b/>элдик<s n="adj"/></r></p></e>
 		<e><p><l>international<s n="adj"/><s n="sint"/></l><r>эл<b/>аралык<s n="adj"/></r></p></e>
+		<e><p><l>beautiful<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
+		<e><p><l>pretty<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
 
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
