@@ -55,6 +55,7 @@ adj: _.adjtype.adjlevel ;
 vP: _.transitivity.tense ;
 PP: _ ;
 AP: _ ;
+vAux: _.tense.person.number ;
 vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
 
@@ -106,13 +107,13 @@ VP -> PP DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
 !v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
 !v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
 
-vP -> 0: v.$transitivity vaux.$tense
+vP -> 0: v.$transitivity vAux.$tense
           { 2 _1 1(tense=pprs) } ( 2.lem in en_vaux_ing )
           { 2(person=1.person,number=1.number) _1 to@pr _1 1(tense=inf) } ( 2.lem in en_vaux_to ) |
       v.$transitivity { 1 } ;
 
-vaux -> vaux { 1 } |
-        vaux [$person=_,$number=_] ( ~( 1.lem in en_vaux_person ) ) { 1 }
+vAux -> vaux { 1 }
+             { 1(person=_,number=_) } ( ~( 1.lem in en_vaux_person ) )
      ;
 
 
