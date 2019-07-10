@@ -42,6 +42,7 @@ case > case : nom subj, acc obj, dat obj ;
 
 
 !!! PATTERNS !!!
+! when building chunk or lu of this type, put these tags in this order
 
 NP: _.case.prep_flag ;
 DP: _.case.prep_flag ;
@@ -60,6 +61,9 @@ vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
 
 !vaux_thing: lemh.<vbser>.tense.person.number ;
+
+
+!!! RULES !!!
 
 NP ->	0: np.$lem/sl.$case/sl { 1 } |
       1: n.$lem/sl.$case/sl { 1 } |
