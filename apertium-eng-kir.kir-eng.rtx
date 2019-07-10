@@ -24,6 +24,8 @@ en_verbs_nopr = believe ;
 en_vaux_ing = be ;
 en_vaux_to = want ;
 
+en_verbs_person = be have ;
+
 might_get_pr = loc dat abl gen ;
 
 city = Нарын ;
@@ -109,8 +111,8 @@ vP -> 0: v.$transitivity vaux.$tense
           { 2(person=1.person,number=1.number) _1 to@pr _1 1(tense=inf) } ( 2.lem in en_vaux_to ) |
       v.$transitivity { 1 } ;
 
-v -> v                       { 1 } ( 1.lem in en_verbs_person ) |
-     v [$person=_,$number=_] { 1 }
+vaux -> vaux { 1 } |
+        vaux [$person=_,$number=_] ( ~( 1.lem in en_verbs_person ) ) { 1 }
   ;
 
 
