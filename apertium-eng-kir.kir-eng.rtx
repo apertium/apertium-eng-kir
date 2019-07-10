@@ -113,7 +113,7 @@ vP -> 0: v.$transitivity vaux.$tense
 
 vaux -> vaux { 1 } |
         vaux [$person=_,$number=_] ( ~( 1.lem in en_verbs_person ) ) { 1 }
-  ;
+     ;
 
 
 
