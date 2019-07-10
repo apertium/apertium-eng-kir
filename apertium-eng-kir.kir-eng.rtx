@@ -112,8 +112,8 @@ vP -> 0: v.$transitivity vAux.$tense
           { 2(person=1.person,number=1.number) _1 to@pr _1 1(tense=inf) } ( 2.lem in en_vaux_to ) |
       v.$transitivity { 1 } ;
 
-vAux -> vaux { 1 }
-             { 1(person=_,number=_) } ( ~( 1.lem in en_vaux_person ) )
+vAux -> vaux { 1(person=_,number=_) } ( ~( 1.lem in en_vaux_person ) )
+             { 1 }
      ;
 
 
