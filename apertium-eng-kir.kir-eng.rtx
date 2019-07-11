@@ -22,7 +22,7 @@ prc = (PTD pprs) prc_perf prc_ipf prc_irre pprs ;  ! select -ing if in doubt
 vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
-!allverbstuff = [tense] [prc] [vadv] [ger] [vadj] ;
+fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
 
 poss = px1sg px2sg px3sg px1pl px2pl px3pl;
 
