@@ -210,6 +210,9 @@
 		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
 		<e r="LR"><p><l>a<s n="det"/><s n="ind"/><s n="sg"/></l><r></r></p></e>
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
+		<e><p><l>this<s n="det"/><s n="dem"/></l><r>ушул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
+		<e><p><l>that<s n="det"/><s n="dem"/></l><r>ошол<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
+		<e><p><l>that<s n="det"/><s n="dem"/></l><r>тиги<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 
       <!-- Prepositions -->
 		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
