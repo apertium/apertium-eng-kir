@@ -14,6 +14,7 @@ prep_flag = (PRD noneb) to in on at for PRD none;
 adjlevel = cmp ;
 adjtype = sint ;
 nptype = n np ;
+det_type = dem ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
@@ -146,9 +147,10 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
           (if (1.person=p3 and 1.number=sg)
               { 1(person=p3, number=sg) }
            else
-              { 1(person=_, number=_) } 
+              { 1(person=_, number=_) }
           )
-		;
+		   |
+      2: v.$transitivity { 1 } ;
 
 vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
                        { 1(person=_, number=_) }
