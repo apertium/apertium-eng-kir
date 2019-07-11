@@ -105,19 +105,19 @@ PP -> DP ?(1.case in might_get_pr)
              { 1 }
           else
              { (if ((1.prep_flag = to) or (1.case = dat))
-                   to@pr
+                   [ to@pr _ ]
                 else-if (1.prep_flag = at)
-                   at@pr
+                   [ at@pr _ ]
                 else-if (1.prep_flag = in)
-                   in@pr
+                   [ in@pr _ ]
                 else-if (1.prep_flag = on)
-                   on@pr
+                   [ on@pr _ ]
                 else-if (1.case = gen)
-                   of@pr
+                   [ of@pr _ ]
                 else
-                   _
+                   []
                 )
-                _ 1 } );
+                1 } );
 
 VP -> PP DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
       DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
@@ -144,7 +144,7 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
            else ! 2.lem in en_vaux_to
               { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } ) |
       1: v.$transitivity
-          (if (1.person=p3 and 1.number=sg)
+          (if ((1.person=p3) and (1.number=sg))
               { 1(person=p3, number=sg) }
            else
               { 1(person=_, number=_) }
