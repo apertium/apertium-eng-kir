@@ -45,7 +45,7 @@ case > case : nom subj, acc obj, dat obj ;
 !!! PATTERNS !!!
 ! when building chunk or lu of this type, put these tags in this order
 
-NP: _.case.prep_flag ;
+NP: _.case.prep_flag.number ;
 DP: _.case.prep_flag ;
 VP: _ ;
 np: _ ;
@@ -57,6 +57,7 @@ adj: _.adjtype.adjlevel ;
 vP: _.transitivity.tense ;
 PP: _ ;
 AP: _ ;
+det: _.<dem>.number ;
 vAux: _.tense.person.number ;
 vaux: _.tense.person.number ;
 !vbser: _.tense.person.number ;
@@ -66,20 +67,22 @@ vaux: _.tense.person.number ;
 
 !!! RULES !!!
 
-NP ->	0: np.$lem/sl.$case/sl { 1 } |
-      1: n.$lem/sl.$case/sl { 1 } |
-      2: np.top.loc ?(1.lem/sl in city) [$case=loc,$prep_flag=in] { 1 } |
-      3: np.top.loc                     [$case=loc,$prep_flag=on] { 1 } |
-!      2: np.top.loc [$case=loc] { in@prep _ 1 } (1.lem/sl in city)
+NP ->	0: np.$lem/sl.$case/sl [$number=sg] { 1 } |
+      1: n.$lem/sl.$case/sl.$number { 1 } |
+      2: np.top.loc ?(1.lem/sl in city) [$case=loc,$prep_flag=in,$number=sg] { 1 } |
+      3: np.top.loc                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
+!      2: np.top.loc [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
 !                                { at@prep _ 1 } |
-      4: n.nom n.px3sp.$case { 1 _1 2 }
+      4: n.nom n.px3sp.$case [$number=sg] { 1 _1 2 }
    ;
 
 AP -> adj { 1 } ;
 !|
  !     AP { 1 } ;
 
-DP -> 0: NP.$case.$prep_flag { the@det.def.sp _ 1 } |
+DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
+      det AP NP.$case.$prep_flag { 1 _1 2 _2 3 } |
+      0: NP.$case.$prep_flag { the@det.def.sp _ 1 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
