@@ -44,6 +44,9 @@
     <sdef n="iv"              c="Intransitive"/>
     <sdef n="tv"              c="Transitive"/>
 
+    <sdef n="caus"            c="Causative"/>
+    <sdef n="pass"            c="Passive"/>
+
     <sdef n="nt"              c="Neuter"/>
     <sdef n="ut"              c="Utrum"/>
     <sdef n="f"               c="Feminine"/>
@@ -165,6 +168,8 @@
 		<e><p><l>show<g><b/>up</g><s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>give<s n="vblex"/></l><r>бер<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>show<s n="vblex"/></l><r>көрсөт<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>see<s n="vblex"/></l><r>көр<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>drop<s n="vblex"/></l><r>түш<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
 
 
 		<!-- vaux -->

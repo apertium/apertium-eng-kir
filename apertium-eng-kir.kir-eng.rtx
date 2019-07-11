@@ -18,7 +18,7 @@ nptype = n np ;
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
 tense = (TD pres) pres aor ifi past ;  ! finites
-prc = (PTD pprs) prc_perf prc_ipf prc_irre pprs ;  ! select -ing if in doubt
+prc = (PTD pprs) prc_perf prc_impf prc_irre pprs ;  ! select -ing if in doubt
 vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
@@ -48,7 +48,7 @@ tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
-
+fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 !!! PATTERNS !!!
 ! when building chunk or lu of this type, put these tags in this order
@@ -135,12 +135,18 @@ VP -> PP DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
 !v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
 !v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
 
-vP -> 0: v.$transitivity vAux.$tense
+vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
           (if (2.lem in en_vaux_ing)
               { 2 _1 1(tense=pprs) }
            else ! 2.lem in en_vaux_to
               { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } ) |
-      1: v.$transitivity { 1 } ;
+      1: v.$transitivity
+          (if (1.person=p3 and 1.number=sg)
+              { 1(person=p3, number=sg) }
+           else
+              { 1(person=_, number=_) } 
+          )
+		;
 
 vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
                        { 1(person=_, number=_) }
