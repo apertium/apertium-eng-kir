@@ -98,8 +98,10 @@ PP -> DP ?(1.case in might_get_pr)
                    in@pr
                 else-if (1.prep_flag = on)
                    on@pr
+                else-if (1.case = gen)
+                   of@pr
                 else
-                   not_a_real_prep@pr
+                   _
                 )
                 _ 1 } );
 

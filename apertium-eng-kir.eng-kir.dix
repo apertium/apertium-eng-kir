@@ -50,6 +50,7 @@
     <sdef n="m"               c="Masculine"/>
     <sdef n="mf"              c="Masculine or Feminine"/>
     <sdef n="un"              c="No gender"/>
+    <sdef n="GD"              c="Gender TBD"/>
 
     <sdef n="sg"              c="Singular"/>
     <sdef n="du"              c="Dual"/>
@@ -66,6 +67,7 @@
     <sdef n="gen"             c="Genitive"/>
     <sdef n="subj"            c="Subject"/>
     <sdef n="obj"             c="Object"/>
+    <sdef n="CD"              c="Case TBD"/>
 
     <sdef n="dem"             c="Demonstrative"/>
     <sdef n="itg"             c="Question word / interrogative"/>
@@ -179,10 +181,12 @@
 		<e><p><l>a<b/>lot<s n="adv"/></l><r>көп<s n="adv"/></r></p></e>
 
       <!-- PRONOUNS -->
-		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
+		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
 		<e><p><l>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>сиз<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/><s n="frm"/></r></p></e>
 		<e><p><l>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>сен<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></r></p></e>
-		<e><p><l>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>биз<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
+		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>биз<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
+		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="GD"/><s n="sg"/></l><r>ал<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
+		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>алар<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
 
 		<!-- NUMBERS -->
 		<e><p><l>one</l><r>бир</r></p><par n="par__num"/></e>
