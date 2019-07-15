@@ -160,10 +160,10 @@ $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 ###############################################################################
 
 $(PREFIX1).rtx.bin: $(BASENAME).$(PREFIX1).rtx
-	rtx-comp $< $@ $(PREFIX1).rtx.bin2
+	rtx-comp $< $@
 
 $(PREFIX2).rtx.bin: $(BASENAME).$(PREFIX2).rtx
-	rtx-comp $< $@ $(PREFIX2).rtx.bin2
+	rtx-comp $< $@
 
 
 ###############################################################################
