@@ -63,7 +63,7 @@ S: _ ;
 n: _.number ;
 v: _.tense ;
 adj: _.adjtype.adjlevel ;
-vP: _.transitivity.tense; ! .fnf ;
+vP: _.transitivity.tense.fnf; ! .fnf ;
 PP: _ ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -143,17 +143,18 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
               { 2 _1 1(tense=pprs) }
            else ! 2.lem in en_vaux_to
               { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } ) |
-      1: v.$transitivity
+      1: v.$transitivity [$fnf=1.fnfall>fnf]
           (if ((1.person=p3) and (1.number=sg))
               { 1(person=p3, number=sg) }
            else
               { 1(person=_, number=_) }
           )
 		   |
-      2: v.$transitivity { 1 } ;
+      2: v.$transitivity [$fnf=1.fnfall>fnf]
+          { 1 } ;
 
-TOTAL_HACK: _;
-TOTAL_HACK -> vP TOTAL_HACK ?(x not equal x) { 1 _1 2 };
+!TOTAL_HACK: _;
+!TOTAL_HACK -> vP TOTAL_HACK ?(x not equal x) { 1 _1 2 };
 ! this rule never applies, but the fact that it exists
 ! ensure that paths ending in vP will not be discarded for being dead ends
 
