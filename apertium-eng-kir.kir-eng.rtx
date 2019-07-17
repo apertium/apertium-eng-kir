@@ -2,6 +2,7 @@
 
 number = (ND sg) sg pl sp ;
 case = (CD subj) nom acc dat gen loc abl subj obj ;
+oblique = (CD obj) acc dat loc abl obj ;
 prontype = pers dem ;
 !tenseetc = ifi past aor pres prc_perf prc_ipf ;
 !nonfinite = prc_perf, pprs, prc_impf, pprs ;
@@ -98,7 +99,7 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
       2: prn.$case { 1 } |
-      VP.prc DP { 2 _1 that@cnjsub _ 1 }
+      VP.prc DP.$case { 2 _1 that@cnjsub _ 1 }
    ;
 
 PP -> DP ?(1.case in might_get_pr)
@@ -122,7 +123,7 @@ PP -> DP ?(1.case in might_get_pr)
 
 VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
       DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
-      DP DP vP.$fnf { 3 _2 2 _1 1 } |
+      DP.oblique DP.acc vP.$fnf { 3 _2 2 _1 1 } |
       PP DP.acc vP.$fnf { 3 _2 2 _1 1 }
    ;
 
