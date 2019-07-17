@@ -19,7 +19,7 @@ det_type = dem ;
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
 tense = (TD pres) pres aor ifi past ;  ! finites
-prc = (PTD pprs) prc_perf prc_impf prc_irre pprs ;  ! select -ing if in doubt
+prc = (PTD pprs) prc_past prc_impf prc_irre pprs ;  ! select -ing if in doubt
 vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
@@ -56,14 +56,14 @@ fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 NP: _.nptype.case.prep_flag.number ;
 DP: _.case.prep_flag ;
-VP: _ ;
+VP: _.fnf ;
 np: _ ;
 prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
 v: _.tense ;
 adj: _.adjtype.adjlevel ;
-vP: _.transitivity.tense.fnf; ! .fnf ;
+vP: _.transitivity.tense.fnf;
 PP: _ ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -97,7 +97,8 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
-      2: prn.$case { 1 }
+      2: prn.$case { 1 } |
+      VP.prc DP { 2 _1 that@cnjsub _ 1 }
    ;
 
 PP -> DP ?(1.case in might_get_pr)
@@ -119,10 +120,10 @@ PP -> DP ?(1.case in might_get_pr)
                 )
                 1 } );
 
-VP -> PP DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
-      DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity { 3 _2 2 _1 1 } |
-      DP DP vP { 3 _2 2 _1 1 } |
-      PP DP.acc vP { 3 _2 2 _1 1 }
+VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
+      DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
+      DP DP vP.$fnf { 3 _2 2 _1 1 } |
+      PP DP.acc vP.$fnf { 3 _2 2 _1 1 }
    ;
 
 
