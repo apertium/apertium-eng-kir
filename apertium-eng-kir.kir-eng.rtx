@@ -98,7 +98,7 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
       2: prn.$case { 1 } |
-      VP.prc DP { 2 _1 that@cnjsub _ 1 }
+      VP.prc DP.$case { 2 _1 that@cnjsub _ 1 }
    ;
 
 PP -> DP ?(1.case in might_get_pr)
@@ -122,7 +122,12 @@ PP -> DP ?(1.case in might_get_pr)
 
 VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
       DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
-      DP DP vP.$fnf { 3 _2 2 _1 1 } |
+      DP DP vP.$fnf ?((1.case not = nom) or (2.case not = nom) or (3.fnf not = prc))
+            (if ((1.case = nom) and (2.case = acc))
+                { 1 _1 3 _2 2 }
+             else
+                { 3 _2 2 _1 1 } ) |
+      DP vP.$fnf { 1 _1 2 } |
       PP DP.acc vP.$fnf { 3 _2 2 _1 1 }
    ;
 
@@ -139,26 +144,24 @@ VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
 !v -> 0: v.$tenseetc vaux { 2[vaux_thing] _1 1 } ;
 !v -> 0: v.$tenseetc vaux.$tense { 2 _1 1 } ;
 
+prc_or_tense = [prc] [tense] ;
+prc_or_tense > tense : prc_past past ;
+
 vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
           (if (2.lem in en_vaux_ing)
               { 2 _1 1(tense=pprs) }
            else ! 2.lem in en_vaux_to
               { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } )
        |
-      1: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
-          (if ((1.person=p3) and (1.number=sg))
-              { 1(person=p3, number=sg) }
-           else
-              { 1(person=_, number=_) }
-          )
-       |
-      2: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
-          { 1 } ;
-
-!TOTAL_HACK: _;
-!TOTAL_HACK -> vP TOTAL_HACK ?(x not equal x) { 1 _1 2 };
-! this rule never applies, but the fact that it exists
-! ensure that paths ending in vP will not be discarded for being dead ends
+      !1: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
+      !    (if ((1.person=p3) and (1.number=sg))
+      !        { 1(person=p3, number=sg) }
+      !     else
+      !        { 1(person=_, number=_) }
+      !    )
+      ! |
+      2: v.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { 1(tense=$tense) } ;
 
 vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
                        { 1(person=_, number=_) }
