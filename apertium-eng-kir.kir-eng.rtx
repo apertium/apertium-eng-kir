@@ -123,6 +123,7 @@ PP -> DP ?(1.case in might_get_pr)
 
 VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
       DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
+!      DP.oblique DP.acc vP.$fnf { 3 _2 2 _1 1 } |
       DP DP vP.$fnf ?((1.case not = nom) or (2.case not = nom) or (3.fnf not = prc))
             (if ((1.case = nom) and (2.case = acc))
                 { 1 _1 3 _2 2 }
