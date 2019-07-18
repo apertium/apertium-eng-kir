@@ -114,5 +114,12 @@
 			</p>
 			<i><j/></i>
 		</e>
+		<e lm="ооз тий" c="taste">
+			<p>
+				<l>ооз<s n="n"/><s n="nom"/><j/>тий<s n="v"/><s n="tv"/></l>
+				<r>ооз<b/>тий<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
 	</section>
 </dictionary>

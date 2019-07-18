@@ -139,6 +139,9 @@
       <e><p><l>road<s n="n"/></l><r>жол<s n="n"/></r></p></e>
       <e><p><l>way<s n="n"/></l><r>жол<s n="n"/></r></p></e>
       <e><p><l>year<s n="n"/></l><r>жыл<s n="n"/></r></p></e>
+      <e><p><l>chicken<s n="n"/></l><r>тоок<s n="n"/></r></p></e>
+      <e><p><l>meat<s n="n"/></l><r>эт<s n="n"/></r></p></e>
+      <e><p><l>mouth<s n="n"/></l><r>ооз<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
@@ -148,6 +151,7 @@
 		<e><p><l>international<s n="adj"/><s n="sint"/></l><r>эл<b/>аралык<s n="adj"/></r></p></e>
 		<e><p><l>beautiful<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
 		<e><p><l>pretty<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
+		<e><p><l>tasty<s n="adj"/><s n="sint"/></l><r>дамдуу<s n="adj"/></r></p></e>
 
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
@@ -170,6 +174,10 @@
 		<e><p><l>show<s n="vblex"/></l><r>көрсөт<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>see<s n="vblex"/></l><r>көр<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>drop<s n="vblex"/></l><r>түш<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
+		<e><p><l>try<s n="vblex"/></l><r>ооз<b/>тий<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>taste<s n="vblex"/></l><r>ооз<b/>тий<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>touch<s n="vblex"/></l><r>тий<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>eat<s n="vblex"/></l><r>же<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
