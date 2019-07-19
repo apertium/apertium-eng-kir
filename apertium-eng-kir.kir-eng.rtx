@@ -169,7 +169,12 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       3: cop [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       4: cop.neg [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { 1(tense=$tense) _ not@adv } |
+      3: v ?((1.lem/sl = бол) and (1.lem/tl = be)) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { 1(tense=$tense) } |
+      4: v.neg ?((1.lem/sl = бол) and (1.lem/tl = be)) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } ;
+
 
 
 
