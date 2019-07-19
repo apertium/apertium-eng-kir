@@ -167,7 +167,10 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       2: v.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       3: cop [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { 1(tense=$tense) } ;
+          { 1(tense=$tense) } |
+      4: cop.neg [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { 1(tense=$tense) _ not@adv } ;
+
 
 
 vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
