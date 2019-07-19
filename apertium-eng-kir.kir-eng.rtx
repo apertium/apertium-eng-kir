@@ -164,8 +164,10 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       !        { 1(person=_, number=_) }
       !    )
       ! |
-      2: v.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      1: v.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
+      2: v.*.neg.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { do@vbdo.$tense _ not@adv _ 1(tense=inf) } |
       3: cop [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       4: cop.neg [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
