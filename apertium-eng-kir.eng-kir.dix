@@ -143,6 +143,11 @@
       <e><p><l>chicken<s n="n"/></l><r>тоок<s n="n"/></r></p></e>
       <e><p><l>meat<s n="n"/></l><r>эт<s n="n"/></r></p></e>
       <e><p><l>mouth<s n="n"/></l><r>ооз<s n="n"/></r></p></e>
+      <e><p><l>arm<s n="n"/></l><r>кол<s n="n"/></r></p></e>
+      <e><p><l>hand<s n="n"/></l><r>кол<s n="n"/></r></p></e>
+      <e><p><l>city<s n="n"/></l><r>шаар<s n="n"/></r></p></e>
+      <e><p><l>village<s n="n"/></l><r>айыл<s n="n"/></r></p></e>
+      <e><p><l>town<s n="n"/></l><r>шаарча<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
@@ -167,6 +172,7 @@
 		<e><p><l>be<s n="vbser"/></l><r>э<s n="cop"/></r></p></e>
 		<e><p><l>happen<s n="vblex"/></l><r>бол<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>happen<s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>become<s n="vblex"/></l><r>бол<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>pass<s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>go<g><b/>on</g><s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>come<s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
