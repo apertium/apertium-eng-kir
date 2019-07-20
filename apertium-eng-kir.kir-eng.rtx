@@ -118,6 +118,8 @@ PP -> DP ?(1.case in might_get_pr)
                    [ from@pr _ ]
                 else-if (1.case = dat)
                    [ to@pr _ ]
+                else
+                   []
                )
 				 1 }
           else
