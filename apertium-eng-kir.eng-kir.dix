@@ -148,6 +148,9 @@
       <e><p><l>city<s n="n"/></l><r>шаар<s n="n"/></r></p></e>
       <e><p><l>village<s n="n"/></l><r>айыл<s n="n"/></r></p></e>
       <e><p><l>town<s n="n"/></l><r>шаарча<s n="n"/></r></p></e>
+      <e><p><l>official<s n="n"/></l><r>депутат<s n="n"/></r></p></e>
+      <e><p><l>jail<s n="n"/></l><r>абак<s n="n"/></r></p></e>
+      <e><p><l>prison<s n="n"/></l><r>түрмө<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
@@ -158,6 +161,7 @@
 		<e><p><l>beautiful<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
 		<e><p><l>pretty<s n="adj"/><s n="sint"/></l><r>сулуу<s n="adj"/></r></p></e>
 		<e><p><l>tasty<s n="adj"/><s n="sint"/></l><r>дамдуу<s n="adj"/></r></p></e>
+		<e><p><l>former<s n="adj"/></l><r>мурда<s n="adv"/><s n="attr"/></r></p></e>
 
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
@@ -186,6 +190,8 @@
 		<e><p><l>touch<s n="vblex"/></l><r>тий<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>eat<s n="vblex"/></l><r>же<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>do<s n="vblex"/></l><r>кыл<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>transfer<s n="vblex"/></l><r>котор<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>translate<s n="vblex"/></l><r>котор<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->

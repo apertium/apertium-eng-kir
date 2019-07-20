@@ -10,20 +10,23 @@ person = (PD p3) p1 p2 p3 ;
 transitivity = tv iv cop ;
 gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
-prep_flag = (PRD noneb) to in on at for PRD none;
+prep_flag = (PRD none) to in on at for PRD none;
                  ! ^ hack, but not all NPs have prep_flag set, which overrides <dat> and this no pr
 adjlevel = cmp ;
 adjtype = sint ;
+adv_behaviour = attr ;
+advlevel = cmp ;
 nptype = n np ;
 det_type = dem ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
 tense = (TD pres) pres aor ifi past ;  ! finites
-prc = (PTD pprs) prc_past prc_impf prc_irre pprs ;  ! select -ing if in doubt
+prc = (PTD pprs) prc_past prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
 vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
+voice = pass caus ;
 fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
 
 poss = px1sg px2sg px3sg px1pl px2pl px3pl;
@@ -70,6 +73,9 @@ AP: _ ;
 det_dem: _.<dem>.number ;
 det_def: _.definite.number ;
 det: (if (1.det_type = dem) 1[det_dem] else 1[det_def]);
+adv_attr: _ ;
+adv_default: _.advlevel ;
+adv: (if (1.adv_behaviour = attr) 1[adv_attr] else 1[adv_default]);
 vAux: _.tense.person.number ;
 vaux: _.tense.person.number ;
 cop: _.tense.person.number ;
@@ -89,7 +95,8 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl [$number=sg] { 1 } |
       4: n.nom n.px3sp.$case.$nptype [$number=sg] { 1 _1 2 }
    ;
 
-AP -> adj { 1 } ;
+AP -> adj { 1 } |
+      adv.attr { 1 } ;
 !|
  !     AP { 1 } ;
 
@@ -104,8 +111,15 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
    ;
 
 PP -> DP ?(1.case in might_get_pr)
-         (if (1.prep_flag = none)
-             { 1 }
+         (if ((1.prep_flag = none) or (1.prep_flag = PRD))
+             { (if (1.case = gen)
+                   [ of@pr _ ]
+                else-if (1.case = abl)
+                   [ from@pr _ ]
+                else-if (1.case = dat)
+                   [ to@pr _ ]
+               )
+				 1 }
           else
              { (if ((1.prep_flag = to) or (1.case = dat))
                    [ to@pr _ ]
@@ -115,8 +129,8 @@ PP -> DP ?(1.case in might_get_pr)
                    [ in@pr _ ]
                 else-if (1.prep_flag = on)
                    [ on@pr _ ]
-                else-if (1.case = gen)
-                   [ of@pr _ ]
+                else-if (1.prep_flag = from)
+                   [ from@pr _ ]
                 else
                    []
                 )
@@ -165,18 +179,22 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       !    )
       ! |
       1: v.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { 1(tense=$tense) } |
+          (if (1.voice/sl = pass)
+              { be@vbser(person=$person,number=$number,tense=$tense) _ 1(tense=pp) }
+           else
+              { 1(tense=$tense) } ) |
       2: v.*.neg.$transitivity [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { do@vbdo.$tense _ not@adv _ 1(tense=inf) } |
+
       3: cop [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       4: cop.neg [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } |
+
       3: бол@v ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       4: бол@v.*.neg ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } ;
-
 
 
 
