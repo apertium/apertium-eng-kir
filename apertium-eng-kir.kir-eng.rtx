@@ -188,4 +188,4 @@ vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
 
 
 
-S -> DP.nom VP { 1 _1 2 } ;
+S -> DP.nom VP.fin { 1 _1 2 } ;
