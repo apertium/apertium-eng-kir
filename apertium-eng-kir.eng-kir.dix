@@ -167,6 +167,7 @@
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>throw<b/>away<s n="vblex"/></l><r>ташта<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>take<s n="vblex"/></l><r>ал<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>get<s n="vblex"/></l><r>ал<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>take<b/>away<s n="vblex"/></l><r>алып<b/>кет<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>take<b/>away<s n="vblex"/></l><r>алып<b/>сал<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>fly<s n="vblex"/></l><r>уч<s n="v"/><s n="iv"/></r></p></e>
@@ -192,6 +193,10 @@
 		<e><p><l>do<s n="vblex"/></l><r>кыл<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>transfer<s n="vblex"/></l><r>котор<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>translate<s n="vblex"/></l><r>котор<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>lift<s n="vblex"/></l><r>көтөр<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>carry<s n="vblex"/></l><r>көтөр<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>fall<s n="vblex"/></l><r>түш<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>fall<s n="vblex"/></l><r>кула<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
