@@ -1,0 +1,9 @@
+Мен туристтер түшүргөн сулуу чымчыкты көрдүм.|I saw the pretty bird that the tourists dropped.
+Мен жаман турист эмесмин.|I am not the bad tourist.
+Мен жаман туристтерге сулуу чымчыкты көрсөттүм.|I showed the pretty bird to the bad tourists.
+Мен туристтерди көрдүм.|I saw the tourists.
+Мен туристтерди көргөн жокмун.|I did not see the tourists.
+Мен дамдуу этти жегим келди.|I wanted to eat the tasty meat.
+Мен дамдуу этти жеп атам.|I am eating the tasty meat.
+Мен дамдуу этти жеген жокмун.|I did not eat the tasty meat.
+
