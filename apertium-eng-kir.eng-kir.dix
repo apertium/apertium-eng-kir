@@ -201,6 +201,9 @@
 		<e><p><l>enter<s n="vblex"/></l><r>кир<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>go<g><b/>in</g><s n="vblex"/></l><r>кир<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>go<s n="vblex"/></l><r>бар<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>leave<s n="vblex"/></l><r>чык<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>go<g><b/>out<b/>of</g><s n="vblex"/></l><r>чык<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>leave<s n="vblex"/></l><r>кет<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->

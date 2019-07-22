@@ -34,7 +34,9 @@ poss = px1sg px2sg px3sg px1pl px2pl px3pl;
 en_nouns_mass = bread paper ;
 en_nouns_count = window paper ;
 
-en_verbs_nopr = believe touch enter go cross;
+en_verbs_nopr = believe touch enter reach cross leave;
+ky_verbs_dat_arg = ишен тий кир жет;
+ky_verbs_abl_arg = өт аш;
 en_vaux_ing = be ;
 en_vaux_to = want ;
 
