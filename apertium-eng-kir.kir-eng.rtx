@@ -27,6 +27,7 @@ vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
 voice = pass caus ;
+passive = pass ;
 fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
 
 poss = px1sg px2sg px3sg px1pl px2pl px3pl;
@@ -189,7 +190,7 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       !    )
       ! |
       1: v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          (if (1.voice/sl = pass)
+          (if (1.passive/sl = pass)
               { be@vbser.$tense.$person.$number _ 1(tense=pp) }
            else
               { 1(tense=$tense) } ) |
