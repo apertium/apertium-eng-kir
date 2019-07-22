@@ -55,6 +55,7 @@ tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
+case > prep_flag : dat to;
 fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 !!! OUTPUT PATTERNS !!!
@@ -88,7 +89,7 @@ cop: _.tense.person.number ;
 
 !!! RULES !!!
 
-NP ->	0: np.$nptype.$lem/sl.$case/sl [$number=sg] { 1 } |
+NP ->	0: np.$nptype.$lem/sl.$case/sl [$number=sg,$prep_flag=1.case/sl>prep_flag] { 1 } |
       1: n.$nptype.$lem/sl.$case/sl.$number { 1 } |
       2: np.top.loc.$nptype ?(1.lem/sl in city) [$case=loc,$prep_flag=in,$number=sg] { 1 } |
       3: np.top.loc.$nptype                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
