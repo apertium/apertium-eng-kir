@@ -55,7 +55,7 @@ tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
-case > prep_flag : dat to;
+case > prep_flag : dat to, abl from, gen of, loc at, acc none, nom none;
 fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 !!! OUTPUT PATTERNS !!!
