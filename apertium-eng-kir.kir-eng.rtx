@@ -70,7 +70,7 @@ n: _.number ;
 v: _.tense ;
 adj: _.adjtype.adjlevel ;
 vP: _.transitivity.tense.fnf;
-PP: _ ;
+PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
 det_def: _.definite.number ;
