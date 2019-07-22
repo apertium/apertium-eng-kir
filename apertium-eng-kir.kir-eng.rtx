@@ -113,7 +113,9 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
    ;
 
 PP -> DP ?(1.case in might_get_pr)
-         (if ((1.prep_flag = none) or (1.prep_flag = PRD))
+         (if (1.prep_flag = none) 
+             { 1 }
+          else-if (1.prep_flag = PRD)
              { (if (1.case = gen)
                    [ of@pr _ ]
                 else-if (1.case = abl)
@@ -123,7 +125,7 @@ PP -> DP ?(1.case in might_get_pr)
                 else
                    []
                )
-				 1 }
+              1 }
           else
              { (if ((1.prep_flag = to) or (1.case = dat))
                    [ to@pr _ ]
