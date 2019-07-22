@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
-  <!-- 
-    This rule chooses "energía" as the translation of "power" when it is preceded by "wind". 
-    Add your own rules within <rule> here, using the resources below as a guide 
-  -->
-
   <rule>
-    <match lemma="wind"/>
-    <match lemma="power" tags="n.*">
-      <select lemma="energía" tags="n.*"/>
+    <match tags="num.ord"/>
+    <match lemma="жол" tags="n.*">
+      <select lemma="time" tags="n.*"/>
     </match>
   </rule>
+  <rule>
+    <match tags="*.abl"/>
+    <match lemma="өт" tags="v.iv.*">
+      <select lemma="pass" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule weight="1.2">
+    <match lemma="өт" tags="v.iv.*">
+      <select lemma="go# on" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="үй" tags="n.*">
+      <select lemma="home" tags="n.*"/>
+    </match>
+  </rule>
+  <rule weight="1.2">
+    <match lemma="үй" tags="n.*">
+      <select lemma="house" tags="n.*"/>
+    </match>
+    <or>
+      <match lemma="кир" tags="v.*"/>
+      <match lemma="чык" tags="v.*"/>
+    </or>
+  </rule>
 </rules>
-
 <!-- 
 Resources: 
     http://wiki.apertium.org/wiki/How_to_get_started_with_lexical_selection_rules
@@ -20,4 +39,3 @@ Resources:
     http://wiki.apertium.org/wiki/Lexical_selection
     http://wiki.apertium.org/wiki/Learning_rules_from_parallel_and_non-parallel_corpora
 -->
-

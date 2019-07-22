@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<metalrx>
+<def-seqs>
+	<def-seq n="state-change-motion-verbs">
+		<!-- distinguish between "house" and "home" -->
+		<!-- e.g., "үйгө кир" = "go into the house", but "үйгө бар" = "go home" -->
+		<or>
+			<match lemma="кир" tags="v.*"/>
+			<match lemma="чык" tags="v.*"/>
+		</or>
+	</def-seq>
+</def-seqs>
+
 <rules>
 	<rule>
 		<match tags="num.ord"/>
@@ -19,8 +31,20 @@
 		</match>
 	</rule>
 
-</rules>
+	<rule>
+		<match lemma="үй" tags="n.*">
+			<select lemma="home" tags="n.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="үй" tags="n.*">
+			<select lemma="house" tags="n.*"/>
+		</match>
+		<seq n="state-change-motion-verbs"/>
+	</rule>
 
+</rules>
+</metalrx>
 <!-- 
 Resources: 
     http://wiki.apertium.org/wiki/How_to_get_started_with_lexical_selection_rules
@@ -28,4 +52,3 @@ Resources:
     http://wiki.apertium.org/wiki/Lexical_selection
     http://wiki.apertium.org/wiki/Learning_rules_from_parallel_and_non-parallel_corpora
 -->
-

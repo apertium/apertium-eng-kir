@@ -127,6 +127,7 @@
    <section id="main" type="standard">
       <!-- NOUNS -->
       <e><p><l>house<s n="n"/></l><r>үй<s n="n"/></r></p></e>
+      <e><p><l>home<s n="n"/></l><r>үй<s n="n"/></r></p></e>
       <e><p><l>paper<s n="n"/></l><r>кагаз<s n="n"/></r></p></e>
       <e><p><l>teacher<s n="n"/></l><r>мугалим<s n="n"/></r></p></e>
       <e><p><l>bird<s n="n"/></l><r>чымчык<s n="n"/></r></p></e>
@@ -197,6 +198,9 @@
 		<e><p><l>carry<s n="vblex"/></l><r>көтөр<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>fall<s n="vblex"/></l><r>түш<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>fall<s n="vblex"/></l><r>кула<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>enter<s n="vblex"/></l><r>кир<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>go<g><b/>in</g><s n="vblex"/></l><r>кир<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>go<s n="vblex"/></l><r>бар<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->

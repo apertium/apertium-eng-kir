@@ -34,7 +34,7 @@ poss = px1sg px2sg px3sg px1pl px2pl px3pl;
 en_nouns_mass = bread paper ;
 en_nouns_count = window paper ;
 
-en_verbs_nopr = believe ;
+en_verbs_nopr = believe touch enter go cross;
 en_vaux_ing = be ;
 en_vaux_to = want ;
 
@@ -142,13 +142,19 @@ VP -> PP DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
       DP.definiteness.prep_flag DP.definiteness.prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
 !      DP.oblique DP.acc vP.$fnf { 3 _2 2 _1 1 } |
       DP vP.cop.$fnf { 2 _1 1 } |
-      DP DP vP.$fnf.$transitivity ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
+      DP DP vP.$fnf.$transitivity
+!         ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
+         ?(
+            ((2.case = nom) and (1.case in might_get_pr)) or
+            ((2.case = acc) and (1.case in might_get_pr))
+          )
             (if ((1.case = nom) and (2.case = acc))
                 { 1 _1 3 _2 2 }
              else
                 { 3 _2 2 _1 1 } ) |
       DP vP.$fnf { 1 _1 2 } |
-      PP DP.acc vP.$fnf { 3 _2 2 _1 1 }
+      PP DP.acc vP.$fnf { 3 _2 2 _1 1 } |
+      PP PP vP.$fnf.$transitivity { 3 _2 2 _1 1 }
    ;
 
 

@@ -121,6 +121,11 @@ $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 ## Lexical sequences
 ###############################################################################
 
+%.lrx: metalrx-to-lrx.xslt %.metalrx
+	xsltproc $^ > $@.tmp
+	@xmllint --format $@.tmp > $@
+	@rm $@.tmp
+
 $(PREFIX1).autoseq.bin: $(BASENAME).$(PREFIX1).lsx
 	lsx-comp lr $< $@
 
