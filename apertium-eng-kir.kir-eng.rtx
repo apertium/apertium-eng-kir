@@ -10,7 +10,7 @@ person = (PD p3) p1 p2 p3 ;
 transitivity = tv iv cop ;
 gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
-prep_flag = (PRD none) to in on at for PRD none;
+prep_flag = (PRD none) to in on at for from PRD none;
                  ! ^ hack, but not all NPs have prep_flag set, which overrides <dat> and this no pr
 adjlevel = cmp ;
 adjtype = sint ;
