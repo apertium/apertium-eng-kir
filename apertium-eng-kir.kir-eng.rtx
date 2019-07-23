@@ -147,7 +147,13 @@ VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
                 { 1 _1 3 _2 2 }
              else
                 { 3 _2 2 _1 1 } ) |
-      DP vP.$fnf { 1 _1 2 } |
+      DP vP.$transitivity.$fnf
+         ?(not
+            (
+               ((2.passive = pass) or (2.transitivity = iv))
+               and (1.case = nom)
+            )
+          ) { 1 _1 2 } |
       PP DP.acc vP.$fnf { 3 _2 2 _1 1 } |
       PP PP vP.$fnf.$transitivity { 3 _2 2 _1 1 } |
       PP vP.$fnf.$transitivity
@@ -157,7 +163,8 @@ VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
              else
                1
             )
-         }
+         } |
+      vP.$fnf.$transitivity { 1 }
    ;
 
 
