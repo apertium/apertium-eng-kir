@@ -198,7 +198,7 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       ! |
       1: v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           (if (1.passive/sl = pass)
-              { be@vbser.$tense.$person.$number _ 1(tense=pp) }
+              { be@vbser.$tense.[1.person].[1.number] _ 1(tense=pp) }
            else
               { 1(tense=$tense) } ) |
       2: v.*.neg.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
