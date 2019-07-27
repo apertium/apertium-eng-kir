@@ -53,7 +53,7 @@ city = Нарын ;
 
 poss > person : px1sg p1, px2sg p2, px3sg p3, px1pl p1, px2pl p2, px3pl p3, px3sp p3;
 poss > number : px1sg sg, px2sg sg, px3sg sg, px1pl pl, px2pl pl, px3pl pl, px3sp sg;
-poss > gender : px1sg mf, px2sg mf, px3sg nt, px1pl mf, px2pl mf, px3pl mf, px3sp mf;
+poss > gender : px1sg mf, px2sg mf, px3sg nt, px1pl mf, px2pl mf, px3pl mf, px3sp nt;
 tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
