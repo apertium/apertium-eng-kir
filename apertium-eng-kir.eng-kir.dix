@@ -160,6 +160,7 @@
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
+		<e><p><l>absent<s n="adj"/></l><r>жок<s n="adj"/></r></p></e>
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>жаман<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>начар<s n="adj"/></r></p></e>
