@@ -30,7 +30,7 @@ voice = pass caus ;
 passive = pass ;
 fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
 
-poss = (PSD PSD) px1sg px2sg px3sg px1pl px2pl px3pl px3sp;
+poss = (PSD noPOSS) px1sg px2sg px3sg px1pl px2pl px3pl px3sp noPOSS;
 px3 = px3sp px3sg px3pl ;
 
 en_nouns_mass = bread paper ;
@@ -53,6 +53,7 @@ city = Нарын ;
 
 poss > person : px1sg p1, px2sg p2, px3sg p3, px1pl p1, px2pl p2, px3pl p3;
 poss > number : px1sg sg, px2sg sg, px3sg sg, px1pl pl, px2pl pl, px3pl pl;
+poss > gender : px1sg mf, px2sg mf, px3sg nt, px1pl mf, px2pl mf, px3pl mf;
 tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
@@ -107,7 +108,13 @@ AP -> adj { 1 } |
 
 DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       det AP NP.$case.$prep_flag { 1 _1 2 _2 3 } |
-      0: NP.$case.$prep_flag { the@det.def.sp _ 1 } |
+      0: NP.$case.$prep_flag {
+          (if (1.poss = noPOSS)
+               [ the@det.def.sp ]
+             else
+               [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
+               ! [ prpers@det.pos(person=1.poss>person,gender=1.poss>gender,number=1.poss>number) ]
+          ) _ 1 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
