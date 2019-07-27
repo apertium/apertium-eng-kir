@@ -113,7 +113,6 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
                [ the@det.def.sp ]
              else
                [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
-               ! [ prpers@det.pos(person=1.poss>person,gender=1.poss>gender,number=1.poss>number) ]
           ) _ 1 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
