@@ -152,8 +152,14 @@
       <e><p><l>official<s n="n"/></l><r>депутат<s n="n"/></r></p></e>
       <e><p><l>jail<s n="n"/></l><r>абак<s n="n"/></r></p></e>
       <e><p><l>prison<s n="n"/></l><r>түрмө<s n="n"/></r></p></e>
+      <e><p><l>cat<s n="n"/></l><r>мышык<s n="n"/></r></p></e>
+      <e><p><l>puppy<s n="n"/></l><r>күчүк<s n="n"/></r></p></e>
+      <e><p><l>dog<s n="n"/></l><r>күчүк<s n="n"/></r></p></e>
+      <e><p><l>dog<s n="n"/></l><r>ит<s n="n"/></r></p></e>
+      <e><p><l>tail<s n="n"/></l><r>куйрук<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
+		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>жаман<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>начар<s n="adj"/></r></p></e>
@@ -183,6 +189,7 @@
 		<e><p><l>pass<s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>go<g><b/>on</g><s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>come<s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>get<g><b/>home</g><s n="vblex"/></l><r>үйгө<b/>кел<s n="v"/><s n="iv"/></r></p></e><!-- FIXME: add to lsxes -->
 		<e><p><l>show<g><b/>up</g><s n="vblex"/></l><r>кел<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>give<s n="vblex"/></l><r>бер<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>show<s n="vblex"/></l><r>көрсөт<s n="v"/><s n="tv"/></r></p></e>
