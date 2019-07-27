@@ -106,7 +106,9 @@ AP -> adj { 1 } |
 !|
  !     AP { 1 } ;
 
-DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
+DP -> 1: NP.gen NP.$case.$prep_flag.px3 { 1 's@gen _1 2 } |
+      2: NP.gen NP.$case.$prep_flag.px3 { 2 _1 of@pr _ 1 } |
+      det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       det AP NP.$case.$prep_flag { 1 _1 2 _2 3 } |
       0: NP.$case.$prep_flag {
           (if (1.poss = noPOSS)
@@ -118,9 +120,7 @@ DP -> det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
       2: prn.$case { 1 } |
-      VP.prc DP.$case { 2 _1 that@cnjsub _ 1 } |
-      1: NP.gen NP.$case.$prep_flag.px3 { 1 's@gen _1 2 } |
-      2: NP.gen NP.$case.$prep_flag.px3 { 2 _1 of@pr _ 1 }
+      VP.prc DP.$case { 2 _1 that@cnjsub _ 1 }
    ;
 
 PP -> DP.$prep_flag ?(1.case in might_get_pr)
