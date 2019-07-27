@@ -7,3 +7,5 @@
 Мен дамдуу этти жеп атам.|I am eating the tasty meat.
 Мен дамдуу этти жеген жокмун.|I did not eat the tasty meat.
 Сыйгалак чымчыктар түшүрүлүштү.|the Slippery birds were dropped.
+Мен бармын.|I am present.
+Мен жокмун.|I am absent.
