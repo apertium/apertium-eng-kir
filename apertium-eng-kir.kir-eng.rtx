@@ -18,10 +18,12 @@ adv_behaviour = attr ;
 advlevel = cmp ;
 nptype = n np ;
 det_type = dem ;
+negative = (pos pos) neg pos ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
-tense = (TD pres) pres aor ifi past ;  ! finites
+tense = (TD pres) pres aor ifi past qst ;  ! finites
+    ! use <qst>
 prc = (PTD pprs) prc_past prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
 vadv = gna_perf ;
 ger = ger ger_past ;
@@ -67,14 +69,13 @@ fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.case.prep_flag ;
-VP: _.fnf ;
+VP: _.fnf.transitivity.tense.person.number.negative ;
 np: _ ;
 prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
-v: _.tense ;
 adj: _.adjtype.adjlevel ;
-vP: _.transitivity.tense.fnf;
+vP: _.transitivity.tense.fnf.person.number.negative ;
 PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -83,13 +84,46 @@ det: (if (1.det_type = dem) 1[det_dem] else 1[det_def]);
 adv_attr: _ ;
 adv_default: _.advlevel ;
 adv: (if (1.adv_behaviour = attr) 1[adv_attr] else 1[adv_default]);
-vAux: _.tense.person.number ;
-vaux: _.tense.person.number ;
+
+vaux_pers: _.tense.person.number ;
+vaux_nopers: _.tense ;
+vaux: (if (1.tense = qst) 1[vaux_nopers](tense=inf)
+       else-if (1.lem/tl not in en_vaux_person) 1[vaux_nopers]
+       else 1[vaux_pers]);
 cop: _.tense.person.number ;
-!vbser: _.tense.person.number ;
+vbdo: _.tense.person.number ;
+vbser: _.tense.person.number ;
+
+verb_pers: pos_tag.tense.person.number;
+verb_nopers: pos_tag.tense;
+verb: (if (1.tense = qst)
+          1[verb_nopers](tense=inf)
+       else-if (1.tense = pres and 1.person = p3 and 1.number = sg)
+          (if (1.negative = neg)
+              [ 1[verb_pers] + not@adv ]
+           else
+              1[verb_pers])
+       else
+          (if (1.negative = neg)
+              [ 1[verb_nopers] + not@adv ]
+           else
+              1[verb_nopers])
+       );
+v: (always 1[verb]);
+vblex: (always 1[verb]);
 
 !vaux_thing: lemh.<vbser>.tense.person.number ;
 
+!!! MACROS !!!
+
+qst_front: (if (1.lem = жат or 1.lem = э)
+              be[verb](pos_tag=vbser, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+            else-if (1.lem = ал)
+              can[verb](pos_tag=vbmod, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+            else
+              do[verb](pos_tag=vbdo, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+           );
+               
 
 !!! RULES !!!
 
@@ -120,7 +154,8 @@ DP -> 1: NP.gen NP.px3.$case.$prep_flag { 1 's@gen _1 2 } |
       1: NP.$case.$prep_flag { a@det.idf.sp _ 1 } |
       0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
       1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
-      2: prn.$case { 1 } |
+      2: prn.$case { (if (1.person = p1 and 1.number = sg) 1(lemcase=Aa)
+                      else 1(lemcase=$lemcase)) } |
       VP.prc DP.$case { 2 _1 that@cnjsub _ 1 }
    ;
 
@@ -145,12 +180,12 @@ PP -> DP.$prep_flag ?(1.case in might_get_pr)
                 )
                 1 } );
 
-VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
-      DP.[definiteness].prep_flag DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
-!      DP.oblique DP.acc vP.$fnf { 3 _2 2 _1 1 } |
-      DP vP.cop.$fnf { 2 _1 1 } |
-      AP vP.cop.$fnf { 2 _1 1 } |
-      DP DP vP.$fnf.$transitivity
+VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
+      DP.[definiteness].prep_flag DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
+!      DP.oblique DP.acc %vP { 3 _2 2 _1 1 } |
+      DP %vP.cop { 2 _1 1 } |
+      AP %vP.cop { 2 _1 1 } |
+      DP DP %vP
 !         ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
          ?(
             ((2.case = nom) and (1.case in might_get_pr)) or
@@ -160,16 +195,16 @@ VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
                 { 1 _1 3 _2 2 }
              else
                 { 3 _2 2 _1 1 } ) |
-      DP vP.$transitivity.$fnf
+      DP %vP.$lem
          ?(not
             (
                ((2.passive = pass) or (2.transitivity = iv))
                and (1.case = nom)
             )
-          ) { 1 _1 2 } |
-      PP DP.acc vP.$fnf { 3 _2 2 _1 1 } |
-      PP PP vP.$fnf.$transitivity { 3 _2 2 _1 1 } |
-      PP vP.$fnf.$transitivity
+          ) { %2 _1 1 } |
+      PP DP.acc %vP { 3 _2 2 _1 1 } |
+      PP PP %vP { 3 _2 2 _1 1 } |
+      PP %vP
          { 2 _1
             (if (2.lem in ky_verbs_dat_arg)
                1(prep_flag=none)
@@ -177,7 +212,7 @@ VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
                1
             )
          } |
-      vP.$fnf.$transitivity { 1 }
+      %vP { 1 }
    ;
 
 
@@ -195,14 +230,17 @@ VP -> PP DP.[definiteness].prep_flag vP.$transitivity.$fnf { 3 _2 2 _1 1 } |
 
 prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
+frontable = be can ;
 
-vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
-          (if (2.lem in en_vaux_ing)
-              { 2 _1 1(tense=pprs) }
+vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
+          (if (2.lem/tl in frontable and $tense = qst)
+              { (if (2.lem/tl = be) 1(tense=pprs, negative=pos) else 1(tense=inf, negative=pos)) }
+           else-if (2.lem in en_vaux_ing)
+              { 2(tense=$tense) _1 1(tense=pprs) }
            else-if (2.lem in en_vaux_none)
-              { 2 _1 1(tense=inf) }
+              { 2(tense=$tense) _1 1(tense=inf) }
            else ! 2.lem in en_vaux_to
-              { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } )
+              { 2(person=1.person, number=1.number, tense=$tense) _1 to@pr _1 1(tense=inf) } )
        |
       !1: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
       !    (if ((1.person=p3) and (1.number=sg))
@@ -211,32 +249,28 @@ vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
       !        { 1(person=_, number=_) }
       !    )
       ! |
-      1: v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          (if (1.passive/sl = pass)
+      1: %v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          (if ((1.passive/sl = pass) and ($tense not = qst))
               { be@vbser.$tense.[1.person].[1.number] _ 1(tense=pp) }
            else
               { 1(tense=$tense) } ) |
-      2: v.*.neg.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { do@vbdo.$tense _ not@adv _ 1(tense=inf) } |
+      2: %v.*.neg.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          (if ($tense = qst)
+              { 1(tense=inf, negative=pos) }
+           else
+              { do@vbdo.$tense _ not@adv _ 1(tense=inf, negative=pos) } ) |
 
-      3: cop [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
-      4: cop.neg [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      4: %cop.neg.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } |
 
-      3: бол@v ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      3: %бол@v ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
-      4: бол@v.*.neg ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      4: %бол@v.*.neg ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } ;
 
 
 
-vAux -> vaux.$lemh (if (1.lem not in en_vaux_person)
-                       { 1(person=_, number=_) }
-                    else
-                       { 1 } )
-     ;
-
-
-
-S -> DP.nom VP.fin { 1 _1 2 } ;
+S -> DP.nom VP.fin { 1 _1 2 } |
+     DP.nom.$lemcase VP qst { 2[qst_front](lemcase=$lemcase) _ 1(lemcase=aa) _1 2(tense=qst) } ;

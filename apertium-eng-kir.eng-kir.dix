@@ -269,7 +269,7 @@
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>тиги<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 
 		<!-- Misc -->
-		<e r="LR"><p><l>бы<s n="qst"/></l><r></r></p></e>
+		<e r="RL"><p><l></l><r>бы<s n="qst"/></r></p></e>
 
       <!-- Prepositions -->
 		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
