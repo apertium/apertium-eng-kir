@@ -262,8 +262,8 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "house" | apertium -d . eng-kir | tee .test-mt
-	@echo "house" > .test-ref
+	cat tests/eng-kir-regression-tests.txt | sed -r 's/[^|]+\|//' > .test-ref
+	cat tests/eng-kir-regression-tests.txt | sed -r 's/\|[^|]+//' | apertium -d . kir-eng > .test-mt
 	@diff .test-ref .test-mt
 	echo "house" | apertium -d . kir-eng | tee .test-mt
 	@echo "house" > .test-ref
