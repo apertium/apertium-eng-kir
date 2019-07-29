@@ -41,6 +41,7 @@ ky_verbs_dat_arg = ишен тий кир жет;
 ky_verbs_abl_arg = өт аш;
 en_vaux_ing = be ;
 en_vaux_to = want ;
+en_vaux_none = can ;
 
 en_vaux_person = be have ;
 
@@ -198,6 +199,8 @@ prc_or_tense > tense : prc_past past ;
 vP -> 0: v.$transitivity vAux.$tense [$fnf=1.fnfall>fnf]
           (if (2.lem in en_vaux_ing)
               { 2 _1 1(tense=pprs) }
+           else-if (2.lem in en_vaux_none)
+              { 2 _1 1(tense=inf) }
            else ! 2.lem in en_vaux_to
               { 2(person=1.person, number=1.number) _1 to@pr _1 1(tense=inf) } )
        |
