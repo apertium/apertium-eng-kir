@@ -9,3 +9,13 @@
 Сыйгалак чымчыктар түшүрүлүштү.|the Slippery birds were dropped.
 Мен бармын.|I am present.
 Мен жокмун.|I am absent.
+Сен дамдуу этти жей аласыңбы?|Can you eat the tasty meat?
+Сен дамдуу этти жеп жатасыңбы?|Are you eating the tasty meat?
+Сен дамдуу этти жегиң келдиби?|Did you want to eat the tasty meat?
+Сен дамдуу этти жейсиңби?|Do you eat the tasty meat?
+Сен дамдуу этти жей албайсыңбы?|Can't you eat the tasty meat?
+Сен дамдуу этти жебей жатасыңбы?|Aren't you eating the tasty meat?
+Сен дамдуу этти жеп жаткан жоксуңбу?|Weren't you eating the tasty meat?
+Сен дамдуу этти жегиң келген жокпу?|Didn't you want to eat the tasty meat?
+Сен дамдуу этти жебейсиңби?|Don't you eat the tasty meat?
+
