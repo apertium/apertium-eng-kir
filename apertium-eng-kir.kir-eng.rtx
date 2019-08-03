@@ -79,7 +79,7 @@ vP: _.transitivity.tense.fnf.person.number.negative ;
 PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
-det_def: _.definite.number ;
+det_def: _.definiteness.number ;
 det: (if (1.det_type = dem) 1[det_dem] else 1[det_def]);
 adv_attr: _ ;
 adv_default: _.advlevel ;
@@ -123,7 +123,7 @@ qst_front: (if (1.lem = жат or 1.lem = э)
             else
               do[verb](pos_tag=vbdo, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
            );
-               
+
 
 !!! RULES !!!
 
