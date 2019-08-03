@@ -10,7 +10,7 @@ person = (PD p3) p1 p2 p3 ;
 transitivity = tv iv cop ;
 gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
-prep_flag = (PRD none) to in on at for of from PRD none;
+prep_flag = (PRD NOpr) to in on at for of from PRD NOpr; !none;
                  ! ^ hack, but not all NPs have prep_flag set, which overrides <dat> and this no pr
 adjlevel = cmp ;
 adjtype = sint ;
@@ -24,7 +24,8 @@ negative = (pos pos) neg pos ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
-tense = (TD pres) pres aor ifi past qst ;  ! finites
+tense = (TD pres) pres aor ifi past ;  ! finites
+qst = (QD NOqst) qst NOqst ;
     ! use <qst>
 prc = (PTD pprs) prc_past prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
 vadv = gna_perf ;
@@ -64,7 +65,7 @@ nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 ger > tense : ger pprs, ger_past pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
-case > prep_flag : dat to, abl from, gen of, loc at, acc none, nom none;
+case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr;
 fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 !!! OUTPUT PATTERNS !!!
@@ -99,7 +100,7 @@ num: _.number ;
 
 vaux_pers: _.tense.person.number ;
 vaux_nopers: _.tense ;
-vaux: (if (1.tense = qst) 1[vaux_nopers](tense=inf)
+vaux: (if (1.qst = qst) 1[vaux_nopers](tense=inf)
        else-if (1.lem/tl not in en_vaux_person) 1[vaux_nopers]
        else 1[vaux_pers]);
 cop: _.tense.person.number ;
@@ -108,7 +109,7 @@ vbser: _.tense.person.number ;
 
 verb_pers: pos_tag.tense.person.number;
 verb_nopers: pos_tag.tense;
-verb: (if (1.tense = qst)
+verb: (if (1.qst = qst)
           1[verb_nopers](tense=inf)
        else-if (1.tense = pres and 1.person = p3 and 1.number = sg)
           (if (1.negative = neg)
@@ -178,7 +179,7 @@ DP -> 1: NP.gen NP.px3.$case.$prep_flag { 1 's@gen _1 2 } |
    ;
 
 PP -> DP.$prep_flag ?(1.case in might_get_pr)
-         (if ($prep_flag = none)
+         (if ($prep_flag = NOpr)
              { 1 }
           else
              { (if (($prep_flag = to) or (1.case = dat))
@@ -227,7 +228,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
       PP %vP
          { 2 _1
             (if (2.lem in ky_verbs_dat_arg)
-               1(prep_flag=none)
+               1(prep_flag=NOpr)
              else
                1
             )
@@ -253,7 +254,7 @@ prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
 vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
-          (if (2.lem/tl in frontable and $tense = qst)
+          (if (2.lem/tl in frontable and $qst = qst)
               { (if (2.lem/tl = be) 1(tense=pprs, negative=pos) else 1(tense=inf, negative=pos)) }
            else-if (2.lem in en_vaux_ing)
               { 2(tense=$tense) _1 1(tense=pprs) }
@@ -270,12 +271,12 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
       !    )
       ! |
       1: %v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          (if ((1.passive/sl = pass) and ($tense not = qst))
+          (if ((1.passive/sl = pass) and ($qst not = qst))
               { be@vbser.$tense.[1.person].[1.number] _ 1(tense=pp) }
            else
               { 1(tense=$tense) } ) |
       2: %v.*.neg.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          (if ($tense = qst)
+          (if ($qst = qst)
               { 1(tense=inf, negative=pos) }
            else
               { do@vbdo.$tense _ not@adv _ 1(tense=inf, negative=pos) } ) |

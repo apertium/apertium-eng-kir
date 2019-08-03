@@ -365,6 +365,7 @@
 		<e><p><l>what<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>эмне<s n="prn"/><s n="itg"/></r></p></e>
 		<e><p><l>who<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>ким<s n="prn"/><s n="itg"/></r></p></e>
 		<e><p><l>where<s n="adv"/><s n="itg"/></l><r>кайда<s n="adv"/><s n="itg"/></r></p></e>
+		<e><p><l>own<s n="adj"/></l><r>өз<s n="det"/><s n="ref"/></r></p></e>
 		
 		<e><p><l>nothing<s n="prn"/><s n="ind"/><s n="mf"/><s n="sg"/></l><r>эч<b/>нерсе<s n="prn"/><s n="neg"/></r></p></e>
 
@@ -402,7 +403,7 @@
 		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>
 		<e><p><l>and<s n="cnjcoo"/></l><r>менен<s n="cnjcoo"/></r></p></e>
 		<e><p><l>but<s n="cnjcoo"/></l><r>бирок<s n="cnjcoo"/></r></p></e>
-		<e><p><l>but<s n="cnjcoo"/></l><r>а<s n="cnjcoo"/></r></p></e>
+		<e><p><l>and<s n="cnjcoo"/></l><r>а<s n="cnjcoo"/></r></p></e>
 
 		<!-- Misc -->
 		<e r="RL"><p><l></l><r>бы<s n="qst"/></r></p></e>
@@ -414,6 +415,7 @@
 		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
 		<e><p><l>with<s n="pr"/></l><r>менен<s n="post"/></r></p></e>
 		<e><p><l>after<s n="pr"/></l><r>кийин<s n="post"/></r></p></e>
+		<e><p><l>before<s n="pr"/></l><r>чейин<s n="post"/></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
