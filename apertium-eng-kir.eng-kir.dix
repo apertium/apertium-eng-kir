@@ -125,87 +125,97 @@
 				</p>
 			</e>
 		</pardef>
+		<pardef n="par__n">
+			<e>
+				<p>
+					<l><s n="n"/></l>
+					<r><s n="n"/></r>
+				</p>
+			</e>
+		</pardef>
 	</pardefs>
 
    <section id="main" type="standard">
       <!-- NOUNS -->
-      <e><p><l>house<s n="n"/></l><r>үй<s n="n"/></r></p></e>
-      <e><p><l>home<s n="n"/></l><r>үй<s n="n"/></r></p></e>
-      <e><p><l>paper<s n="n"/></l><r>кагаз<s n="n"/></r></p></e>
-      <e><p><l>teacher<s n="n"/></l><r>мугалим<s n="n"/></r></p></e>
-      <e><p><l>bird<s n="n"/></l><r>чымчык<s n="n"/></r></p></e>
-      <e><p><l>bird<s n="n"/></l><r>куш<s n="n"/></r></p></e>
-      <e><p><l>shyrdaq<s n="n"/></l><r>шырдак<s n="n"/></r></p></e>
-      <e><p><l>festival<s n="n"/></l><r>фестиваль<s n="n"/></r></p></e>
-      <e><p><l>tourist<s n="n"/></l><r>турист<s n="n"/></r></p></e>
-      <e><p><l>time<s n="n"/></l><r>заман<s n="n"/></r></p></e>
-      <e><p><l>time<s n="n"/></l><r>убакыт<s n="n"/></r></p></e>
-      <e><p><l>time<s n="n"/></l><r>жол<s n="n"/></r></p></e>
-      <e><p><l>road<s n="n"/></l><r>жол<s n="n"/></r></p></e>
-      <e><p><l>way<s n="n"/></l><r>жол<s n="n"/></r></p></e>
-      <e><p><l>year<s n="n"/></l><r>жыл<s n="n"/></r></p></e>
-      <e><p><l>chicken<s n="n"/></l><r>тоок<s n="n"/></r></p></e>
-      <e><p><l>meat<s n="n"/></l><r>эт<s n="n"/></r></p></e>
-      <e><p><l>mouth<s n="n"/></l><r>ооз<s n="n"/></r></p></e>
-      <e><p><l>arm<s n="n"/></l><r>кол<s n="n"/></r></p></e>
-      <e><p><l>hand<s n="n"/></l><r>кол<s n="n"/></r></p></e>
-      <e><p><l>city<s n="n"/></l><r>шаар<s n="n"/></r></p></e>
-      <e><p><l>village<s n="n"/></l><r>айыл<s n="n"/></r></p></e>
-      <e><p><l>town<s n="n"/></l><r>шаарча<s n="n"/></r></p></e>
-      <e><p><l>official<s n="n"/></l><r>депутат<s n="n"/></r></p></e>
-      <e><p><l>jail<s n="n"/></l><r>абак<s n="n"/></r></p></e>
-      <e><p><l>prison<s n="n"/></l><r>түрмө<s n="n"/></r></p></e>
-      <e><p><l>cat<s n="n"/></l><r>мышык<s n="n"/></r></p></e>
-      <e><p><l>puppy<s n="n"/></l><r>күчүк<s n="n"/></r></p></e>
-      <e><p><l>dog<s n="n"/></l><r>күчүк<s n="n"/></r></p></e>
-      <e><p><l>dog<s n="n"/></l><r>ит<s n="n"/></r></p></e>
-      <e><p><l>tail<s n="n"/></l><r>куйрук<s n="n"/></r></p></e>
-      <e><p><l>refuse<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
-      <e><p><l>waste<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
-      <e><p><l>garbage<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
-      <e><p><l>trash<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
-      <e><p><l>medal<s n="n"/></l><r>медаль<s n="n"/></r></p></e>
-      <e><p><l>olympiad<s n="n"/></l><r>олимпиада<s n="n"/></r></p></e>
-      <e><p><l>garden<s n="n"/></l><r>бакча<s n="n"/></r></p></e>
-      <e><p><l>reason<s n="n"/></l><r>себеп<s n="n"/></r></p></e>
-      <e><p><l>mother<s n="n"/></l><r>эне<s n="n"/></r></p></e>
-      <e><p><l>father<s n="n"/></l><r>ата<s n="n"/></r></p></e>
-      <e><p><l>tree<s n="n"/></l><r>дарак<s n="n"/></r></p></e>
-      <e><p><l>door<s n="n"/></l><r>эшик<s n="n"/></r></p></e>
-      <e><p><l>outside<s n="n"/></l><r>сырт<s n="n"/></r></p></e>
-      <e><p><l>inside<s n="n"/></l><r>ич<s n="n"/></r></p></e>
-      <e><p><l>front<s n="n"/></l><r>алд<s n="n"/></r></p></e>
-      <e><p><l>back<s n="n"/></l><r>арт<s n="n"/></r></p></e>
-      <e><p><l>underside<s n="n"/></l><r>аст<s n="n"/></r></p></e>
-      <e><p><l>game<s n="n"/></l><r>оюн<s n="n"/></r></p></e>
-      <e><p><l>window<s n="n"/></l><r>терезе<s n="n"/></r></p></e>
-      <e><p><l>response<s n="n"/></l><r>жооп<s n="n"/></r></p></e>
-      <e><p><l>answer<s n="n"/></l><r>жооп<s n="n"/></r></p></e>
-      <e><p><l>person<s n="n"/></l><r>адам<s n="n"/></r></p></e>
-      <e><p><l>child<s n="n"/></l><r>бала<s n="n"/></r></p></e>
-      <e><p><l>kid<s n="n"/></l><r>бала<s n="n"/></r></p></e>
-      <e><p><l>boy<s n="n"/></l><r>бала<s n="n"/></r></p></e>
-      <e><p><l>girl<s n="n"/></l><r>кыз<s n="n"/></r></p></e>
-      <e><p><l>thing<s n="n"/></l><r>нерсе<s n="n"/></r></p></e>
-      <e><p><l>surrounding<s n="n"/></l><r>айлана<s n="n"/></r></p></e>
-      <e><p><l>eye<s n="n"/></l><r>көз<s n="n"/></r></p></e>
-      <e><p><l>sound<s n="n"/></l><r>добуш<s n="n"/></r></p></e>
-      <e><p><l>sound<s n="n"/></l><r>тыбыш<s n="n"/></r></p></e>
-      <e><p><l>table<s n="n"/></l><r>үстөл<s n="n"/></r></p></e>
-      <e><p><l>chair<s n="n"/></l><r>отургуч<s n="n"/></r></p></e>
-      <e><p><l>animal<s n="n"/></l><r>жаныбар<s n="n"/></r></p></e>
-      <e><p><l>head<s n="n"/></l><r>баш<s n="n"/></r></p></e>
-      <e><p><l>little<b/>sister<s n="n"/></l><r>карындаш<s n="n"/></r></p></e>
-      <e><p><l>little<b/>sister<s n="n"/></l><r>сиңди<s n="n"/></r></p></e>
-      <e><p><l>little<b/>brother<s n="n"/></l><r>ини<s n="n"/></r></p></e>
-      <e><p><l>big<b/>brother<s n="n"/></l><r>байке<s n="n"/></r></p></e>
-      <e><p><l>big<b/>sister<s n="n"/></l><r>эжеке<s n="n"/></r></p></e>
-      <e><p><l>happiness<s n="n"/></l><r>кубаныч<s n="n"/></r></p></e>
+      <e><p><l>house</l><r>үй</r></p><par n="par__n"/></e>
+      <e><p><l>home</l><r>үй</r></p><par n="par__n"/></e>
+      <e><p><l>paper</l><r>кагаз</r></p><par n="par__n"/></e>
+      <e><p><l>teacher</l><r>мугалим</r></p><par n="par__n"/></e>
+      <e><p><l>bird</l><r>чымчык</r></p><par n="par__n"/></e>
+      <e><p><l>bird</l><r>куш</r></p><par n="par__n"/></e>
+      <e><p><l>shyrdaq</l><r>шырдак</r></p><par n="par__n"/></e>
+      <e><p><l>festival</l><r>фестиваль</r></p><par n="par__n"/></e>
+      <e><p><l>tourist</l><r>турист</r></p><par n="par__n"/></e>
+      <e><p><l>time</l><r>заман</r></p><par n="par__n"/></e>
+      <e><p><l>time</l><r>убакыт</r></p><par n="par__n"/></e>
+      <e><p><l>time</l><r>жол</r></p><par n="par__n"/></e>
+      <e><p><l>road</l><r>жол</r></p><par n="par__n"/></e>
+      <e><p><l>way</l><r>жол</r></p><par n="par__n"/></e>
+      <e><p><l>year</l><r>жыл</r></p><par n="par__n"/></e>
+      <e><p><l>chicken</l><r>тоок</r></p><par n="par__n"/></e>
+      <e><p><l>meat</l><r>эт</r></p><par n="par__n"/></e>
+      <e><p><l>mouth</l><r>ооз</r></p><par n="par__n"/></e>
+      <e><p><l>arm</l><r>кол</r></p><par n="par__n"/></e>
+      <e><p><l>hand</l><r>кол</r></p><par n="par__n"/></e>
+      <e><p><l>city</l><r>шаар</r></p><par n="par__n"/></e>
+      <e><p><l>village</l><r>айыл</r></p><par n="par__n"/></e>
+      <e><p><l>town</l><r>шаарча</r></p><par n="par__n"/></e>
+      <e><p><l>official</l><r>депутат</r></p><par n="par__n"/></e>
+      <e><p><l>jail</l><r>абак</r></p><par n="par__n"/></e>
+      <e><p><l>prison</l><r>түрмө</r></p><par n="par__n"/></e>
+      <e><p><l>cat</l><r>мышык</r></p><par n="par__n"/></e>
+      <e><p><l>puppy</l><r>күчүк</r></p><par n="par__n"/></e>
+      <e><p><l>dog</l><r>күчүк</r></p><par n="par__n"/></e>
+      <e><p><l>dog</l><r>ит</r></p><par n="par__n"/></e>
+      <e><p><l>tail</l><r>куйрук</r></p><par n="par__n"/></e>
+      <e><p><l>refuse</l><r>таштанды</r></p><par n="par__n"/></e>
+      <e><p><l>waste</l><r>таштанды</r></p><par n="par__n"/></e>
+      <e><p><l>garbage</l><r>таштанды</r></p><par n="par__n"/></e>
+      <e><p><l>trash</l><r>таштанды</r></p><par n="par__n"/></e>
+      <e><p><l>medal</l><r>медаль</r></p><par n="par__n"/></e>
+      <e><p><l>olympiad</l><r>олимпиада</r></p><par n="par__n"/></e>
+      <e><p><l>garden</l><r>бакча</r></p><par n="par__n"/></e>
+      <e><p><l>reason</l><r>себеп</r></p><par n="par__n"/></e>
+      <e><p><l>mother</l><r>эне</r></p><par n="par__n"/></e>
+      <e><p><l>father</l><r>ата</r></p><par n="par__n"/></e>
+      <e><p><l>tree</l><r>дарак</r></p><par n="par__n"/></e>
+      <e><p><l>door</l><r>эшик</r></p><par n="par__n"/></e>
+      <e><p><l>outside</l><r>сырт</r></p><par n="par__n"/></e>
+      <e><p><l>inside</l><r>ич</r></p><par n="par__n"/></e>
+      <e><p><l>front</l><r>алд</r></p><par n="par__n"/></e>
+      <e><p><l>back</l><r>арт</r></p><par n="par__n"/></e>
+      <e><p><l>underside</l><r>аст</r></p><par n="par__n"/></e>
+      <e><p><l>game</l><r>оюн</r></p><par n="par__n"/></e>
+      <e><p><l>window</l><r>терезе</r></p><par n="par__n"/></e>
+      <e><p><l>response</l><r>жооп</r></p><par n="par__n"/></e>
+      <e><p><l>answer</l><r>жооп</r></p><par n="par__n"/></e>
+      <e><p><l>person</l><r>адам</r></p><par n="par__n"/></e>
+      <e><p><l>child</l><r>бала</r></p><par n="par__n"/></e>
+      <e><p><l>kid</l><r>бала</r></p><par n="par__n"/></e>
+      <e><p><l>boy</l><r>бала</r></p><par n="par__n"/></e>
+      <e><p><l>girl</l><r>кыз</r></p><par n="par__n"/></e>
+      <e><p><l>thing</l><r>нерсе</r></p><par n="par__n"/></e>
+      <e><p><l>surrounding</l><r>айлана</r></p><par n="par__n"/></e>
+      <e><p><l>eye</l><r>көз</r></p><par n="par__n"/></e>
+      <e><p><l>sound</l><r>добуш</r></p><par n="par__n"/></e>
+      <e><p><l>sound</l><r>тыбыш</r></p><par n="par__n"/></e>
+      <e><p><l>table</l><r>үстөл</r></p><par n="par__n"/></e>
+      <e><p><l>chair</l><r>отургуч</r></p><par n="par__n"/></e>
+      <e><p><l>animal</l><r>жаныбар</r></p><par n="par__n"/></e>
+      <e><p><l>head</l><r>баш</r></p><par n="par__n"/></e>
+      <e><p><l>little<b/>sister</l><r>карындаш</r></p><par n="par__n"/></e>
+      <e><p><l>little<b/>sister</l><r>сиңди</r></p><par n="par__n"/></e>
+      <e><p><l>little<b/>brother</l><r>ини</r></p><par n="par__n"/></e>
+      <e><p><l>big<b/>brother</l><r>байке</r></p><par n="par__n"/></e>
+      <e><p><l>big<b/>sister</l><r>эжеке</r></p><par n="par__n"/></e>
+      <e><p><l>happiness</l><r>кубаныч</r></p><par n="par__n"/></e>
+      <e><p><l>weather</l><r>аба<b/>ырайы</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
 		<e><p><l>absent<s n="adj"/></l><r>жок<s n="adj"/></r></p></e>
 		<e><p><l>good<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
+		<e><p><l>nice<s n="adj"/><s n="sint"/></l><r>жакшы<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>жаман<s n="adj"/></r></p></e>
 		<e><p><l>bad<s n="adj"/><s n="sint"/></l><r>начар<s n="adj"/></r></p></e>
 		<e><p><l>foreign<s n="adj"/><s n="sint"/></l><r>чет<b/>элдик<s n="adj"/></r></p></e>
@@ -215,14 +225,14 @@
 		<e><p><l>tasty<s n="adj"/><s n="sint"/></l><r>дамдуу<s n="adj"/></r></p></e>
 		<e><p><l>former<s n="adj"/></l><r>мурда<s n="adv"/><s n="attr"/></r></p></e>
 		<e><p><l>slippery<s n="adj"/></l><r>сыйгалак<s n="adj"/></r></p></e>
-		<e><p><l>warm<s n="adj"/></l><r>жылуу<s n="adj"/></r></p></e>
-		<e><p><l>hot<s n="adj"/></l><r>ысык<s n="adj"/></r></p></e>
-		<e><p><l>cold<s n="adj"/></l><r>суук<s n="adj"/></r></p></e>
-		<e><p><l>cold<s n="adj"/></l><r>муздак<s n="adj"/></r></p></e>
-		<e><p><l>cool<s n="adj"/></l><r>салкын<s n="adj"/></r></p></e>
+		<e><p><l>warm<s n="adj"/><s n="sint"/></l><r>жылуу<s n="adj"/></r></p></e>
+		<e><p><l>hot<s n="adj"/><s n="sint"/></l><r>ысык<s n="adj"/></r></p></e>
+		<e><p><l>cold<s n="adj"/><s n="sint"/></l><r>суук<s n="adj"/></r></p></e>
+		<e><p><l>cold<s n="adj"/><s n="sint"/></l><r>муздак<s n="adj"/></r></p></e>
+		<e><p><l>cool<s n="adj"/><s n="sint"/></l><r>салкын<s n="adj"/></r></p></e>
 		<e><p><l>big<s n="adj"/><s n="sint"/></l><r>чоң<s n="adj"/></r></p></e>
 		<e><p><l>large<s n="adj"/><s n="sint"/></l><r>чоң<s n="adj"/></r></p></e>
-		<e><p><l>little<s n="adj"/><s n="sint"/></l><r>кичинекей<s n="adj"/></r></p></e>
+		<e><p><l>little<s n="adj"/></l><r>кичинекей<s n="adj"/></r></p></e>
 		<e><p><l>small<s n="adj"/><s n="sint"/></l><r>кичинекей<s n="adj"/></r></p></e>
 		<e><p><l>old<s n="adj"/><s n="sint"/></l><r>эски<s n="adj"/></r></p></e>
 		<e><p><l>old<s n="adj"/><s n="sint"/></l><r>картаң<s n="adj"/></r></p></e>
@@ -301,6 +311,9 @@
 		<e><p><l>press<s n="vblex"/></l><r>бас<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>laugh<s n="vblex"/></l><r>күл<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>like<s n="vblex"/></l><r>жакшы<b/>көр<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
+		<e><p><l>say<s n="vblex"/></l><r>де<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -310,6 +323,7 @@
 		<e><p><l>be<s n="vbser"/></l><r>отур<s n="vaux"/></r></p></e>
 		<e><p><l>want<s n="vblex"/></l><r>кел<s n="vaux"/></r></p></e>
 		<e><p><l>can<s n="vbmod"/></l><r>ал<s n="vaux"/></r></p></e>
+		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="vaux"/></r></p></e>
 		<e r="LR"><p><l>do<s n="vbdo"/></l><r></r></p></e>
 
 
@@ -346,6 +360,10 @@
 		<e><p><l>prpers<s n="det"/><s n="pos"/><s n="p3"/><s n="nt"/><s n="sg"/></l><r>ал<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/><s n="gen"/></r></p></e>
 
 		<e><p><l>this<s n="prn"/><s n="dem"/><s n="mf"/><s n="sg"/></l><r>бул<s n="prn"/><s n="dem"/></r></p></e><!-- also "these" -->
+		<e><p><l>what<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>эмне<s n="prn"/><s n="itg"/></r></p></e>
+		<e><p><l>who<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>ким<s n="prn"/><s n="itg"/></r></p></e>
+		
+		<e><p><l>nothing<s n="prn"/><s n="ind"/><s n="mf"/><s n="sg"/></l><r>эч<b/>нерсе<s n="prn"/><s n="neg"/></r></p></e>
 
 		<!-- NUMBERS -->
 		<e><p><l>one</l><r>бир</r></p><par n="par__num"/></e>

@@ -42,7 +42,35 @@
 		</match>
 		<seq n="state-change-motion-verbs"/>
 	</rule>
+	<rule weight="1.2">
+		<or>
+			<match tags="adj.*"/>
+			<match tags="adj"/>
+		</or>
+		<match lemma="үй" tags="n.*">
+			<select lemma="house" tags="n.*"/>
+		</match>
+	</rule>
 
+	<rule>
+		<match lemma="жакшы" tags="adj.*">
+			<select lemma="good" tags="adj.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="жакшы" tags="adj.*">
+			<select lemma="nice" tags="adj.*"/>
+		</match>
+		<repeat upto="3"><match/></repeat>
+		<match lemma="аба ырайы" tags="n.*"/>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="аба ырайы" tags="n.*"/>
+		<repeat upto="3"><match/></repeat>
+		<match lemma="жакшы" tags="adj.*">
+			<select lemma="nice" tags="adj.*"/>
+		</match>
+	</rule>
 </rules>
 </metalrx>
 <!-- 
