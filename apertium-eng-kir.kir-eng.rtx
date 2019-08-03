@@ -12,10 +12,10 @@ gender = (GD m) m f mf nt ;
 definiteness = (DD def) ind def ;
 prep_flag = (PRD NOpr) to in on at for of from PRD NOpr; !none;
                  ! ^ hack, but not all NPs have prep_flag set, which overrides <dat> and this no pr
-adjlevel = cmp ;
+adjlevel = comp ;
 adjtype = sint ;
 adv_behaviour = attr ;
-advlevel = cmp ;
+advlevel = comp ;
 nptype = n np ;
 det_type = dem ;
 np_type = top cog ant ;

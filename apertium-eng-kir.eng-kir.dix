@@ -242,6 +242,10 @@
 		<e><p><l>close<s n="adj"/><s n="sint"/></l><r>жакын<s n="adj"/></r></p></e>
 		<e><p><l>near<s n="adj"/><s n="sint"/></l><r>жакын<s n="adj"/></r></p></e>
 		<e><p><l>possible<s n="adj"/></l><r>мүмкүн<s n="adj"/></r></p></e>
+		<e><p><l>slow<s n="adj"/><s n="sint"/></l><r>акырын<s n="adj"/></r></p></e>
+		<e><p><l>quiet<s n="adj"/><s n="sint"/></l><r>акырын<s n="adj"/></r></p></e>
+		<e><p><l>clear<s n="adj"/><s n="sint"/></l><r>тунук<s n="adj"/></r></p></e>
+
 
 
 		<!-- VERBS -->
