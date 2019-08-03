@@ -19,7 +19,9 @@
     <sdef n="cnjcoo"          c="Co-ordinating conjunction"/>
     <sdef n="cnjadv"          c="Adverbial conjunction"/>
     <sdef n="pr"              c="Preposition"/>
+    <sdef n="post"            c="Postposition"/>
     <sdef n="adv"             c="Adverb"/>
+    <sdef n="postadv"         c="Postposed Adverb"/>
     <sdef n="ij"              c="Interjection"/>
     <sdef n="adj"             c="Adjective"/>
     <sdef n="prn"             c="Pronoun"/>
@@ -164,6 +166,41 @@
       <e><p><l>trash<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
       <e><p><l>medal<s n="n"/></l><r>медаль<s n="n"/></r></p></e>
       <e><p><l>olympiad<s n="n"/></l><r>олимпиада<s n="n"/></r></p></e>
+      <e><p><l>garden<s n="n"/></l><r>бакча<s n="n"/></r></p></e>
+      <e><p><l>reason<s n="n"/></l><r>себеп<s n="n"/></r></p></e>
+      <e><p><l>mother<s n="n"/></l><r>эне<s n="n"/></r></p></e>
+      <e><p><l>father<s n="n"/></l><r>ата<s n="n"/></r></p></e>
+      <e><p><l>tree<s n="n"/></l><r>дарак<s n="n"/></r></p></e>
+      <e><p><l>door<s n="n"/></l><r>эшик<s n="n"/></r></p></e>
+      <e><p><l>outside<s n="n"/></l><r>сырт<s n="n"/></r></p></e>
+      <e><p><l>inside<s n="n"/></l><r>ич<s n="n"/></r></p></e>
+      <e><p><l>front<s n="n"/></l><r>алд<s n="n"/></r></p></e>
+      <e><p><l>back<s n="n"/></l><r>арт<s n="n"/></r></p></e>
+      <e><p><l>underside<s n="n"/></l><r>аст<s n="n"/></r></p></e>
+      <e><p><l>game<s n="n"/></l><r>оюн<s n="n"/></r></p></e>
+      <e><p><l>window<s n="n"/></l><r>терезе<s n="n"/></r></p></e>
+      <e><p><l>response<s n="n"/></l><r>жооп<s n="n"/></r></p></e>
+      <e><p><l>answer<s n="n"/></l><r>жооп<s n="n"/></r></p></e>
+      <e><p><l>person<s n="n"/></l><r>адам<s n="n"/></r></p></e>
+      <e><p><l>child<s n="n"/></l><r>бала<s n="n"/></r></p></e>
+      <e><p><l>kid<s n="n"/></l><r>бала<s n="n"/></r></p></e>
+      <e><p><l>boy<s n="n"/></l><r>бала<s n="n"/></r></p></e>
+      <e><p><l>girl<s n="n"/></l><r>кыз<s n="n"/></r></p></e>
+      <e><p><l>thing<s n="n"/></l><r>нерсе<s n="n"/></r></p></e>
+      <e><p><l>surrounding<s n="n"/></l><r>айлана<s n="n"/></r></p></e>
+      <e><p><l>eye<s n="n"/></l><r>көз<s n="n"/></r></p></e>
+      <e><p><l>sound<s n="n"/></l><r>добуш<s n="n"/></r></p></e>
+      <e><p><l>sound<s n="n"/></l><r>тыбыш<s n="n"/></r></p></e>
+      <e><p><l>table<s n="n"/></l><r>үстөл<s n="n"/></r></p></e>
+      <e><p><l>chair<s n="n"/></l><r>отургуч<s n="n"/></r></p></e>
+      <e><p><l>animal<s n="n"/></l><r>жаныбар<s n="n"/></r></p></e>
+      <e><p><l>head<s n="n"/></l><r>баш<s n="n"/></r></p></e>
+      <e><p><l>little<b/>sister<s n="n"/></l><r>карындаш<s n="n"/></r></p></e>
+      <e><p><l>little<b/>sister<s n="n"/></l><r>сиңди<s n="n"/></r></p></e>
+      <e><p><l>little<b/>brother<s n="n"/></l><r>ини<s n="n"/></r></p></e>
+      <e><p><l>big<b/>brother<s n="n"/></l><r>байке<s n="n"/></r></p></e>
+      <e><p><l>big<b/>sister<s n="n"/></l><r>эжеке<s n="n"/></r></p></e>
+      <e><p><l>happiness<s n="n"/></l><r>кубаныч<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
@@ -178,6 +215,23 @@
 		<e><p><l>tasty<s n="adj"/><s n="sint"/></l><r>дамдуу<s n="adj"/></r></p></e>
 		<e><p><l>former<s n="adj"/></l><r>мурда<s n="adv"/><s n="attr"/></r></p></e>
 		<e><p><l>slippery<s n="adj"/></l><r>сыйгалак<s n="adj"/></r></p></e>
+		<e><p><l>warm<s n="adj"/></l><r>жылуу<s n="adj"/></r></p></e>
+		<e><p><l>hot<s n="adj"/></l><r>ысык<s n="adj"/></r></p></e>
+		<e><p><l>cold<s n="adj"/></l><r>суук<s n="adj"/></r></p></e>
+		<e><p><l>cold<s n="adj"/></l><r>муздак<s n="adj"/></r></p></e>
+		<e><p><l>cool<s n="adj"/></l><r>салкын<s n="adj"/></r></p></e>
+		<e><p><l>big<s n="adj"/><s n="sint"/></l><r>чоң<s n="adj"/></r></p></e>
+		<e><p><l>large<s n="adj"/><s n="sint"/></l><r>чоң<s n="adj"/></r></p></e>
+		<e><p><l>little<s n="adj"/><s n="sint"/></l><r>кичинекей<s n="adj"/></r></p></e>
+		<e><p><l>small<s n="adj"/><s n="sint"/></l><r>кичинекей<s n="adj"/></r></p></e>
+		<e><p><l>old<s n="adj"/><s n="sint"/></l><r>эски<s n="adj"/></r></p></e>
+		<e><p><l>old<s n="adj"/><s n="sint"/></l><r>картаң<s n="adj"/></r></p></e>
+		<e><p><l>new<s n="adj"/><s n="sint"/></l><r>жаңы<s n="adj"/></r></p></e>
+		<e><p><l>young<s n="adj"/><s n="sint"/></l><r>жаш<s n="adj"/></r></p></e>
+		<e><p><l>close<s n="adj"/><s n="sint"/></l><r>жакын<s n="adj"/></r></p></e>
+		<e><p><l>near<s n="adj"/><s n="sint"/></l><r>жакын<s n="adj"/></r></p></e>
+		<e><p><l>possible<s n="adj"/></l><r>мүмкүн<s n="adj"/></r></p></e>
+
 
 		<!-- VERBS -->
 		<e><p><l>throw<s n="vblex"/></l><r>ыргыт<s n="v"/><s n="tv"/></r></p></e>
@@ -223,12 +277,39 @@
 		<e><p><l>run<s n="vblex"/></l><r>чурка<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>make<s n="vblex"/></l><r>жаса<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>make<s n="vblex"/></l><r>кыл<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>play<s n="vblex"/></l><r>ойно<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>watch<s n="vblex"/></l><r>кара<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>look<s n="vblex"/></l><r>кара<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>look<g><b/>at</g><s n="vblex"/></l><r>кара<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>stand<s n="vblex"/></l><r>тур<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>think<s n="vblex"/></l><r>ойло<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>say<s n="vblex"/></l><r>айт<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>tell<s n="vblex"/></l><r>айт<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>speak<s n="vblex"/></l><r>сүйлө<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>look<g><b/>for</g><s n="vblex"/></l><r>изде<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>count<s n="vblex"/></l><r>сана<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>find<s n="vblex"/></l><r>тап<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>hide<s n="vblex"/></l><r>жашын<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>hide<s n="vblex"/></l><r>кат<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>sleep<s n="vblex"/></l><r>укта<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>listen<s n="vblex"/></l><r>ук<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>hear<s n="vblex"/></l><r>ук<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>close<s n="vblex"/></l><r>жап<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>open<s n="vblex"/></l><r>ач<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>ask<s n="vblex"/></l><r>сура<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>walk<s n="vblex"/></l><r>бас<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>press<s n="vblex"/></l><r>бас<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>laugh<s n="vblex"/></l><r>күл<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>like<s n="vblex"/></l><r>жакшы<b/>көр<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
 		<e><p><l>be<s n="vbser"/></l><r>жат<s n="vaux"/></r></p></e>
+		<e><p><l>be<s n="vbser"/></l><r>жүр<s n="vaux"/></r></p></e>
+		<e><p><l>be<s n="vbser"/></l><r>тур<s n="vaux"/></r></p></e>
+		<e><p><l>be<s n="vbser"/></l><r>отур<s n="vaux"/></r></p></e>
 		<e><p><l>want<s n="vblex"/></l><r>кел<s n="vaux"/></r></p></e>
-		<e><p><l>can<s n="vblex"/></l><r>ал<s n="vaux"/></r></p></e>
+		<e><p><l>can<s n="vbmod"/></l><r>ал<s n="vaux"/></r></p></e>
 		<e r="LR"><p><l>do<s n="vbdo"/></l><r></r></p></e>
 
 
@@ -239,6 +320,20 @@
 		<e><p><l>this<b/>year<s n="adv"/></l><r>быйыл<s n="adv"/></r></p></e>
 		<e><p><l>especially<s n="adv"/></l><r>өзгөчө<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>a<b/>lot<s n="adv"/></l><r>көп<s n="adv"/></r></p></e>
+		<e><p><l>very<s n="adv"/></l><r>абдан<s n="adv"/></r></p></e>
+		<e><p><l>today<s n="adv"/></l><r>бүгүн<s n="adv"/></r></p></e>
+		<e><p><l>yesterday<s n="adv"/></l><r>кечээ<s n="adv"/></r></p></e>
+		<e><p><l>together<s n="adv"/></l><r>чогуу<s n="adv"/></r></p></e>
+		<e><p><l>always<s n="adv"/></l><r>дайыма<s n="adv"/></r></p></e>
+		<e><p><l>now<s n="adv"/></l><r>азыр<s n="adv"/></r></p></e>
+		<e><p><l>now<s n="adv"/></l><r>эми<s n="adv"/></r></p></e>
+		<e><p><l>never<s n="adv"/></l><r>эч<b/>качан<s n="adv"/></r></p></e>
+		<e><p><l>also<s n="adv"/></l><r>да<s n="postadv"/></r></p></e>
+		<e><p><l>slowly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
+		<e><p><l>quietly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
+		<e><p><l>clearly<s n="adv"/></l><r>тунук<s n="adj"/><s n="advl"/></r></p></e>
+
+		<e><p><l>maybe<s n="adv"/></l><r>мүмкүн<s n="adj"/></r></p></e>
 
       <!-- PRONOUNS -->
 		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
@@ -249,6 +344,8 @@
 		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="pl"/></l><r>алар<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
 
 		<e><p><l>prpers<s n="det"/><s n="pos"/><s n="p3"/><s n="nt"/><s n="sg"/></l><r>ал<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/><s n="gen"/></r></p></e>
+
+		<e><p><l>this<s n="prn"/><s n="dem"/><s n="mf"/><s n="sg"/></l><r>бул<s n="prn"/><s n="dem"/></r></p></e><!-- also "these" -->
 
 		<!-- NUMBERS -->
 		<e><p><l>one</l><r>бир</r></p><par n="par__num"/></e>
@@ -267,6 +364,10 @@
 		<e><p><l>Naryn<s n="np"/><s n="top"/></l><r>Нарын<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>Tengir<b/>Too<s n="np"/><s n="top"/></l><r>Теңир<b/>Тоо<s n="np"/><s n="top"/></r></p></e>
 
+		<!-- np.ant -->
+		<e><p><l>Azamat<s n="np"/><s n="ant"/><s n="m"/></l><r>Азамат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+		<e><p><l>Aygül<s n="np"/><s n="ant"/><s n="f"/></l><r>Айгүл<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
 		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
@@ -276,11 +377,22 @@
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>ошол<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>тиги<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 
+		<!-- cnj -->
+		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>
+		<e><p><l>and<s n="cnjcoo"/></l><r>менен<s n="cnjcoo"/></r></p></e>
+		<e><p><l>but<s n="cnjcoo"/></l><r>бирок<s n="cnjcoo"/></r></p></e>
+		<e><p><l>but<s n="cnjcoo"/></l><r>а<s n="cnjcoo"/></r></p></e>
+
 		<!-- Misc -->
 		<e r="RL"><p><l></l><r>бы<s n="qst"/></r></p></e>
+		<e><p><l>of<b/>course<s n="adv"/></l><r>албетте<s n="ij"/></r></p></e>
+		<e><p><l>no<s n="adv"/></l><r>жок<s n="ij"/></r></p></e>
+		<e><p><l>yes<s n="ij"/></l><r>ооба<s n="ij"/></r></p></e>
 
       <!-- Prepositions -->
 		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
+		<e><p><l>with<s n="pr"/></l><r>менен<s n="post"/></r></p></e>
+		<e><p><l>after<s n="pr"/></l><r>кийин<s n="post"/></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>

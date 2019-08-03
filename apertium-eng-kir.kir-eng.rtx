@@ -75,6 +75,7 @@ prn: _.case.person.gender.number ;
 S: _ ;
 n: _.number ;
 adj: _.adjtype.adjlevel ;
+post: _;
 vP: _.transitivity.tense.fnf.person.number.negative ;
 PP: _.prep_flag ;
 AP: _ ;
@@ -178,7 +179,8 @@ PP -> DP.$prep_flag ?(1.case in might_get_pr)
                 else
                    []
                 )
-                1 } );
+                1 } ) |
+      DP post { 2 _1 1 } ;
 
 VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
       DP.[definiteness].prep_flag DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
