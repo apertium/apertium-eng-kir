@@ -130,11 +130,11 @@ vblex: (always 1[verb]);
 !!! MACROS !!!
 
 qst_front: (if (1.lem = жат or 1.lem = э)
-              be[verb](pos_tag=vbser, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+              be[verb](pos_tag=vbser, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst)
             else-if (1.lem = ал)
-              can[verb](pos_tag=vbmod, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+              can[verb](pos_tag=vbmod, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst)
             else
-              do[verb](pos_tag=vbdo, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase)
+              do[verb](pos_tag=vbdo, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst)
            );
 
 
