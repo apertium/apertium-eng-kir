@@ -180,6 +180,7 @@
       <e><p><l>father</l><r>ата</r></p><par n="par__n"/></e>
       <e><p><l>tree</l><r>дарак</r></p><par n="par__n"/></e>
       <e><p><l>door</l><r>эшик</r></p><par n="par__n"/></e>
+      <e><p><l>outside</l><r>эшик</r></p><par n="par__n"/></e>
       <e><p><l>outside</l><r>сырт</r></p><par n="par__n"/></e>
       <e><p><l>inside</l><r>ич</r></p><par n="par__n"/></e>
       <e><p><l>front</l><r>алд</r></p><par n="par__n"/></e>
@@ -335,6 +336,7 @@
 		<e><p><l>especially<s n="adv"/></l><r>өзгөчө<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>a<b/>lot<s n="adv"/></l><r>көп<s n="adv"/></r></p></e>
 		<e><p><l>very<s n="adv"/></l><r>абдан<s n="adv"/></r></p></e>
+		<e><p><l>very<s n="adv"/></l><r>өтө<s n="adv"/></r></p></e>
 		<e><p><l>today<s n="adv"/></l><r>бүгүн<s n="adv"/></r></p></e>
 		<e><p><l>yesterday<s n="adv"/></l><r>кечээ<s n="adv"/></r></p></e>
 		<e><p><l>together<s n="adv"/></l><r>чогуу<s n="adv"/></r></p></e>
@@ -362,6 +364,7 @@
 		<e><p><l>this<s n="prn"/><s n="dem"/><s n="mf"/><s n="sg"/></l><r>бул<s n="prn"/><s n="dem"/></r></p></e><!-- also "these" -->
 		<e><p><l>what<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>эмне<s n="prn"/><s n="itg"/></r></p></e>
 		<e><p><l>who<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>ким<s n="prn"/><s n="itg"/></r></p></e>
+		<e><p><l>where<s n="adv"/><s n="itg"/></l><r>кайда<s n="adv"/><s n="itg"/></r></p></e>
 		
 		<e><p><l>nothing<s n="prn"/><s n="ind"/><s n="mf"/><s n="sg"/></l><r>эч<b/>нерсе<s n="prn"/><s n="neg"/></r></p></e>
 

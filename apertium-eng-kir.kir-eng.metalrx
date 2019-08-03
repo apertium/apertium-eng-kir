@@ -71,6 +71,42 @@
 			<select lemma="nice" tags="adj.*"/>
 		</match>
 	</rule>
+
+	<rule>
+		<match lemma="жакшы" tags="adj">
+			<select lemma="good" tags="adj.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="жакшы" tags="adj">
+			<select lemma="nice" tags="adj.*"/>
+		</match>
+		<repeat upto="3"><match/></repeat>
+		<match lemma="аба ырайы" tags="n.*"/>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="аба ырайы" tags="n.*"/>
+		<repeat upto="3"><match/></repeat>
+		<match lemma="жакшы" tags="adj">
+			<select lemma="nice" tags="adj.*"/>
+		</match>
+	</rule>
+
+	<rule weight="1.2">
+		<match lemma="эшик" tags="n.acc">
+			<select lemma="door" tags="n.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="эшик" tags="n.nom">
+			<select lemma="door" tags="n.*"/>
+		</match>
+	</rule>
+	<rule>
+		<match lemma="эшик" tags="n.*">
+			<select lemma="outside" tags="n.*"/>
+		</match>
+	</rule>
 </rules>
 </metalrx>
 <!-- 
