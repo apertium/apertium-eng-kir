@@ -148,6 +148,7 @@
       <e><p><l>tourist</l><r>турист</r></p><par n="par__n"/></e>
       <e><p><l>time</l><r>заман</r></p><par n="par__n"/></e>
       <e><p><l>time</l><r>убакыт</r></p><par n="par__n"/></e>
+      <e><p><l>time</l><r>маал</r></p><par n="par__n"/></e>
       <e><p><l>time</l><r>жол</r></p><par n="par__n"/></e>
       <e><p><l>road</l><r>жол</r></p><par n="par__n"/></e>
       <e><p><l>way</l><r>жол</r></p><par n="par__n"/></e>
@@ -211,6 +212,11 @@
       <e><p><l>big<b/>sister</l><r>эжеке</r></p><par n="par__n"/></e>
       <e><p><l>happiness</l><r>кубаныч</r></p><par n="par__n"/></e>
       <e><p><l>weather</l><r>аба<b/>ырайы</r></p><par n="par__n"/></e>
+      <e><p><l>food</l><r>тамак</r></p><par n="par__n"/></e>
+      <e><p><l>rabbit</l><r>коён</r></p><par n="par__n"/></e>
+      <e><p><l>bunny</l><r>коёнек</r></p><par n="par__n"/></e>
+      <e><p><l>land</l><r>жер</r></p><par n="par__n"/></e>
+      <e><p><l>place</l><r>жер</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
@@ -245,6 +251,7 @@
 		<e><p><l>slow<s n="adj"/><s n="sint"/></l><r>акырын<s n="adj"/></r></p></e>
 		<e><p><l>quiet<s n="adj"/><s n="sint"/></l><r>акырын<s n="adj"/></r></p></e>
 		<e><p><l>clear<s n="adj"/><s n="sint"/></l><r>тунук<s n="adj"/></r></p></e>
+		<e><p><l>necessary<s n="adj"/></l><r>керек<s n="adj"/></r></p></e>
 
 
 
@@ -319,6 +326,11 @@
 		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
 		<e><p><l>say<s n="vblex"/></l><r>де<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>drink<s n="vblex"/></l><r>ич<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>eat<s n="vblex"/></l><r>же<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>start<s n="vblex"/></l><r>башта<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>begin<s n="vblex"/></l><r>башта<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>try<s n="vblex"/></l><r>аракет<b/>кыл<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -354,6 +366,8 @@
 		<e><p><l>clearly<s n="adv"/></l><r>тунук<s n="adj"/><s n="advl"/></r></p></e>
 
 		<e><p><l>maybe<s n="adv"/></l><r>мүмкүн<s n="adj"/></r></p></e>
+		
+		<e><p><l>everywhere<s n="adv"/></l><r>бардык<b/>жер<s n="adv"/></r></p></e>
 
       <!-- PRONOUNS -->
 		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
@@ -402,6 +416,8 @@
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>ушул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>ошол<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>тиги<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
+		
+		<e><p><l>all<s n="det"/><s n="qnt"/><s n="pl"/></l><r>бардык<s n="det"/><s n="qnt"/></r></p></e><!-- also "those" -->
 
 		<!-- cnj -->
 		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>

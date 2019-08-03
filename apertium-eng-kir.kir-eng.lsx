@@ -13,6 +13,7 @@
 		<sdef n="advl"/>
 		<sdef n="det"/>
 		<sdef n="dem"/>
+		<sdef n="qnt"/>
 	</sdefs>
 	<pardefs>
 		<pardef n="adj">
@@ -125,6 +126,13 @@
 			<p>
 				<l>ооз<s n="n"/><s n="nom"/><j/>тий<s n="v"/><s n="tv"/></l>
 				<r>ооз<b/>тий<s n="v"/><s n="tv"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+		<e lm="бардык жер" c="everywhere">
+			<p>
+				<l>бардык<s n="det"/><s n="qnt"/><j/>жер<s n="n"/></l>
+				<r>бардык жер<s n="adv"/></r>
 			</p>
 			<i><t/><j/></i>
 		</e>
