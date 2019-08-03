@@ -294,4 +294,4 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
 
 
 S -> DP.nom VP.fin { 1 _1 2 } |
-     DP.nom.$lemcase VP qst { 2[qst_front](lemcase=$lemcase) _ 1(lemcase=aa) _1 2(tense=qst) } ;
+     DP.nom.$lemcase VP qst { 2[qst_front](lemcase=$lemcase) _ 1(lemcase=aa) _1 2(qst=qst) } ;
