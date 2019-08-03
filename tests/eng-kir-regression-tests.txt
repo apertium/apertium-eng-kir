@@ -18,4 +18,6 @@
 Сен дамдуу этти жеп жаткан жоксуңбу?|Weren't you eating the tasty meat?
 Сен дамдуу этти жегиң келген жокпу?|Didn't you want to eat the tasty meat?
 Сен дамдуу этти жебейсиңби?|Don't you eat the tasty meat?
-
+Олимпиада медалы таштандыдан жасалат.|Olympiad medal is made from garbage.
+Мышыктын куйругу бар.|The cat has a tail.
+Мышыктын куйругу жок.|The cat doesn't have a tail.

@@ -158,6 +158,12 @@
       <e><p><l>dog<s n="n"/></l><r>күчүк<s n="n"/></r></p></e>
       <e><p><l>dog<s n="n"/></l><r>ит<s n="n"/></r></p></e>
       <e><p><l>tail<s n="n"/></l><r>куйрук<s n="n"/></r></p></e>
+      <e><p><l>refuse<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
+      <e><p><l>waste<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
+      <e><p><l>garbage<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
+      <e><p><l>trash<s n="n"/></l><r>таштанды<s n="n"/></r></p></e>
+      <e><p><l>medal<s n="n"/></l><r>медаль<s n="n"/></r></p></e>
+      <e><p><l>olympiad<s n="n"/></l><r>олимпиада<s n="n"/></r></p></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
@@ -215,6 +221,8 @@
 		<e><p><l>go<g><b/>out<b/>of</g><s n="vblex"/></l><r>чык<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>leave<s n="vblex"/></l><r>кет<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>run<s n="vblex"/></l><r>чурка<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>make<s n="vblex"/></l><r>жаса<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>make<s n="vblex"/></l><r>кыл<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
