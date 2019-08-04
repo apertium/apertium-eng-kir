@@ -223,6 +223,12 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
                 { 1 _1 3 _2 2 }
              else
                 { 3 _2 2 _1 1 } ) |
+      DP DP %vP
+         ?(
+            ((1.case = nom) and (2.case in might_get_pr)) or
+            ((1.case = acc) and (2.case in might_get_pr))
+          )
+            { 3 _2 1 _1 2 } |
       DP %vP.$lem
          ?(not
             (
