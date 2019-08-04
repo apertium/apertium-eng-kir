@@ -14,7 +14,8 @@ prep_flag = (PRD NOpr) to in on at for of from PRD NOpr; !none;
                  ! ^ hack, but not all NPs have prep_flag set, which overrides <dat> and this no pr
 adjlevel = comp ;
 adjtype = sint ;
-adv_behaviour = attr ;
+adv_behaviour = (AdvBD NOadvB) attr ;
+adj_behaviour = advl subst ;
 advlevel = comp ;
 nptype = n np ;
 det_type = dem ;
@@ -51,7 +52,7 @@ en_nouns_loc_at = concert school club game address shore ;
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
 ky_verbs_abl_arg = өт аш;
-en_vaux_ing = be finish ;
+en_vaux_ing = be finish start begin ;
 en_vaux_to = want ;
 en_vaux_none = can ;
 
@@ -98,6 +99,7 @@ det: (if (1.det_type = dem) 1[det_dem] else 1[det_def]);
 adv_attr: _ ;
 adv_default: _.advlevel ;
 adv: (if (1.adv_behaviour = attr) 1[adv_attr] else 1[adv_default]);
+AdvP: _.advlevel ;
 np_top: _.<top> ;
 np_ant: _.<ant>.gender.number ;
 np_cog: _.<cog>.gender ;
@@ -158,9 +160,9 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg] { 1 } |
       NP cnjcoo %NP [$number=pl,$nptype=np] { 1 _1 2 _2 3 }  ! FIXME: having trouble making $nptype dynamic
    ;
 
-AP -> adj { 1 } |
+AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
       adv.attr { 1 } |
-      adv adj { 1 _1 2 } ;
+      AdvP adj { 1 _1 2 } ;
 !|
  !     AP { 1 } ;
 
@@ -171,6 +173,8 @@ DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
 		num NP.$number.$case.$prep_flag { 1 _1 2 } |
 		num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
       det num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 _3 4 } |
+      AP det NP.$number.$case.$prep_flag { 2 _2 1 _1 3 } |
+      NP.*.gen AP det NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 3 _3 2 _2 4 } |
       0: NP.n.$number.$case.$prep_flag {
           (if (1.poss = noPOSS)
                [ the@det.def.sp ]
@@ -248,11 +252,17 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
                1
             )
          } |
-      PP adv %vP { 3 _2 2 _1 1 } |
-      adv %vP { 2 _1 1 } |
+      DP AdvP %vP
+         ?((1.case = acc))
+         { 3 _1 1 _2 2 } |
+      PP AdvP %vP { 3 _2 2 _1 1 } |
+      AdvP %vP { 2 _1 1 } |
       %vP { 1 }
    ;
 
+AdvP -> adj.advl.$advlevel [$adv_behaviour=NOadvB] { 
+          (if ($advlevel = comp) [ more@adv _ ] ) 1 } |
+        %adv { 1 } ;
 
 !      0: v.$transitivity { 1 } |
 !      1: NP.acc v.$transitivity { 2 _1 1 } |

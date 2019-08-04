@@ -11,6 +11,7 @@
 		<sdef n="iv"/>
 		<sdef n="prc_perf"/>
 		<sdef n="advl"/>
+		<sdef n="comp"/>
 		<sdef n="det"/>
 		<sdef n="dem"/>
 		<sdef n="qnt"/>
@@ -135,6 +136,14 @@
 				<r>бардык жер<s n="adv"/></r>
 			</p>
 			<i><t/><j/></i>
+		</e>
+		<e lm="adj.comp.advl" c="rearrange to adj.advl.comp"><!-- so that adj.advl forms can be put in the dictionary -->
+			<i><w/><s n="adj"/></i>
+			<p>
+				<l><s n="comp"/><s n="advl"/></l>
+				<r><s n="advl"/><s n="comp"/></r>
+			</p>
+			<i><j/></i>
 		</e>
 	</section>
 </dictionary>

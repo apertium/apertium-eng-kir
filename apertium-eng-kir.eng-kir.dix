@@ -323,6 +323,8 @@
 		<e><p><l>walk<s n="vblex"/></l><r>бас<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>press<s n="vblex"/></l><r>бас<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>laugh<s n="vblex"/></l><r>күл<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>smile<s n="vblex"/></l><r>жылмай<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>cry<s n="vblex"/></l><r>ыйла<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>like<s n="vblex"/></l><r>жакшы<b/>көр<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>finish<s n="vblex"/></l><r>бүт<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
@@ -331,6 +333,7 @@
 		<e><p><l>eat<s n="vblex"/></l><r>же<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>start<s n="vblex"/></l><r>башта<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>begin<s n="vblex"/></l><r>башта<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>start<s n="vblex"/></l><r>башта<s n="vaux"/></r></p></e>
 		<e><p><l>try<s n="vblex"/></l><r>аракет<b/>кыл<s n="v"/><s n="iv"/></r></p></e>
 
 
@@ -360,11 +363,13 @@
 		<e><p><l>always<s n="adv"/></l><r>дайыма<s n="adv"/></r></p></e>
 		<e><p><l>now<s n="adv"/></l><r>азыр<s n="adv"/></r></p></e>
 		<e><p><l>now<s n="adv"/></l><r>эми<s n="adv"/></r></p></e>
+		<e><p><l>but<b/>now<s n="adv"/></l><r>ал<b/>эми<s n="cnjadv"/></r></p></e>
 		<e><p><l>never<s n="adv"/></l><r>эч<b/>качан<s n="adv"/></r></p></e>
 		<e><p><l>also<s n="adv"/></l><r>да<s n="postadv"/></r></p></e>
 		<e><p><l>slowly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>quietly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>clearly<s n="adv"/></l><r>тунук<s n="adj"/><s n="advl"/></r></p></e>
+		<e><p><l>happily<s n="adv"/></l><r>көңүлдүү<s n="adj"/><s n="advl"/></r></p></e>
 
 		<e><p><l>maybe<s n="adv"/></l><r>мүмкүн<s n="adj"/></r></p></e>
 		
@@ -412,7 +417,7 @@
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
 		<e r="LR"><p><l>the<s n="det"/><s n="def"/><s n="sp"/></l><r></r></p></e>
-		<e r="LR"><p><l>a<s n="det"/><s n="ind"/><s n="sg"/></l><r></r></p></e>
+		<e><p><l>a<s n="det"/><s n="ind"/><s n="sg"/></l><r>бир<s n="det"/><s n="ind"/></r></p></e>
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>бул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 		<e><p><l>this<s n="det"/><s n="dem"/></l><r>ушул<s n="det"/><s n="dem"/></r></p></e><!-- also "these" -->
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>ошол<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
@@ -437,6 +442,7 @@
 		<e><p><l>with<s n="pr"/></l><r>менен<s n="post"/></r></p></e>
 		<e><p><l>after<s n="pr"/></l><r>кийин<s n="post"/></r></p></e>
 		<e><p><l>before<s n="pr"/></l><r>чейин<s n="post"/></r></p></e>
+		<e><p><l>towards<s n="pr"/></l><r>карай<s n="post"/></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
