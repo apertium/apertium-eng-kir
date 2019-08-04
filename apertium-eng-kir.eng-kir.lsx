@@ -112,6 +112,22 @@
 			<i><t/><j/></i>
 		</e>
 
+		<e lm="big sister" c="эжеке">
+			<p>
+				<l>big<s n="adj"/><s n="sint"/><j/>sister<s n="n"/></l>
+				<r>big<b/>sister<s n="n"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+
+		<e lm="big brother" c="байке">
+			<p>
+				<l>big<s n="adj"/><s n="sint"/><j/>brother<s n="n"/></l>
+				<r>big<b/>brother<s n="n"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+
 		<e lm="do like this" c="минт">
 			<p>
 				<l>do<s n="vblex"/></l>

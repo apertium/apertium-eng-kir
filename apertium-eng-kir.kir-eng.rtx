@@ -58,6 +58,8 @@ en_vaux_none = can ;
 
 en_vaux_person = be have ;
 
+ky_titles = байке эже мырза айым ;
+
 might_get_pr = loc dat abl gen ;
 
 city = Нарын ;
@@ -158,14 +160,16 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep
 !      2: np.top.loc.$nptype.$poss [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
 !                                { at@prep _ 1 } |
       4: n.nom n.px3sp.$case.$nptype [$number=sg] { 1 _1 2 } | ! $poss=2.poss
-      NP cnjcoo %NP [$number=pl,$nptype=np] { 1 _1 2 _2 3 }  ! FIXME: having trouble making $nptype dynamic
+      NP cnjcoo %NP [$number=pl,$nptype=np] { 1 _1 2 _2 3 } | ! FIXME: having trouble making $nptype dynamic
+      np.ant.$nptype n.$case/sl.$number.$poss ?(2.lem/sl in ky_titles) { 2 _1 1 }
    ;
 
 AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
       adv.attr { 1 } |
       "# year-old" num жашар@adj { 1 _1 2 } |
       AP AP { 1 _1 2 } |
-      AdvP adj { 1 _1 2 } ;
+      AdvP adj { 1 _1 2 }
+;
 !|
  !     AP { 1 } ;
 

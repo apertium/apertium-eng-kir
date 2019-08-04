@@ -205,6 +205,8 @@
       <e><p><l>kid</l><r>бала</r></p><par n="par__n"/></e>
       <e><p><l>boy</l><r>бала</r></p><par n="par__n"/></e>
       <e><p><l>girl</l><r>кыз</r></p><par n="par__n"/></e>
+      <e><p><l>daughter</l><r>кыз</r></p><par n="par__n"/></e>
+      <e><p><l>son</l><r>уул</r></p><par n="par__n"/></e>
       <e><p><l>thing</l><r>нерсе</r></p><par n="par__n"/></e>
       <e><p><l>surrounding</l><r>айлана</r></p><par n="par__n"/></e>
       <e><p><l>eye</l><r>көз</r></p><par n="par__n"/></e>
@@ -231,6 +233,8 @@
       <e><p><l>day</l><r>күн</r></p><par n="par__n"/></e>
       <e><p><l>night</l><r>түн</r></p><par n="par__n"/></e>
       <e><p><l>agreement</l><r>келишим</r></p><par n="par__n"/></e>
+      <e><p><l>rat</l><r>келемиш</r></p><par n="par__n"/></e>
+      <e><p><l>mouse</l><r>чычкан</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
