@@ -157,7 +157,7 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep
       3: np.top.loc.$nptype.$poss                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
 !      2: np.top.loc.$nptype.$poss [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
 !                                { at@prep _ 1 } |
-      4: n.nom n.px3sp.$case.$nptype [$number=sg,$poss=2.poss] { 1 _1 2 } |
+      4: n.nom n.px3sp.$case.$nptype [$number=sg] { 1 _1 2 } | ! $poss=2.poss
       NP cnjcoo %NP [$number=pl,$nptype=np] { 1 _1 2 _2 3 }  ! FIXME: having trouble making $nptype dynamic
    ;
 
