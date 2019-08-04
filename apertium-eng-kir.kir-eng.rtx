@@ -261,6 +261,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
       DP AdvP %vP
          ?((1.case = acc))
          { 3 _1 1 _2 2 } |
+      DP PP %vP
+         ?((1.case = acc))
+         { 3 _1 1 _2 2 } |
       PP AdvP %vP { 3 _2 2 _1 1 } |
       AdvP %vP { 2 _1 1 } |
       %vP { 1 }
