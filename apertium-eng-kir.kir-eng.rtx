@@ -64,6 +64,8 @@ might_get_pr = loc dat abl gen ;
 
 city = Нарын ;
 
+prep_nouns = арт алд жан үст аст орто маңдай түп ара ич ;
+
 
 !!! MAPPINGS !!!
 
@@ -77,6 +79,7 @@ prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj ;
 case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NOpr, obj NOpr;
 fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
+prep_nouns > preposition : арт behind, алд in\ front\ of, жан next\ to, үст on\ top\ of, аст under, орто in\ the\ middle\ of, маңдай across\ from, түп at\ the\ bottom\ of, ара between, ич inside ;
 
 !!! OUTPUT PATTERNS !!!
 ! when building chunk or lu of this type, put these tags in this order
@@ -173,7 +176,15 @@ AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
 !|
  !     AP { 1 } ;
 
-DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
+DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag {
+! FIXME: can't get the following to work:
+!         (if (2.lem/sl in  prep_nouns)
+!           [ 2[prep_nouns>preposition] 1 ]
+!          else
+!           [ 1 's@gen _1 2 ]
+!         ) } |
+           1 's@gen _1 2 } |
+! COMMENT OUT THE ABOVE LINE once the FIXME above is fixed
       4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
 		! The following are hacks.
 		! They should really be [DP [DP[det NP.gen]] NP.px3]
