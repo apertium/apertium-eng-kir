@@ -82,6 +82,7 @@ fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.number.case.prep_flag ;
 VP: _.fnf.transitivity.tense.person.number.negative.qst ;
+RC: _ ;
 prn_pers: _.case.person.gender.number ;
 prn_itg: _.<itg>.gender.number ;
 prn_ind: _.<ind>.gender.number ;
@@ -193,9 +194,13 @@ DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
       1: AP NP.$number.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
       2: prn.$number.$case { (if (1.person = p1 and 1.number = sg) 1(lemcase=Aa)
                       else 1(lemcase=$lemcase)) } |
-      VP.prc DP.$number.$case { 2 _1 that@cnjsub _ 1 } |
+      RC DP.$number.$case { 2 _1 that@cnjsub _ 1 } |
 		VP.ger { 1 }
    ;
+
+RC -> DP.*.nom VP.prc { 1 _1 2 } |
+      VP.prc { 1 }
+;
 
 PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
          (if ($prep_flag = NOpr)
@@ -269,7 +274,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
       %vP { 1 }
    ;
 
-AdvP -> adj.advl.$advlevel [$adv_behaviour=NOadvB] { 
+AdvP -> adj.advl.$advlevel [$adv_behaviour=NOadvB] {
           (if ($advlevel = comp) [ more@adv _ ] ) 1 } |
         %adv { 1 } ;
 
@@ -334,7 +339,7 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
 
 
 S -> DP.*.nom VP.fin
-       { 1 _1 
+       { 1 _1
                (if ((2.number = sg) and (1.number = pl))
                     2(number=pl)
                 else 2
