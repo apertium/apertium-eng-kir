@@ -195,6 +195,7 @@
       <e><p><l>front</l><r>алд</r></p><par n="par__n"/></e>
       <e><p><l>back</l><r>арт</r></p><par n="par__n"/></e>
       <e><p><l>underside</l><r>аст</r></p><par n="par__n"/></e>
+      <e><p><l>middle</l><r>орто</r></p><par n="par__n"/></e>
       <e><p><l>game</l><r>оюн</r></p><par n="par__n"/></e>
       <e><p><l>window</l><r>терезе</r></p><par n="par__n"/></e>
       <e><p><l>response</l><r>жооп</r></p><par n="par__n"/></e>
@@ -226,6 +227,10 @@
       <e><p><l>land</l><r>жер</r></p><par n="par__n"/></e>
       <e><p><l>place</l><r>жер</r></p><par n="par__n"/></e>
       <e><p><l>refrigerator</l><r>муздаткыч</r></p><par n="par__n"/></e>
+      <e><p><l>sun</l><r>күн</r></p><par n="par__n"/></e>
+      <e><p><l>day</l><r>күн</r></p><par n="par__n"/></e>
+      <e><p><l>night</l><r>түн</r></p><par n="par__n"/></e>
+      <e><p><l>agreement</l><r>келишим</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
@@ -351,6 +356,7 @@
 		<e><p><l>try<s n="vblex"/></l><r>аракет<b/>кыл<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>do<b/>like<b/>this<s n="vblex"/></l><r>минт<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>do<b/>like<b/>that<s n="vblex"/></l><r>ант<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>change<s n="vblex"/></l><r>өзгөр<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -392,6 +398,8 @@
 		
 		<e><p><l>everywhere<s n="adv"/></l><r>бардык<b/>жер<s n="adv"/></r></p></e>
 		<e><p><l>fast<s n="adv"/></l><r>катуу<s n="adj"/><s n="advl"/></r></p></e>
+		<e><p><l>at<b/>night<s n="adv"/></l><r>түнүчүндө<s n="adv"/></r></p></e>
+		<e><p><l>during<b/>the<b/>day<s n="adv"/></l><r>күндүз<s n="adv"/></r></p></e>
 
 
       <!-- PRONOUNS -->
@@ -433,6 +441,9 @@
 		<!-- np.ant -->
 		<e><p><l>Azamat<s n="np"/><s n="ant"/><s n="m"/></l><r>Азамат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 		<e><p><l>Aygül<s n="np"/><s n="ant"/><s n="f"/></l><r>Айгүл<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+
+		<!-- other np -->
+		<e><p><l>Kumtor<s n="np"/><s n="org"/></l><r>Кумтөр<s n="np"/><s n="org"/></r></p></e>
 
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
