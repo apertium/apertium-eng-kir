@@ -21,3 +21,6 @@
 Олимпиада медалы таштандыдан жасалат.|Olympiad medal is made from garbage.
 Мышыктын куйругу бар.|The cat has a tail.
 Мышыктын куйругу жок.|The cat doesn't have a tail.
+Мен муздаткычтан тамакты алдым.|I got the food from the refrigerator.
+Мен тамакты муздаткычтан алдым.|I got the food from the refrigerator.
+

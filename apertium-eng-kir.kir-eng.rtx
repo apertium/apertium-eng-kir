@@ -80,7 +80,7 @@ fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.case.prep_flag ;
-VP: _.fnf.transitivity.tense.person.number.negative ;
+VP: _.fnf.transitivity.tense.person.number.negative.qst ;
 prn_pers: _.case.person.gender.number ;
 prn_itg: _.<itg>.gender.number ;
 prn_ind: _.<ind>.gender.number ;
@@ -89,7 +89,7 @@ S: _ ;
 n: _.number ;
 adj: _.adjtype.adjlevel ;
 post: _;
-vP: _.transitivity.tense.fnf.person.number.negative ;
+vP: _.transitivity.tense.fnf.person.number.negative.qst ;
 PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -246,6 +246,8 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
                1
             )
          } |
+      PP adv %vP { 3 _2 2 _1 1 } |
+      adv %vP { 2 _1 1 } |
       %vP { 1 }
    ;
 
