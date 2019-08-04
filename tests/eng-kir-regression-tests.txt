@@ -23,4 +23,5 @@
 Мышыктын куйругу жок.|The cat doesn't have a tail.
 Мен муздаткычтан тамакты алдым.|I got the food from the refrigerator.
 Мен тамакты муздаткычтан алдым.|I got the food from the refrigerator.
+Мен тооктун этин жакшы көрөм.|I like chicken's meat.
 

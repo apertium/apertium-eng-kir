@@ -164,8 +164,8 @@ AP -> adj { 1 } |
 !|
  !     AP { 1 } ;
 
-DP -> 2: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
-      2: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
+DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
+      4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
       det NP.$number.$case.$prep_flag { 1(number=2.number) _1 2 } |
       det AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
 		num NP.$number.$case.$prep_flag { 1 _1 2 } |
