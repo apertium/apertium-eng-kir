@@ -79,7 +79,7 @@ fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 ! when building chunk or lu of this type, put these tags in this order
 
 NP: _.nptype.number.poss.case.prep_flag ;
-DP: _.case.prep_flag ;
+DP: _.number.case.prep_flag ;
 VP: _.fnf.transitivity.tense.person.number.negative.qst ;
 prn_pers: _.case.person.gender.number ;
 prn_itg: _.<itg>.gender.number ;
@@ -104,6 +104,7 @@ np_cog: _.<cog>.gender ;
 np_default: _ ;
 np: (if (1.np_type = top) 1[np_top] else-if (1.np_type = ant) 1[np_ant] else-if (1.np_type = cog) 1[np_cog] else 1[np_default]);
 num: _.number ;
+cnjcoo: _ ;
 
 vaux_pers: _.tense.person.number ;
 vaux_nopers: _.tense ;
@@ -153,7 +154,8 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg] { 1 } |
       3: np.top.loc.$nptype.$poss                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
 !      2: np.top.loc.$nptype.$poss [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
 !                                { at@prep _ 1 } |
-      4: n.nom n.px3sp.$case.$nptype [$number=sg,$poss=2.poss] { 1 _1 2 }
+      4: n.nom n.px3sp.$case.$nptype [$number=sg,$poss=2.poss] { 1 _1 2 } |
+      NP cnjcoo %NP [$number=pl,$nptype=np] { 1 _1 2 _2 3 }  ! FIXME: having trouble making $nptype dynamic
    ;
 
 AP -> adj { 1 } |
@@ -162,26 +164,26 @@ AP -> adj { 1 } |
 !|
  !     AP { 1 } ;
 
-DP -> 2: NP.*.gen NP.*.[px3].$case.$prep_flag { 1 's@gen _1 2 } |
-      2: NP.*.gen NP.*.[px3].$case.$prep_flag { 2 _1 of@pr _ 1 } |
-      det NP.$case.$prep_flag { 1(number=2.number) _1 2 } |
-      det AP NP.$case.$prep_flag { 1 _1 2 _2 3 } |
-		num NP.$case.$prep_flag { 1 _1 2 } |
-		num AP NP.$case.$prep_flag { 1 _1 2 _2 3 } |
-      det num AP NP.$case.$prep_flag { 1 _1 2 _2 3 _3 4 } |
-      0: NP.n.$case.$prep_flag {
+DP -> 2: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 's@gen _1 2 } |
+      2: NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
+      det NP.$number.$case.$prep_flag { 1(number=2.number) _1 2 } |
+      det AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
+		num NP.$number.$case.$prep_flag { 1 _1 2 } |
+		num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
+      det num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 _3 4 } |
+      0: NP.n.$number.$case.$prep_flag {
           (if (1.poss = noPOSS)
                [ the@det.def.sp ]
              else
                [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
           ) _ 1 } |
-      1: NP.n.$case.$prep_flag { a@det.idf.sp _ 1 } |
-      2: NP.np.$case.$prep_flag { 1 } |
-      0: AP NP.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
-      1: AP NP.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
-      2: prn.$case { (if (1.person = p1 and 1.number = sg) 1(lemcase=Aa)
+      1: NP.n.$number.$case.$prep_flag { a@det.idf.sp _ 1 } |
+      2: NP.np.$number.$case.$prep_flag { 1 } |
+      0: AP NP.$number.$case.$prep_flag { the@det.def.sp _ 1 _1 2 } |
+      1: AP NP.$number.$case.$prep_flag { a@det.idf.sp _ 1 _1 2 } |
+      2: prn.$number.$case { (if (1.person = p1 and 1.number = sg) 1(lemcase=Aa)
                       else 1(lemcase=$lemcase)) } |
-      VP.prc DP.$case { 2 _1 that@cnjsub _ 1 } |
+      VP.prc DP.$number.$case { 2 _1 that@cnjsub _ 1 } |
 		VP.ger { 1 }
    ;
 
@@ -236,7 +238,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
                and (1.case = nom)
             )
           ) { %2 _1 1 } |
-      PP DP.acc %vP { 3 _2 2 _1 1 } |
+      PP DP.*.acc %vP { 3 _2 2 _1 1 } |
       PP PP %vP { 3 _2 2 _1 1 } |
       PP %vP
          { 2 _1
@@ -308,5 +310,11 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
 
 
 
-S -> DP.nom VP.fin { 1 _1 2 } |
-     DP.nom.$lemcase VP qst { 2[qst_front](lemcase=$lemcase) _ 1(lemcase=aa) _1 2(qst=qst) } ;
+S -> DP.*.nom VP.fin
+       { 1 _1 
+               (if ((2.number = sg) and (1.number = pl))
+                    2(number=pl)
+                else 2
+               )
+       } |
+     DP.*.nom.$lemcase VP qst { 2[qst_front](lemcase=$lemcase) _ 1(lemcase=aa) _1 2(qst=qst) } ;
