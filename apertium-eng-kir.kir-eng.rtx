@@ -185,7 +185,7 @@ DP -> 1: NP.*.gen NP.*.[px3].$case.$prep_flag { 1 's@gen _1 2 } |
 		VP.ger { 1 }
    ;
 
-PP -> DP.$prep_flag ?(1.case in might_get_pr)
+PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
          (if ($prep_flag = NOpr)
              { 1 }
           else
