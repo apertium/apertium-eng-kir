@@ -262,6 +262,8 @@
 		<e><p><l>clear<s n="adj"/><s n="sint"/></l><r>тунук<s n="adj"/></r></p></e>
 		<e><p><l>necessary<s n="adj"/></l><r>керек<s n="adj"/></r></p></e>
 		<e><p><l>year-old<s n="adj"/></l><r>жашар<s n="adj"/></r></p></e>
+		<e><p><l>hard<s n="adj"/><s n="sint"/></l><r>катуу<s n="adj"/></r></p></e>
+		<e><p><l>fast<s n="adj"/><s n="sint"/></l><r>катуу<s n="adj"/></r></p></e>
 
 
 
@@ -372,6 +374,7 @@
 		<e><p><l>today<s n="adv"/></l><r>бүгүн<s n="adv"/></r></p></e>
 		<e><p><l>yesterday<s n="adv"/></l><r>кечээ<s n="adv"/></r></p></e>
 		<e><p><l>together<s n="adv"/></l><r>чогуу<s n="adv"/></r></p></e>
+		<e><p><l>together<s n="adv"/></l><r>бирге<s n="adv"/></r></p></e>
 		<e><p><l>always<s n="adv"/></l><r>дайыма<s n="adv"/></r></p></e>
 		<e><p><l>now<s n="adv"/></l><r>азыр<s n="adv"/></r></p></e>
 		<e><p><l>now<s n="adv"/></l><r>эми<s n="adv"/></r></p></e>
@@ -386,6 +389,8 @@
 		<e><p><l>maybe<s n="adv"/></l><r>мүмкүн<s n="adj"/></r></p></e>
 		
 		<e><p><l>everywhere<s n="adv"/></l><r>бардык<b/>жер<s n="adv"/></r></p></e>
+		<e><p><l>fast<s n="adv"/></l><r>катуу<s n="adj"/><s n="advl"/></r></p></e>
+
 
       <!-- PRONOUNS -->
 		<e><p><l>prpers<s n="prn"/><s n="CD"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>мен<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>

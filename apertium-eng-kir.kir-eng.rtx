@@ -318,7 +318,11 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=1.fnfall>fnf]
       3: %бол@v ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) } |
       4: %бол@v.*.neg ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { 1(tense=$tense) _ not@adv } ;
+          { 1(tense=$tense) _ not@adv } |
+      5: %v.$transitivity.$lem/sl бар@v.iv.prc_impf жат@vaux [$fnf=2.fnfall>fnf, $tense=1.prc_or_tense>tense]
+          { 3 _1 1(tense=$tense) }
+;
+
 
 
 

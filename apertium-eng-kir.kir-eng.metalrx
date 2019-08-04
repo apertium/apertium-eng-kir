@@ -9,6 +9,12 @@
 			<match lemma="чык" tags="v.*"/>
 		</or>
 	</def-seq>
+	<def-seq n="fast-not-hard-verbs">
+		<or>
+			<match lemma="чурка" tags="v.*"/>
+			<match lemma="айда" tags="v.*"/>
+		</or>
+	</def-seq>
 </def-seqs>
 
 <rules>
@@ -107,6 +113,32 @@
 			<select lemma="outside" tags="n.*"/>
 		</match>
 	</rule>
+
+	<rule weight="1.2">
+		<match lemma="катуу" tags="adj">
+			<select lemma="fast" tags="adj.*"/>
+		</match>
+		<repeat upto="3"><match/></repeat>
+		<seq n="fast-not-hard-verbs"/>
+	</rule>
+	<rule>
+		<match lemma="катуу" tags="adj">
+			<select lemma="hard" tags="adj.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="катуу" tags="adj.*">
+			<select lemma="fast" tags="adj.*"/>
+		</match>
+		<repeat upto="3"><match/></repeat>
+		<seq n="fast-not-hard-verbs"/>
+	</rule>
+	<rule>
+		<match lemma="катуу" tags="adj.*">
+			<select lemma="hard" tags="adj.*"/>
+		</match>
+	</rule>
+
 </rules>
 </metalrx>
 <!--
