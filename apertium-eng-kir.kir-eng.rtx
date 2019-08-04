@@ -192,7 +192,8 @@ DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag {
       4: det NP.*.gen NP.*.[px3].$number.$case.$prep_flag { 1 _1 3 _2 of@pr _ 2 } |
       det NP.$number.$case.$prep_flag { 1(number=2.number) _1 2 } |
       det AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
-		num NP.$number.$case.$prep_flag { 1 _1 2 } |
+		num NP.$number.$case.$prep_flag ?(2.lem not = жаш ) { 1 _1 2 } |
+		num NP.$number.$case            ?(2.lem     = жаш ) [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
 		num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 } |
       det num AP NP.$number.$case.$prep_flag { 1 _1 2 _2 3 _3 4 } |
       AP det NP.$number.$case.$prep_flag { 2 _2 1 _1 3 } |
