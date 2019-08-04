@@ -349,6 +349,8 @@
 		<e><p><l>begin<s n="vblex"/></l><r>башта<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>start<s n="vblex"/></l><r>башта<s n="vaux"/></r></p></e>
 		<e><p><l>try<s n="vblex"/></l><r>аракет<b/>кыл<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>do<b/>like<b/>this<s n="vblex"/></l><r>минт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>do<b/>like<b/>that<s n="vblex"/></l><r>ант<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -463,6 +465,7 @@
 		<e><p><l>after<s n="pr"/></l><r>кийин<s n="post"/></r></p></e>
 		<e><p><l>before<s n="pr"/></l><r>чейин<s n="post"/></r></p></e>
 		<e><p><l>towards<s n="pr"/></l><r>карай<s n="post"/></r></p></e>
+		<e><p><l>for<s n="pr"/></l><r>үчүн<s n="post"/></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>

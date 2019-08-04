@@ -112,5 +112,30 @@
 			<i><t/><j/></i>
 		</e>
 
+		<e lm="do like this" c="минт">
+			<p>
+				<l>do<s n="vblex"/></l>
+				<r>do<b/>like<b/>this<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<p>
+				<l>like<b/>this<s n="adv"/></l>
+				<r></r>
+			</p>
+			<i><j/></i>
+		</e>
+
+		<e lm="do like that" c="ант">
+			<p>
+				<l>do<s n="vblex"/></l>
+				<r>do<b/>like<b/>that<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<p>
+				<l>like<b/>that<s n="adv"/></l>
+				<r></r>
+			</p>
+			<i><j/></i>
+		</e>
 	</section>
 </dictionary>
