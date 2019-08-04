@@ -12,6 +12,8 @@
 		<sdef n="tv"/>
 		<sdef n="iv"/>
 		<sdef n="det"/>
+		<sdef n="sg"/>
+		<sdef n="guio"/>
 		<sdef n="sint"/>
 		<sdef n="advl"/>
 		<sdef n="pres"/>
@@ -93,5 +95,22 @@
 			</p>
 			<i>at<s n="pr"/><j/></i>
 		</e>
+
+		<e lm="year-old" c="жашар">
+			<p>
+				<l>year<s n="n"/><s n="sg"/><j/>-<s n="guio"/><j/>old<s n="adj"/><s n="sint"/></l>
+				<r>year-old<s n="adj"/></r>
+			</p>
+			<i><j/></i>
+		</e>
+
+		<e lm="little sister" c="карындаш/сиңди">
+			<p>
+				<l>little<s n="adj"/><j/>sister<s n="n"/></l>
+				<r>little<b/>sister<s n="n"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+
 	</section>
 </dictionary>

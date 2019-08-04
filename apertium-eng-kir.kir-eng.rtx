@@ -162,6 +162,8 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg] { 1 } |
 
 AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
       adv.attr { 1 } |
+      "# year-old" num жашар@adj { 1 _1 2 } |
+      AP AP { 1 _1 2 } |
       AdvP adj { 1 _1 2 } ;
 !|
  !     AP { 1 } ;

@@ -117,10 +117,18 @@
 
 
 	<pardefs>
-		<pardef n="par__num">
+		<pardef n="par__num_sg">
 			<e>
 				<p>
-					<l><s n="num"/></l>
+					<l><s n="num"/><s n="sg"/></l>
+					<r><s n="num"/></r>
+				</p>
+			</e>
+		</pardef>
+		<pardef n="par__num_pl">
+			<e>
+				<p>
+					<l><s n="num"/><s n="pl"/></l>
 					<r><s n="num"/></r>
 				</p>
 			</e>
@@ -253,6 +261,7 @@
 		<e><p><l>quiet<s n="adj"/><s n="sint"/></l><r>акырын<s n="adj"/></r></p></e>
 		<e><p><l>clear<s n="adj"/><s n="sint"/></l><r>тунук<s n="adj"/></r></p></e>
 		<e><p><l>necessary<s n="adj"/></l><r>керек<s n="adj"/></r></p></e>
+		<e><p><l>year-old<s n="adj"/></l><r>жашар<s n="adj"/></r></p></e>
 
 
 
@@ -365,7 +374,7 @@
 		<e><p><l>now<s n="adv"/></l><r>эми<s n="adv"/></r></p></e>
 		<e><p><l>but<b/>now<s n="adv"/></l><r>ал<b/>эми<s n="cnjadv"/></r></p></e>
 		<e><p><l>never<s n="adv"/></l><r>эч<b/>качан<s n="adv"/></r></p></e>
-		<e><p><l>also<s n="adv"/></l><r>да<s n="postadv"/></r></p></e>
+		<e><p><l>also<s n="adv"/></l><r>да<s n="cnjadv"/></r></p></e>
 		<e><p><l>slowly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>quietly<s n="adv"/></l><r>акырын<s n="adj"/><s n="advl"/></r></p></e>
 		<e><p><l>clearly<s n="adv"/></l><r>тунук<s n="adj"/><s n="advl"/></r></p></e>
@@ -389,21 +398,22 @@
 		<e><p><l>what<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>эмне<s n="prn"/><s n="itg"/></r></p></e>
 		<e><p><l>who<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>ким<s n="prn"/><s n="itg"/></r></p></e>
 		<e><p><l>where<s n="adv"/><s n="itg"/></l><r>кайда<s n="adv"/><s n="itg"/></r></p></e>
+		<e><p><l>where<s n="adv"/><s n="itg"/></l><r>кай<b/>жер<s n="adv"/><s n="itg"/></r></p></e>
 		<e><p><l>own<s n="adj"/></l><r>өз<s n="det"/><s n="ref"/></r></p></e>
 		
 		<e><p><l>nothing<s n="prn"/><s n="ind"/><s n="mf"/><s n="sg"/></l><r>эч<b/>нерсе<s n="prn"/><s n="neg"/></r></p></e>
 
 		<!-- NUMBERS -->
-		<e><p><l>one</l><r>бир</r></p><par n="par__num"/></e>
-		<e><p><l>two</l><r>эки</r></p><par n="par__num"/></e>
-		<e><p><l>three</l><r>үч</r></p><par n="par__num"/></e>
-		<e><p><l>four</l><r>төрт</r></p><par n="par__num"/></e>
-		<e><p><l>five</l><r>беш</r></p><par n="par__num"/></e>
-		<e><p><l>six</l><r>алты</r></p><par n="par__num"/></e>
-		<e><p><l>seven</l><r>жети</r></p><par n="par__num"/></e>
-		<e><p><l>eight</l><r>сегиз</r></p><par n="par__num"/></e>
-		<e><p><l>nine</l><r>тогуз</r></p><par n="par__num"/></e>
-		<e><p><l>ten</l><r>он</r></p><par n="par__num"/></e>
+		<e><p><l>one</l><r>бир</r></p><par n="par__num_sg"/></e>
+		<e><p><l>two</l><r>эки</r></p><par n="par__num_pl"/></e>
+		<e><p><l>three</l><r>үч</r></p><par n="par__num_pl"/></e>
+		<e><p><l>four</l><r>төрт</r></p><par n="par__num_pl"/></e>
+		<e><p><l>five</l><r>беш</r></p><par n="par__num_pl"/></e>
+		<e><p><l>six</l><r>алты</r></p><par n="par__num_pl"/></e>
+		<e><p><l>seven</l><r>жети</r></p><par n="par__num_pl"/></e>
+		<e><p><l>eight</l><r>сегиз</r></p><par n="par__num_pl"/></e>
+		<e><p><l>nine</l><r>тогуз</r></p><par n="par__num_pl"/></e>
+		<e><p><l>ten</l><r>он</r></p><par n="par__num_pl"/></e>
 
 		<!-- PROPER NOUNS -->
 		<!-- np.top -->
@@ -423,7 +433,9 @@
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>ошол<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 		<e><p><l>that<s n="det"/><s n="dem"/></l><r>тиги<s n="det"/><s n="dem"/></r></p></e><!-- also "those" -->
 		
-		<e><p><l>all<s n="det"/><s n="qnt"/><s n="pl"/></l><r>бардык<s n="det"/><s n="qnt"/></r></p></e><!-- also "those" -->
+		<e><p><l>all<s n="det"/><s n="qnt"/><s n="pl"/></l><r>бардык<s n="det"/><s n="qnt"/></r></p></e>
+
+		<e><p><l>which<s n="det"/><s n="itg"/><s n="sp"/></l><r>кай<s n="det"/><s n="dem"/></r></p></e>
 
 		<!-- cnj -->
 		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>
