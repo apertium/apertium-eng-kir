@@ -157,7 +157,7 @@ qst_front: (if (1.lem = жат or 1.lem = э)
 !!! RULES !!!
 
 NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep_flag] { 1 } |
-      1: n.$nptype.$lem/sl.$case/sl.$number.$poss [$prep_flag=1.case/sl>prep_flag] { 1 } |
+      1: n.$nptype.$lem/sl.$case/sl.$number.$poss [$prep_flag=(if (1.lem in en_nouns_loc_in) in else 1.case/sl>prep_flag)] { 1 } |
       2: np.top.loc.$nptype.$poss ?(1.lem/sl in city) [$case=loc,$prep_flag=in,$number=sg] { 1 } |
       3: np.top.loc.$nptype.$poss                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
 !      2: np.top.loc.$nptype.$poss [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
