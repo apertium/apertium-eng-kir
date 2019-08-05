@@ -178,8 +178,8 @@ AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
 
 DP -> 4: NP.*.gen NP.*.[px3].$number.$case.$prep_flag {
 ! FIXME: can't get the following to work:
-         (if (2.lem/sl in  prep_nouns)
-           [ 2(lemh=2.lemh>preposition) 1 ]
+         (if (2.lem in  prep_nouns)
+           [ 2(lemh=2.lemh>preposition) _1 1 ]
           else
            [ 1 's@gen _1 2 ]
          ) } |
