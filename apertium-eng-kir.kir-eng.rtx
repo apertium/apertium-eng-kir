@@ -315,11 +315,11 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf]
           (if (2.lem/tl in frontable and $qst = qst)
               { (if (2.lem/tl = be) 1(tense=pprs, negative=pos) else 1(tense=inf, negative=pos)) }
            else-if (2.lem/tl in en_vaux_ing)
-              { 2(tense=$tense) _1 1(tense=pprs) }
+              { 2(tense=$tense, qst=$qst) _1 1(tense=pprs) }
            else-if (2.lem/tl in en_vaux_none)
-              { 2(tense=$tense) _1 1(tense=inf) }
+              { 2(tense=$tense, qst=$qst) _1 1(tense=inf) }
            else ! 2.lem in en_vaux_to
-              { 2(person=1.person, number=1.number, tense=$tense) _1 to@pr _1 1(tense=inf) } )
+              { 2(person=1.person, number=1.number, tense=$tense, qst=$qst) _1 to@pr _1 1(tense=inf) } )
        |
       !1: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
       !    (if ((1.person=p3) and (1.number=sg))
