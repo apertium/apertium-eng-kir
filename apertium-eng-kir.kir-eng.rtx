@@ -311,7 +311,7 @@ prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
-vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf]
+vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos)]
           (if (2.lem/tl in frontable and $qst = qst)
               { (if (2.lem/tl = be) 1(tense=pprs, negative=pos) else 1(tense=inf, negative=pos)) }
            else-if (2.lem/tl in en_vaux_ing)
