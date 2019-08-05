@@ -272,7 +272,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { 3 _2 2 _1 1 } |
       PP DP.*.acc %vP { 3 _2 2 _1 1 } |
       PP PP %vP { 3 _2 2 _1 1 } |
       PP %vP
-         { 2 _1
+         { 2(number=$number) _1
             (if (2.lem in ky_verbs_dat_arg)
                1(prep_flag=NOpr)
              else
@@ -340,7 +340,7 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if 
               { do@vbdo.$tense _ not@adv _ 1(tense=inf, negative=pos) } ) |
 
       3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { 1(tense=$tense) } |
+          { 1(tense=$tense,number=$number) } |
       4: %cop.neg.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 1(tense=$tense) _ not@adv } |
 
