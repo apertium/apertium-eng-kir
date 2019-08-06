@@ -139,6 +139,21 @@
 		</match>
 	</rule>
 
+	<rule weight="1.2">
+		<match lemma="акырын" tags="adj.advl">
+			<select lemma="slowly" tags="adv"/>
+		</match>
+		<repeat upto="3"><match/></repeat>
+		<seq n="fast-not-hard-verbs"/>
+	</rule>
+	<rule>
+		<match lemma="акырын" tags="adj.advl">
+			<select lemma="quietly" tags="adv"/>
+		</match>
+	</rule>
+
+
+
 </rules>
 </metalrx>
 <!--
