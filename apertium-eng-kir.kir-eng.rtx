@@ -124,11 +124,24 @@ vbser: _.tense.person.number ;
 
 verb_pers: pos_tag.tense.person.number;
 verb_nopers: pos_tag.tense;
+
+! should this macro deal with do-support?
+! if so, it should check for (1.negative = neg) and generate do(vbdo)[...] not@adv
 verb: (if (1.qst = qst)
           1(verb_nopers)[tense=inf]
-       else-if (1.tense>tense = pres
-                and ((1.person = p3 and 1.number = sg)
-                      or (1.pos_tag = vbser and (1.person = p1 or 1.person = p3))))
+       else-if (1.tense>tense = pres and 1.person = p3 and 1.number = sg)
+          1(verb_pers)
+       else
+          1(verb_nopers));
+v: (always 1(verb));
+vblex: (always 1(verb));
+
+vaux: (if (1.qst = qst)
+          1(verb_nopers)[tense=inf]
+       else-if ((1.tense>tense = pres) and
+                ( (1.pos_tag = vbser and (1.person = p1 or 1.person = p3))
+                  or
+                  (1.person = p3 and 1.number = sg)))
           (if (1.negative = neg)
               [ 1(verb_pers) + not@adv ]
            else
@@ -139,21 +152,30 @@ verb: (if (1.qst = qst)
            else
               1(verb_nopers))
        );
-v: (always 1(verb));
-vblex: (always 1(verb));
-vaux: (always 1(verb));
-
-!vaux_thing: lemh.<vbser>.tense.person.number ;
 
 !!! MACROS !!!
 
 qst_front: (if (1.lem = жат or 1.lem = э)
-              be(verb)[pos_tag=vbser, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst]
+               be(vaux)[pos_tag=vbser,
+                        person=1.person, number=1.number, tense=1.tense,
+                        negative=1.negative, qst=NOqst, lemcase=1.lemcase]
             else-if (1.lem = ал)
-              can(verb)[pos_tag=vbmod, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst]
+               can(vaux)[pos_tag=vbmod,
+                         person=1.person, number=1.number, tense=1.tense,
+                         negative=1.negative, qst=NOqst, lemcase=1.lemcase]
             else
-              do(verb)[pos_tag=vbdo, tense=1.tense, person=1.person, number=1.number, negative=1.negative, lemcase=1.lemcase, qst=NOqst]
-           );
+               do(vaux)[pos_tag=vbdo,
+                        person=1.person, number=1.number, tense=1.tense,
+                        negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
+
+!qst_front: (always *(vaux)[lemh=(if (1.lem = жат or 1.lem = э) be
+!                                 if (1.lem = ал) can
+!                                 else do),
+!                           pos_tag=(if (1.lem = жат or 1.lem = э) vbser
+!                                    if (1.lem = ал) vbmod
+!                                    else vbdo),
+!                           person=1.person, number=1.number, tense=1.tense,
+!                           negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
 
 
 !!! RULES !!!
