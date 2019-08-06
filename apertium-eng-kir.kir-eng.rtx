@@ -29,6 +29,8 @@ tense = (TD pres) pres aor ifi past ;  ! finites
 qst = (QD NOqst) qst NOqst ;
     ! use <qst>
 prc = (PTD pprs) prc_past prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
+en_nonfin = (NFD noNF) pprs pp inf noNF ;
+
 vadv = gna_perf ;
 ger = ger ger_past ;
 vadj = gpr_past ;
@@ -52,9 +54,12 @@ en_nouns_loc_at = concert school club game address shore ;
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
 ky_verbs_abl_arg = өт аш;
-en_vaux_ing = be finish start begin ;
-en_vaux_to = want ;
+
+en_vaux_ing = be finish start begin like ;
+en_vaux_to = want ;  ! FIXME: like
 en_vaux_none = can ;
+
+ky_verbs_ing = башта бүтүр жакшы\ көр ;
 
 en_vaux_person = be have ;
 
@@ -86,7 +91,7 @@ lemh > preposition : арт behind, алд in\ front\ of, жан next\ to, үс�
 
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.number.case.prep_flag ;
-VP: _.fnf.transitivity.tense.person.number.negative.qst ;
+VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin ;
 RC: _ ;
 prn_pers: _.case.person.gender.number ;
 prn_itg: _.<itg>.gender.number ;
@@ -96,7 +101,7 @@ S: _ ;
 n: _.number ;
 adj: _.adjtype.adjlevel ;
 post: _;
-vP: _.transitivity.tense.fnf.person.number.negative.qst ;
+vP: _.transitivity.tense.fnf.person.number.negative.qst.en_nonfin ;
 PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -269,9 +274,21 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
                and (1.case = nom)
             )
           ) { %2 _1 1 } |
+      2: VP.ger %vP.$lem
+         ?(not
+            (
+               ((2.passive = pass) or (2.transitivity = iv))
+               and (1.case = nom)
+            )
+          ) { %2 _1
+               (if (2.lem in ky_verbs_ing)
+                  1(en_nonfin=pprs)
+                else %1
+               )
+            } |
       PP DP.*.acc %vP { %3 _2 2 _1 1 } |
       PP PP %vP { %3 _2 2 _1 1 } |
-      PP %vP
+      PP %vP.$lem
          { %2 _1
             (if (2.lem in ky_verbs_dat_arg)
                1(prep_flag=NOpr)
@@ -328,6 +345,7 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if 
       !        { 1(person=_, number=_) }
       !    )
       ! |
+		! en_nonfin
       1: %v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           (if ((1.passive/sl = pass) and ($qst not = qst))
               { be@vbser.$tense.[1.person].[1.number] _ 1(tense=pp) }
