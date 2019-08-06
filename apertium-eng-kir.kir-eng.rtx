@@ -131,7 +131,7 @@ verb_pers: pos_tag.tense.person.number;
 verb_nopers: pos_tag.tense;
 verb: (if (1.qst = qst)
           1(verb_nopers)[tense=inf]
-       else-if (1.tense = pres and 1.person = p3 and 1.number = sg)
+       else-if (1.tense>tense = pres and (1.person = p3 and (1.pos_tag = vbser or 1.number = sg)))
           (if (1.negative = neg)
               [ 1(verb_pers) + not@adv ]
            else
@@ -359,9 +359,9 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if 
               { do@vbdo.$tense _ not@adv _ 1[tense=inf, negative=pos] } ) |
 
       3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { %1 } |
+          { (if ($qst not = qst) %1) } |
       4: %cop.neg.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { %1 _ not@adv } |
+          { (if ($qst not = qst) %1) _ not@adv } |
 
       3: %бол@v ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { %1 } |
