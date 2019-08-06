@@ -249,6 +249,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
 !      DP.oblique DP.acc %vP { 3 _2 2 _1 1 } |
       DP %vP.cop { %2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
+      AdvP AP %vP.cop { %3 _2 2 _1 1 } |
       adv.itg %vP.cop { %2 _1 1 } |
       DP DP %vP
 !         ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
