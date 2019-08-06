@@ -118,11 +118,6 @@ np: (if (1.np_type = top) 1(np_top) else-if (1.np_type = ant) 1(np_ant) else-if 
 num: _.number ;
 cnjcoo: _ ;
 
-vaux_pers: _.tense.person.number ;
-vaux_nopers: _.tense ;
-vaux: (if (1.qst = qst) 1(vaux_nopers)[tense=inf]
-       else-if (1.lem/tl not in en_vaux_person) 1(vaux_nopers)
-       else 1(vaux_pers));
 cop: _.tense.person.number ;
 vbdo: _.tense.person.number ;
 vbser: _.tense.person.number ;
@@ -131,7 +126,9 @@ verb_pers: pos_tag.tense.person.number;
 verb_nopers: pos_tag.tense;
 verb: (if (1.qst = qst)
           1(verb_nopers)[tense=inf]
-       else-if (1.tense>tense = pres and (1.person = p3 and (1.pos_tag = vbser or 1.number = sg)))
+       else-if (1.tense>tense = pres
+                and ((1.person = p3 and 1.number = sg)
+                      or (1.pos_tag = vbser and (1.person = p1 or 1.person = p3))))
           (if (1.negative = neg)
               [ 1(verb_pers) + not@adv ]
            else
@@ -144,6 +141,7 @@ verb: (if (1.qst = qst)
        );
 v: (always 1(verb));
 vblex: (always 1(verb));
+vaux: (always 1(verb));
 
 !vaux_thing: lemh.<vbser>.tense.person.number ;
 
@@ -335,7 +333,7 @@ vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if 
            else-if (2.lem/tl in en_vaux_ing)
               { 2[tense=$tense, qst=$qst, number=$number] _1 1[tense=pprs] }
            else-if (2.lem/tl in en_vaux_none)
-              { 2[tense=$tense, qst=$qst, number=$number] _1 1[tense=inf] }
+              { 2[tense=$tense, qst=$qst, number=$number, negative=$negative] _1 1[tense=inf] }
            else ! 2.lem in en_vaux_to
               { 2[person=1.person, number=1.number, tense=$tense, qst=$qst, number=$number] _1 to@pr _1 1[tense=inf] } )
        |
