@@ -59,7 +59,7 @@ en_vaux_ing = be finish start begin like ;
 en_vaux_to = want ;  ! FIXME: like
 en_vaux_none = can ;
 
-ky_verbs_ing = башта бүтүр жакшы\ көр ;
+ky_verbs_ing = башта бүтүр "жакшы көр" ;
 
 en_vaux_person = be have ;
 
@@ -282,8 +282,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
             )
           ) { %2 _1
                (if (2.lem in ky_verbs_ing)
-                  1(en_nonfin=pprs)
-                else %1
+                  [ 1(en_nonfin=pprs) ]
+                else
+                  [ %1 ]
                )
             } |
       PP DP.*.acc %vP { %3 _2 2 _1 1 } |
