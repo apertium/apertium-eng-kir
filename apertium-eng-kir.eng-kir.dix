@@ -488,6 +488,10 @@
 		<e><p><l>before<s n="pr"/></l><r>чейин<s n="post"/></r></p></e>
 		<e><p><l>towards<s n="pr"/></l><r>карай<s n="post"/></r></p></e>
 		<e><p><l>for<s n="pr"/></l><r>үчүн<s n="post"/></r></p></e>
+		<e r="LR"><p><l>in<s n="pr"/></l><r><s n="post"/></r></p></e>
+		<e r="LR"><p><l>at<s n="pr"/></l><r><s n="post"/></r></p></e>
+		<e r="LR"><p><l>on<s n="pr"/></l><r><s n="post"/></r></p></e>
+		<e r="LR"><p><l>of<s n="pr"/></l><r><s n="post"/></r></p></e>
 
       <!-- PUNCT -->
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
