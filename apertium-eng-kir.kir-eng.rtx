@@ -266,7 +266,7 @@ DP ->
       !!! ATTEMPT TO FIX NP.gen NP.px3 rules
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 1 _1 's@gen _ 2 } |
-      4: DP.*.gen %DP.*.[px3] [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)] {
+      4: DP.*.gen %dP.*.[px3] [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)] {
          (if (2.lem in prep_nouns)
            [ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
           else
