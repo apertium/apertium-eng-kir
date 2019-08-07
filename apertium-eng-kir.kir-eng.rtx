@@ -118,6 +118,7 @@ np_default: _ ;
 np: (if (1.np_type = top) 1(np_top) else-if (1.np_type = ant) 1(np_ant) else-if (1.np_type = cog) 1(np_cog) else 1(np_default));
 num: _.number ;
 cnjcoo: _ ;
+pr: _ ;
 
 cop: _.tense.person.number ;
 vbdo: _.tense.person.number ;
@@ -159,27 +160,14 @@ vaux: (if (1.qst = qst)
 
 !!! MACROS !!!
 
-qst_front: (if (1.lem = жат or 1.lem = э)
-               be(vaux)[pos_tag=vbser,
-                        person=1.person, number=1.number, tense=1.tense,
-                        negative=1.negative, qst=NOqst, lemcase=1.lemcase]
-            else-if (1.lem = ал)
-               can(vaux)[pos_tag=vbmod,
-                         person=1.person, number=1.number, tense=1.tense,
-                         negative=1.negative, qst=NOqst, lemcase=1.lemcase]
-            else
-               do(vaux)[pos_tag=vbdo,
-                        person=1.person, number=1.number, tense=1.tense,
-                        negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
-
-!qst_front: (always *(vaux)[lemh=(if (1.lem = жат or 1.lem = э) be
-!                                 if (1.lem = ал) can
-!                                 else do),
-!                           pos_tag=(if (1.lem = жат or 1.lem = э) vbser
-!                                    if (1.lem = ал) vbmod
-!                                    else vbdo),
-!                           person=1.person, number=1.number, tense=1.tense,
-!                           negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
+qst_front: (always *(vaux)[lemh=(if (1.lem = жат or 1.lem = э) be
+                                 if (1.lem = ал) can
+                                 else do),
+                           pos_tag=(if (1.lem = жат or 1.lem = э) vbser
+                                    if (1.lem = ал) vbmod
+                                    else vbdo),
+                           person=1.person, number=1.number, tense=1.tense,
+                           negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
 
 
 !!! RULES !!!
@@ -271,7 +259,7 @@ DP ->
       4: DP.*.gen %dP.*.[px3] [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)] {
          (if (2.lem in prep_nouns)
            ![ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
-           [ 2[lemh=2.lemh>preposition] _1 1 ]
+           [ *(pr)[lemh=2.lemh>preposition] _1 1 ]
           else
            [ 1 's@gen _1 2 ]
          ) }
