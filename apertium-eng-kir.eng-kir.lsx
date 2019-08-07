@@ -152,7 +152,7 @@
 		<e lm="do like that" c="ант">
 			<p>
 				<l>do<s n="vblex"/></l>
-				<r>do<b/>like<b/>that<s n="vblex"/></r>
+				<r>do<j/>like<j/>that<s n="vblex"/></r>
 			</p>
 			<i><t/><j/></i>
 			<p>
@@ -164,7 +164,7 @@
 
 		<e lm="in front of" c="алдында">
 			<p>
-				<l>in<s n="pr"/><b/>front<s n="n"/><s n="sg"/><b/>of<s n="pr"/></l>
+				<l>in<s n="pr"/><j/>front<s n="n"/><s n="sg"/><j/>of<s n="pr"/></l>
 				<r>in<b/>front<b/>of<s n="pr"/></r>
 			</p>
 			<i><j/></i>
