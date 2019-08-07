@@ -24,4 +24,5 @@
 Мен муздаткычтан тамакты алдым.|I got the food from the refrigerator.
 Мен тамакты муздаткычтан алдым.|I got the food from the refrigerator.
 Мен тооктун этин жакшы көрөм.|I like chicken's meat.
-
+Мен үйдүн ичиндемин.|I am inside the house.
+Менин иним беш жашта.|My little brother is five years old.

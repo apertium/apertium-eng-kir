@@ -270,7 +270,8 @@ DP ->
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 1 _1 's@gen _ 2 } |
       4: DP.*.gen %dP.*.[px3] [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)] {
          (if (2.lem in prep_nouns)
-           [ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
+           ![ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
+           [ 2[lemh=2.lemh>preposition] _1 1 ]
           else
            [ 1 's@gen _1 2 ]
          ) }
@@ -300,7 +301,10 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
                    []
                 )
                 1 } ) |
-      DP post { 2 _1 1 } ;
+      DP post { 2 _1 1 } |
+		! FIXME: deal with different prs depending on lemma of 2
+      DP.*.loc-attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
+;
 
 VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       DP.[definiteness].prep_flag DP.[definiteness].prep_flag %vP { 3[number=$number] _2 2 _1 1 } |
