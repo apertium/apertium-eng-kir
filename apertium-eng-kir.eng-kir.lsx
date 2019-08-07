@@ -161,5 +161,13 @@
 			</p>
 			<i><j/></i>
 		</e>
+
+		<e lm="in front of" c="алдында">
+			<p>
+				<l>in<s n="pr"/><b/>front<s n="n"/><s n="sg"/><b/>of<s n="pr"/></l>
+				<r>in<b/>front<b/>of<s n="pr"/></r>
+			</p>
+			<i><j/></i>
+		</e>
 	</section>
 </dictionary>
