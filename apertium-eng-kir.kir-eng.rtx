@@ -124,11 +124,14 @@ vbser: _.tense.person.number ;
 
 verb_pers: pos_tag.tense.person.number;
 verb_nopers: pos_tag.tense;
+verb_nonfin: pos_tag.en_nonfin;
 
 ! should this macro deal with do-support?
 ! if so, it should check for (1.negative = neg) and generate do(vbdo)[...] not@adv
 verb: (if (1.qst = qst)
           1(verb_nopers)[tense=inf]
+       else-if (1.en_nonfin not = noNF)
+          1(verb_nonfin)
        else-if (1.tense>tense = pres and 1.person = p3 and 1.number = sg)
           1(verb_pers)
        else
@@ -325,7 +328,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
          { %3 _1 1 _2 2 } |
       PP AdvP %vP { 3 _2 2 _1 1 } |
       AdvP %vP { %2 _1 1 } |
-      %vP { 1 } |
+      %vP { %1 } |
       S %де@vP { %2 _1 1 }
    ;
 
