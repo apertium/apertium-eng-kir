@@ -226,8 +226,8 @@ dP ->
 !		num жаш@NP.$number.$case.$poss          [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
 !		num AP NP.$number.$case.$prep_flag.$poss { 1 _1 2 _2 3 } |
 !      det num AP NP.$number.$case.$prep_flag.$poss { 1 _1 2 _2 3 _3 4 } |
-      ! FIXME: what to do about this??
-      AP det %NP { 2 _2 1 _1 3 } |
+!      ! FIXME: what to do about this??
+!      AP det %NP { 1 _1 3 } |
 !      0: NP.n.$number.$case.$prep_flag.$poss {
 !          (if (1.poss = noPOSS)
 !               [ the@det.def.sp ]
@@ -245,6 +245,8 @@ dP ->
       AP %NP { 1 _1 2 } |
       %NP { 1 }
    ;
+
+det dP -> AP det %NP { 2 _2 { 1 _1 3 } } ;
 
 DP ->
       0: %dP { 1 } |
