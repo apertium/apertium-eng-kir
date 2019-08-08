@@ -187,10 +187,16 @@ AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
       adv.attr { 1 } |
       "# year-old" num жашар@adj { 1 _1 2 } |
       AP AP { 1 _1 2 } |
-      AdvP adj { 1 _1 2 }
+      AdvP adj { 1 _1 2 } |
+      ! FIXME: is there a way to make this more general?
+      8: кубаныч@NP.*.loc { happy@adj.sint } |
+      8: AdvP кубаныч@NP.*.loc { 1 _1 happy@adj.sint }
 ;
 !|
  !     AP { 1 } ;
+
+! this doesn't seem to work:
+!adj -> 8: кубаныч@NP.*.loc { happy@adj } ;
 
 dP ->
 !      4: NP.*.gen NP.*.[px3].$number.$case [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)] {
