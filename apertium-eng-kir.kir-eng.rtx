@@ -64,6 +64,9 @@ en_vaux_person = be have ;
 
 ky_titles = байке эже мырза айым ;
 
+ky_adv_adadj = өтө абдан аябай эң ;
+en_adv_adadj = very extremely extra super more most somewhat ;
+
 might_get_pr = loc dat abl gen ;
 
 city = Нарын ;
@@ -187,7 +190,8 @@ AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
       adv.attr { 1 } |
       "# year-old" num жашар@adj { 1 _1 2 } |
       AP AP { 1 _1 2 } |
-      AdvP adj { 1 _1 2 } |
+      ! only count AdvP if an ad-adj adv
+      AdvP adj ?(1.lemh in en_adv_adadj) { 1 _1 2 } |
       ! FIXME: is there a way to make this more general?
       8: кубаныч@NP.*.loc { happy@adj.sint } |
       8: AdvP кубаныч@NP.*.loc { 1 _1 happy@adj.sint }
