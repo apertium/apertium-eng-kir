@@ -241,6 +241,8 @@
       <e><p><l>age</l><r>жаш</r></p><par n="par__n"/></e>
       <e><p><l>continuation</l><r>уланды</r></p><par n="par__n"/></e>
       <e><p><l>school</l><r>мектеп</r></p><par n="par__n"/></e>
+      <e><p><l>bus</l><r>автобус</r></p><par n="par__n"/></e>
+      <e><p><l>concert</l><r>концерт</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>

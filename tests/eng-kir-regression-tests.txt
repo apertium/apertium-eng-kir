@@ -29,3 +29,5 @@
 Мен чоң үйдүн алдындагы бакчадамын.|I am in the garden in front of the big house.
 Мен бакчадамын.|I am in the garden.
 Мен чоң үйдүн алдындамын.|I am in front of the big house.
+Мен автобустамын.|I am on the bus.
+Мен концерттемин.|I am at the concert.
