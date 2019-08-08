@@ -1,7 +1,7 @@
 !!! ATTRIBUTE LISTS !!!
 
 number = (ND sg) sg pl sp ;
-case = (CD subj) nom acc dat gen loc abl subj obj ;
+case = (CD subj) nom acc dat gen loc abl subj obj "loc.attr";
 oblique = (CD obj) acc dat loc abl obj ;
 prontype = pers dem ;
 !tenseetc = ifi past aor pres prc_perf prc_ipf ;
@@ -291,7 +291,8 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
                 1 } ) |
       DP post { 2 _1 1 } |
 		! FIXME: deal with different prs depending on lemma of 2
-      DP.*.loc-attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
+      !DP.*.loc.attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
+      DP.*.loc.attr %DP { 2 _1 1 }
 ;
 
 VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
