@@ -141,9 +141,21 @@
 				<l>do<s n="vblex"/></l>
 				<r>do<b/>like<b/>this<s n="vblex"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/></i>
 			<p>
-				<l>like<b/>this<s n="adv"/></l>
+				<l><j/>like<b/>this<s n="adv"/></l>
+				<r></r>
+			</p>
+			<i><j/></i>
+		</e>
+		<e lm="do like that" c="ант">
+			<p>
+				<l>do<s n="vblex"/></l>
+				<r>do<b/>like<b/>that<s n="vblex"/></r>
+			</p>
+			<i><t/></i>
+			<p>
+				<l><j/>like<b/>that<s n="adv"/></l>
 				<r></r>
 			</p>
 			<i><j/></i>
@@ -154,26 +166,14 @@
 				<l>be<s n="vbser"/></l>
 				<r>be<b/>time<s n="vblex"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/></i>
 			<p>
-				<l>time<s n="n"/><s n="sg"/></l>
+				<l><j/>time<s n="n"/><s n="sg"/></l>
 				<r></r>
 			</p>
 			<i><j/></i>
 		</e>
 
-		<e lm="do like that" c="ант">
-			<p>
-				<l>do<s n="vblex"/></l>
-				<r>do<b/>like<b/>that<s n="vblex"/></r>
-			</p>
-			<i><t/><j/></i>
-			<p>
-				<l>like<b/>that<s n="adv"/></l>
-				<r></r>
-			</p>
-			<i><j/></i>
-		</e>
 
 		<e lm="in front of" c="алдында">
 			<p>
