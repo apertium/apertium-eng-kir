@@ -440,7 +440,9 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
       4: %бол@v.*.neg ?(1.lem/tl = be) [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { %1 _ not@adv } |
       5: %v.$transitivity.$lem/sl бар@v.iv.prc_impf жат@vaux [$fnf=3.fnfall>fnf, $tense=1.prc_or_tense>tense]
-          { 3 _1 %1[tense=pprs] }
+          { 3 _1 %1[tense=pprs] } |
+      6: %бол@v.iv.ger_pres.nom керек@adj э@cop
+          { must@vbmod.pres _ be@vbser.inf }
 ;
 
 
