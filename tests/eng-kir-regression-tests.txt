@@ -26,5 +26,6 @@
 Мен тооктун этин жакшы көрөм.|I like chicken's meat.
 Мен үйдүн ичиндемин.|I am inside the house.
 Менин иним беш жашта.|My little brother is five years old.
-Мен чоң үйдүн алдындагы бакчадамын.|I am in the garden that is in front of the big house.
+Мен чоң үйдүн алдындагы бакчадамын.|I am in the garden in front of the big house.
+Мен бакчадамын.|I am in the garden.
 Мен чоң үйдүн алдындамын.|I am in front of the big house.
