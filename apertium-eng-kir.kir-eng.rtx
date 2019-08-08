@@ -254,7 +254,7 @@ det dP -> AP det %NP { 2 _2 { 1 _1 3 } } ;
 !!!DP AdvP -> %AdvP DP { 2 { _1 1 } } ;
 
 DP ->
-      0: %dP { 1 } |
+      0: %dP { 1[lemcase=$lemcase] } |
       1: %dP { a@det.idf.sp _ 1 } |
       1: %dP { the@det.def.sp _ 1 } |
       det %dP { 1[number=2.number] _1 2 } |
