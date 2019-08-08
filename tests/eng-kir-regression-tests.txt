@@ -31,3 +31,4 @@
 Мен чоң үйдүн алдындамын.|I am in front of the big house.
 Мен автобустамын.|I am on the bus.
 Мен концерттемин.|I am at the concert.
+Бул мектеп болуш керек!|This must be a school!
