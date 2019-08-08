@@ -32,7 +32,7 @@ en_nonfin = (NFD noNF) pprs pp inf noNF ;
 
 vadv = gna_perf ;
 ger = ger ger_past ;
-vadj = gpr_past ;
+vadj = gpr_past gpr ;
 voice = pass caus ;
 passive = pass ;
 fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
@@ -59,6 +59,7 @@ en_vaux_to = want ;  ! FIXME: like
 en_vaux_none = can ;
 
 ky_verbs_ing = башта бүтүр "жакшы көр" ;
+ky_verbs_to = "аракет кыл" ;
 
 en_vaux_person = be have ;
 
@@ -277,8 +278,8 @@ DP ->
          ) }
    ;
 
-RC -> DP.*.nom VP.prc { 1 _1 2 } |
-      VP.prc { 1 }
+RC -> DP.*.nom VP.vadj { 1 _1 2 } |
+      VP.vadj { 1 }
 ;
 
 PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
@@ -346,6 +347,8 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
           ) { %2 _1
                (if (2.lem in ky_verbs_ing)
                   [ 1[en_nonfin=pprs] ]
+                else-if (2.lem in ky_verbs_to)
+                  [ to@pr _ 1[en_nonfin=inf] ]
                 else
                   [ %1 ]
                )
@@ -393,7 +396,7 @@ prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
-vP -> 0: v.$transitivity %vaux.$tense.$lem/sl [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos)]
+vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos)]
           (if (2.lem/tl in frontable and $qst = qst)
               { (if (2.lem/tl = be) 1[tense=pprs, negative=pos] else 1[tense=inf, negative=pos]) }
            else-if (2.lem/tl in en_vaux_ing)
