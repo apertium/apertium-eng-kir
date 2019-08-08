@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium English-Kyrgyz], [0.2.0], [jonathan.north.washington@gmail.com], [apertium-eng-kir], [http://wiki.apertium.org/wiki/Apertium-eng-kir])
+AC_INIT([Apertium English-Kyrgyz], [0.2.0], [jonathan.n.washington@gmail.com], [apertium-eng-kir], [http://wiki.apertium.org/wiki/Apertium-eng-kir])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
@@ -27,6 +27,12 @@ AS_IF([test x$LRXCOMP = xfalse], [AC_MSG_ERROR([You don't have lrx-comp installe
 
 AC_PATH_PROG([LRXPROC], [lrx-proc], [false], [$PATH$PATH_SEPARATOR$with_lrx_proc/bin])
 AS_IF([test x$LRXPROC = xfalse], [AC_MSG_ERROR([You don't have lrx-proc installed])])
+
+AC_PATH_PROG([RTXCOMP], [rtx-comp], [false], [$PATH$PATH_SEPARATOR$with_rtx_comp/bin])
+AS_IF([test x$RTXCOMP = xfalse], [AC_MSG_ERROR([You don't have rtx-comp installed])])
+
+AC_PATH_PROG([RTXPROC], [rtx-proc], [false], [$PATH$PATH_SEPARATOR$with_rtx_proc/bin])
+AS_IF([test x$RTXPROC = xfalse], [AC_MSG_ERROR([You don't have rtx-proc installed])])
 
 AC_PATH_PROGS(ZCAT, [gzcat zcat], [false])
 AS_IF([test x$ZCAT = xfalse], [AC_MSG_ERROR([You don't have zcat nor gzcat installed])])
