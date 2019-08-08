@@ -21,6 +21,7 @@ det_type = dem ;
 np_type = top cog ant ;
 prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
+aux_lem = (NOaux do) be do can NOaux ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
@@ -95,7 +96,7 @@ lemh > preposition : арт behind, алд "in front of", жан "next to", үс
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.nptype.number.poss.case.prep_flag ;
 dP: _.nptype.number.poss.case.prep_flag ;
-VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin ;
+VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem ;
 RC: _ ;
 prn_pers: _.case.person.gender.number ;
 prn_itg: _.<itg>.gender.number ;
@@ -105,7 +106,7 @@ S: _ ;
 n: _.number ;
 adj: _.adjtype.adjlevel ;
 post: _;
-vP: _.transitivity.tense.fnf.person.number.negative.qst.en_nonfin ;
+vP: _.transitivity.tense.fnf.person.number.negative.qst.en_nonfin.aux_lem ;
 PP: _.prep_flag ;
 AP: _ ;
 det_dem: _.<dem>.number ;
@@ -164,11 +165,9 @@ vaux: (if (1.qst = qst)
 
 !!! MACROS !!!
 
-qst_front: (always *(vaux)[lemh=(if (1.lem = жат or 1.lem = э) be
-                                 if (1.lem = ал) can
-                                 else do),
-                           pos_tag=(if (1.lem = жат or 1.lem = э) vbser
-                                    if (1.lem = ал) vbmod
+qst_front: (always *(vaux)[lemh=1.aux_lem,
+                           pos_tag=(if (1.aux_lem = be) vbser
+                                    if (1.aux_lem = can) vbmod
                                     else vbdo),
                            person=1.person, number=1.number, tense=1.tense,
                            negative=1.negative, qst=NOqst, lemcase=1.lemcase]);
@@ -403,7 +402,9 @@ prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
-vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos)]
+vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos), $aux_lem=(if (2.lem/sl = жат or 2.lem/sl = э) be
+                         if (2.lem/sl = ал) can
+                         else do)]
           (if (2.lem/tl in frontable and $qst = qst)
               { (if (2.lem/tl = be) 1[tense=pprs, negative=pos] else 1[tense=inf, negative=pos]) }
            else-if (2.lem/tl in en_vaux_ing)
