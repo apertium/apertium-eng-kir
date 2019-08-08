@@ -310,7 +310,9 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
       DP post { 2 _1 1 } |
 		! FIXME: deal with different prs depending on lemma of 2
       !DP.*.loc.attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
-      DP.*.loc.attr %DP { 2 _1 1 }
+      DP.*.loc.attr %DP { (if ($prep_flag not = NOpr)
+                              [ *(pr)[lemh=$prep_flag, lemcase=$lemcase] _ ] )
+                          2 _1 1 }
 ;
 
 VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
