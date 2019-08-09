@@ -1,8 +1,8 @@
 !!! ATTRIBUTE LISTS !!!
 
 number = (ND sg) sg pl sp ;
-case = (CD subj) nom acc dat gen loc abl subj obj "loc.attr";
-oblique = (CD obj) acc dat loc abl obj ;
+case = (CD subj) nom acc acc-ind dat gen loc abl subj obj "loc.attr";
+oblique = (CD obj) acc acc dat loc abl obj ;
 prontype = pers dem ;
 !tenseetc = ifi past aor pres prc_perf prc_ipf ;
 !nonfinite = prc_perf, pprs, prc_impf, pprs ;
@@ -36,6 +36,7 @@ ger = ger ger_past ;
 vadj = gpr_past gpr ;
 voice = pass caus ;
 passive = pass ;
+causative = caus ;
 fnfall = [tense] [prc] [vadv] [ger] [vadj] ;
 
 poss = (PSD noPOSS) px1sg px2sg px3sg px1pl px2pl px3pl px3sp noPOSS;
@@ -85,9 +86,9 @@ tense > tense : aor pres, ifi past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 ger > tense : ger pprs, ger_past pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
-case > case : nom subj, acc obj, dat obj ;
+case > case : nom subj, acc obj, dat obj, acc-ind obj;
 case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NOpr, obj NOpr;
-fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
+fnfall > fnf : [tense] fin, [prc] vadj, [vadv] vadv, [ger] ger, [vadj] vadj ;
 lemh > preposition : арт behind, алд "in front of", жан "next to", үст "on top of", аст under, орто "in the middle of", маңдай "across from", түп "at the bottom of", ара between, ич inside ;
 
 !!! OUTPUT PATTERNS !!!
@@ -324,8 +325,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       DP DP %vP
 !         ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
          ?(
-            ((2.case = nom) and (1.case in might_get_pr)) or
-            ((2.case = acc) and (1.case in might_get_pr))
+!            ((2.case = nom) and (1.case in might_get_pr)) or
+!            ((2.case = acc) and (1.case in might_get_pr))
+            (((2.case = acc) or (2.case = acc-ind)) and (1.case in might_get_pr))
           )
             (if ((1.case = nom) and (2.case = acc))
                 { 1 _1 %3 _2 2 }
@@ -422,7 +424,7 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
       !    )
       ! |
 		! en_nonfin
-      1: %v.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      1: %v.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense, $transitivity=(if (1.causative=caus) tv else 1.transitivity) ]
           (if ((1.passive/sl = pass) and ($qst not = qst))
               { be@vbser.$tense.[1.person].[1.number] _ 1[tense=pp] }
            else
