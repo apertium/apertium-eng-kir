@@ -26,7 +26,7 @@
       <program name="lrx-proc -m">
         <file name="eng-kir.autolex.bin"/>
       </program>
-      <program name="apertium-transfer -b">
+      <!--<program name="apertium-transfer -b">
         <file name="apertium-eng-kir.eng-kir.t1x"/>
         <file name="eng-kir.t1x.bin"/>
       </program>
@@ -37,6 +37,9 @@
       <program name="apertium-postchunk">
         <file name="apertium-eng-kir.eng-kir.t3x"/>
         <file name="eng-kir.t3x.bin"/>
+      </program>-->
+      <program name="rtx-proc -F">
+        <file name="eng-kir.rtx.bin"/>
       </program>
       <program name="lsx-proc" debug-suff="revautoseq">
         <file name="kir-eng.revautoseq.bin"/>

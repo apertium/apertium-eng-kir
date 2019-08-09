@@ -1,13 +1,15 @@
 !!! ATTRIBUTE LISTS !!!
 
 number = sg pl sp ND ;
-case = nom acc gen dat loc abl subj obj CD ;
+case = (CD nom) nom acc gen dat loc abl subj obj CD ;
 transitivity = tv iv ;
 poss = px1sg px1pl px2sg px2pl px3sp ;
 person = (PD p3) p1 p2 p3 PD ;
 formality = frm ;
 det_type = def ind dem itg ;
+prn_type = pers pos ;
 tense = pres aor past ifi fut ;
+ger = ger ger_past ;
 
 !!! MAPPINGS !!!
 
@@ -16,21 +18,36 @@ tense > tense : pres aor ;
 
 !!! OUTPUT PATTERNS !!!
 
-vblex: _.transitivity.tense.person.formality.number ;
-prn: _.person.number.case.formality ;
+vb: _.transitivity.tense.person.formality.number ;
+vb_ger: _.transitivity.ger.case ;
+vblex: (if (1.tense = past)
+           [ 1(vb_ger)[ger=ger_past, case=nom] + э@cop.aor.[1.person].[1.number] ]
+        else
+           1(vb) );
+prn: _.prn_type.person.number.case.formality ;
 adv: _ ;
 n: _.number.poss.case ;
 adj: _ ;
+cop: _.tense.person.number ;
 
 NP: _.number.poss.case ;
-DP: _.number.poss.case.det_type ;
+DP: _.number.poss.case.det_type.person ;
+VP: _.transitivity.tense.person.formality.number ;
+S: _ ;
 
 !!! MACROS !!!
 
 !!! RULES !!!
 
-NP -> %n { %1[number=(if ($number = sg) "" else $number)] } |
+NP -> %n { %1[number=(if ($number = sg) "" else $number), lemcase=$lemcase] } |
       adj %NP { 1 _1 %2 } ;
 
-DP -> %NP { %1 } |
-      det.$det_type %NP { %2[lemcase=$lemcase] } ;
+DP -> %NP [$det_type=ind] { %1 } |
+      det.$det_type/sl.$lemcase/sl %NP { %2[lemcase=$lemcase] } |
+      %prn [$det_type=def] { %1 } ;
+
+VP -> %vblex ?(1.transitivity/tl = iv) { %1 } |
+      %vblex DP ?(1.transitivity/tl = tv)
+            { 2[case=(if (2.det_type = def) acc else nom)] _1 %1 } ;
+
+S -> DP VP { 1 _1 2[number=1.number, person=1.person] } ;
