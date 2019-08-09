@@ -265,8 +265,8 @@ test: all
 	cat tests/eng-kir-regression-tests.txt | sed -r 's/[^|]+\|//' > .test-ref
 	cat tests/eng-kir-regression-tests.txt | sed -r 's/\|[^|]+//' | apertium -d . kir-eng > .test-mt
 	@diff -u .test-ref .test-mt | colordiff
-#	echo "house" | apertium -d . kir-eng | tee .test-mt
-#	@echo "house" > .test-ref
-#	@diff .test-ref .test-mt
-#	@rm .test-ref .test-mt
+	cat tests/eng-kir-regression-tests.txt | sed -r 's/\|[^|]+//' > .test-ref
+	cat tests/eng-kir-regression-tests.txt | sed -r 's/[^|]+\|//' | apertium -d . eng-kir > .test-mt
+	@diff -u .test-ref .test-mt | colordiff
+	@rm .test-ref .test-mt
 
