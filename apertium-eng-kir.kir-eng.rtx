@@ -424,7 +424,17 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
       !    )
       ! |
 		! en_nonfin
-      1: %v.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense, $transitivity=(if (1.causative=caus) tv else 1.transitivity) ]
+      1: %v.$lem/sl
+          [
+            $fnf=1.fnfall>fnf,
+            $tense=1.prc_or_tense>tense,
+            $transitivity=(
+               if ((1.transitivity = iv) and (1.causative=caus) and (1.passive = pass)) iv
+               else-if ((1.transitivity = iv) and (1.causative=caus) and (1.passive not = pass)) tv
+               else-if ((1.transitivity = tv) and (1.passive = pass)) iv
+               else 1.transitivity
+            )
+          ]
           (if ((1.passive/sl = pass) and ($qst not = qst))
               { be@vbser.$tense.[1.person].[1.number] _ 1[tense=pp] }
            else
