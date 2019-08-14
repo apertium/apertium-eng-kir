@@ -491,8 +491,8 @@ S -> 2: DP.*.nom.$lemcase VP.fin
          )
          1[lemcase=aa] _1
          (if ((2.number = sg) and (1.number = pl))
-               2[number=pl,qst=2.qst]
-          else 2[qst=2.qst]
+               2[number=pl,qst=(if (2.interog = itg) qst else NOqst)]
+          else 2[qst=(if (2.interog = itg) qst else NOqst)]
          )
        } |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
