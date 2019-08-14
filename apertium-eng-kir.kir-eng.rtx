@@ -276,7 +276,7 @@ det dP -> AP det %NP { 2 _2 { 1 _1 3 } } ;
 DP ->
       0: %dP { 1[lemcase=$lemcase] } |
       1: %dP { a@det.idf.sp _ 1 } |
-      1: %dP { the@det.def.sp _ 1 } |
+      1: %dP { the@det.def.sp[lemcase=$lemcase] _ 1 } |
       det %dP { 1[number=2.number] _1 2 } |
       0: num %dP { 1 _1 2 } |
 		1: num %жаш@dP [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
@@ -284,7 +284,7 @@ DP ->
       2: %dP.np { 1 } |
       2: %dP.n {
           (if (1.poss = noPOSS)
-               [ the@det.def.sp ]
+               [ the@det.def.sp[lemcase=$lemcase] ]
              else
                [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
           ) _ 1 } |
@@ -366,7 +366,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
                ((2.passive = pass) or (2.transitivity = iv))
                and (1.case = nom)
             )
-          ) [$$wh_word=(if (1.interog = itg) 1)]
+          ) [$$wh_word=(if (1.interog = itg) 1[lemcase=Aa])]
             { %2 (if (1.interog not = itg) [ _1 1 ]) } |
       2: VP.ger %vP.$lem
          ?(not
@@ -487,9 +487,9 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
 
 S -> 2: DP.*.nom.$lemcase VP.fin
        { (if (2.interog = itg)
-               [ $$wh_word[lemcase=$lemcase] _ 2(qst_front) _ ]
+               [ $$wh_word[lemcase=Aa] _ 2(qst_front) _ ]
          )
-         1 _1
+         1[lemcase=aa] _1
          (if ((2.number = sg) and (1.number = pl))
                2[number=pl,qst=qst]
           else 2[qst=qst]
