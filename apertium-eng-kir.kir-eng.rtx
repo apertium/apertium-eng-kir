@@ -96,7 +96,7 @@ case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NO
 fnfall > fnf : [tense] fin, [prc] vadj, [vadv] vadv, [ger] ger, [vadj] vadj ;
 lemh > preposition : арт behind, алд "in front of", жан "next to", үст "on top of", аст under, орто "in the middle of", маңдай "across from", түп "at the bottom of", ара between, ич inside ;
 
-!!! OUTPUT PATTERNS !!!
+!!! PATTERN DEFINITIONS !!!
 ! when building chunk or lu of this type, put these tags in this order
 
 NP: _.nptype.number.poss.case.prep_flag ;
@@ -105,8 +105,9 @@ dP: _.nptype.number.poss.case.prep_flag.interog ;
 VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem ;
 RC: _ ;
 !prn_pers: _.case.person.gender.number ;
+prn_pers_tags_p3: _.case.person.gender.number ;
 prn_pers_tags: _.case.person.gender.number ;
-prn_pers: (always 1(prn_pers_tags)[
+prn_pers: (if (1.person = p3) 1(prn_pers_tags_p3) else 1(prn_pers_tags)[
    gender=(if ((1.lem/ref incl en_nouns_f) or (1.gender/ref = f)) f
            else-if ((1.lem/ref incl en_nouns_m) or (1.gender/ref = m)) m
            else nt
