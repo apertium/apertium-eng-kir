@@ -118,6 +118,7 @@ prn_itg: _.<itg>.gender.number ;
 prn_ind: _.<ind>.gender.number ;
 prn: (if (1.prn_type = itg) 1(prn_itg) else-if (1.prn_type = ind) 1(prn_ind) else 1(prn_pers));
 S: _ ;
+Speech: _ ;
 n: _.number ;
 adj: _.adjtype.adjlevel ;
 post: _;
@@ -407,9 +408,13 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       AdvP %vP { %2 _1 1 } |
       4: AdvP PP AdvP %vP { 1 _1 %4 _3 3 _2 2 } |
       %vP { %1 } |
-      S %де@vP { %2 _1 1 } |
-      S %де@vP.*.prc %vP { %3 _1 1 } |
-      4: DP.*.abl S %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 } 
+      Speech %де@vP { %2 _1 1 } |
+      Speech %де@vP.*.prc %vP { %3 _1 1 } |
+      4: DP.*.abl Speech %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 } 
+   ;
+
+Speech -> S punct { 1 _1 2 } |
+          S { 1 } 
    ;
 
 AdvP -> adj.advl.$advlevel [$adv_behaviour=NOadvB] {
@@ -499,6 +504,6 @@ S -> 2: DP.*.nom.$lemcase VP.fin
          { 1 _1 2[number=(if (2.number = sg and 1.number = pl) pl else 2.number)] } ) |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 } |
-     VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] } |
-     %S punct { %1 _1 2 }
+     VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] }! |
+!     %S punct { %1 _1 2 }
 ;
