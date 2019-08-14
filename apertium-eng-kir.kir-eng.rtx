@@ -249,7 +249,7 @@ dP ->
 !      2: %NP.np.$number.$case.$prep_flag.$poss { 1 } |
 !      0: AP NP.$number.$case.$prep_flag.$poss { the@det.def.sp _ 1 _1 2 } |
 !      1: AP NP.$number.$case.$prep_flag.$poss { a@det.idf.sp _ 1 _1 2 } |
-      2: %prn
+      2: %prn.$case/sl
            {
               (if (1.person = p1 and 1.number = sg)
                   1[lemcase=Aa]
@@ -291,6 +291,8 @@ DP ->
          (if (2.lem in prep_nouns)
            ![ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
            [ *(pr)[lemh=2.lemh>preposition] _1 1 ]
+          else-if (2.lem/sl = prpers)
+           [ 2[case=pos] _1 1 ]
           else
            [ 1 's@gen _1 2 ]
          ) }
