@@ -87,11 +87,11 @@ prep_nouns = арт алд жан үст аст орто маңдай түп а�
 poss > person : px1sg p1, px2sg p2, px3sg p3, px1pl p1, px2pl p2, px3pl p3, px3sp p3;
 poss > number : px1sg sg, px2sg sg, px3sg sg, px1pl pl, px2pl pl, px3pl pl, px3sp sg;
 poss > gender : px1sg mf, px2sg mf, px3sg nt, px1pl mf, px2pl mf, px3pl mf, px3sp nt;
-tense > tense : aor pres, ifi past ;
+tense > tense : aor pres, ifi past, past past ;
 nonfinite > nonfinite : prc_perf pprs, prc_impf pprs ;
 ger > tense : ger pprs, ger_past pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
-case > case : nom subj, acc obj, dat obj, acc-ind obj;
+case > case : nom subj, acc obj, dat obj, acc-ind obj, abl obj, gen pos;
 case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NOpr, obj NOpr;
 fnfall > fnf : [tense] fin, [prc] vadj, [vadv] vadv, [ger] ger, [vadj] vadj ;
 lemh > preposition : арт behind, алд "in front of", жан "next to", үст "on top of", аст under, орто "in the middle of", маңдай "across from", түп "at the bottom of", ара between, ич inside ;
