@@ -347,7 +347,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
                and (1.case = nom)
             )
           ) [$$wh_word=(if (2.interog = itg) 2)]
-            { %2 (if (2.interog not = itg) [ _1 1 ]) } |
+            { %2 (if (1.interog not = itg) [ _1 1 ]) } |
       2: VP.ger %vP.$lem
          ?(not
             (
