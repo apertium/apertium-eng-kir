@@ -23,13 +23,14 @@ prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
 aux_lem = (NOaux do) be do can NOaux ;
 interog = itg ;
+punct = sent cm ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
 tense = (TD pres) pres aor ifi past ;  ! finites
 qst = (QD NOqst) qst NOqst ;
     ! use <qst>
-prc = (PTD pprs) prc_past prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
+prc = (PTD pprs) prc_perf prc_impf prc_irre pprs pp ;  ! select -ing if in doubt
 en_nonfin = (NFD noNF) pprs pp inf noNF ;
 
 vadv = gna_perf ;
@@ -53,8 +54,8 @@ en_nouns_loc_at = concert school club game address shore ;
 ! beach - on, at
 ! road - on, in
 
-en_nouns_m = boy man husband waiter annotator "little sister" "big sister";
-en_nouns_f = girl woman wife waitress annotatrix "little brother" "big brother";
+en_nouns_m = boy man husband waiter annotator "little sister" "big sister" mother;
+en_nouns_f = girl woman wife waitress annotatrix "little brother" "big brother" father;
 
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
@@ -93,7 +94,7 @@ ger > tense : ger pprs, ger_past pprs ;
 prc > tense : prc_perf pprs, prc_impf pprs ;
 case > case : nom subj, acc obj, dat obj, acc-ind obj, abl obj, gen pos;
 case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NOpr, obj NOpr;
-fnfall > fnf : [tense] fin, [prc] vadj, [vadv] vadv, [ger] ger, [vadj] vadj ;
+fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 lemh > preposition : арт behind, алд "in front of", жан "next to", үст "on top of", аст under, орто "in the middle of", маңдай "across from", түп "at the bottom of", ара between, ич inside ;
 
 !!! PATTERN DEFINITIONS !!!
@@ -138,6 +139,9 @@ np: (if (1.np_type = top) 1(np_top) else-if (1.np_type = ant) 1(np_ant) else-if 
 num: _.number ;
 cnjcoo: _ ;
 pr: _ ;
+punct: _ ;
+cm: _ ;
+sent: _ ;
 
 cop: _.tense.person.number ;
 vbdo: _.tense.person.number ;
@@ -403,7 +407,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       AdvP %vP { %2 _1 1 } |
       4: AdvP PP AdvP %vP { 1 _1 %4 _3 3 _2 2 } |
       %vP { %1 } |
-      S %де@vP { %2 _1 1 }
+      S %де@vP { %2 _1 1 } |
+      S %де@vP.*.prc %vP { %3 _1 1 } |
+      4: DP.*.abl S %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 } 
    ;
 
 AdvP -> adj.advl.$advlevel [$adv_behaviour=NOadvB] {
@@ -483,7 +489,7 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
 ;
 
 
-
+punct -> cm { 1 } | sent { 1 } ;
 
 S -> 2: DP.*.nom.$lemcase VP.fin
        { (if (2.interog = itg)
@@ -496,5 +502,7 @@ S -> 2: DP.*.nom.$lemcase VP.fin
          )
        } |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
-     VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 }
+     VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 } |
+     VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] } |
+     %S punct { %1 _1 2 }
 ;
