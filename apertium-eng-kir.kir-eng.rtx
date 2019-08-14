@@ -53,8 +53,8 @@ en_nouns_loc_at = concert school club game address shore ;
 ! beach - on, at
 ! road - on, in
 
-en_nouns_m = boy man husband waiter annotator ;
-en_nouns_f = girl woman wife waitress annotatrix ;
+en_nouns_m = boy man husband waiter annotator "little sister" "big sister";
+en_nouns_f = girl woman wife waitress annotatrix "little brother" "big brother";
 
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
