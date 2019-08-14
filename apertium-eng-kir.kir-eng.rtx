@@ -46,7 +46,7 @@ en_nouns_mass = bread paper ;
 en_nouns_count = window paper ;
 
 en_nouns_loc_in = garden taxi cab car house attic building cabinet agreement ;
-en_nouns_loc_on = bus floor roof shelf motorcycle bicycle plane airplane ship boat ;
+en_nouns_loc_on = bus floor roof shelf motorcycle bicycle plane airplane ship boat paper ;
 en_nouns_loc_at = concert school club game address shore ;
 ! FIXME: multiple options, depending on meaning:
 ! beach - on, at
