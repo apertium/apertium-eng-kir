@@ -22,6 +22,7 @@ np_type = top cog ant ;
 prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
 aux_lem = (NOaux do) be do can NOaux ;
+interog = itg ;
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
@@ -95,8 +96,8 @@ lemh > preposition : арт behind, алд "in front of", жан "next to", үс
 ! when building chunk or lu of this type, put these tags in this order
 
 NP: _.nptype.number.poss.case.prep_flag ;
-DP: _.nptype.number.poss.case.prep_flag ;
-dP: _.nptype.number.poss.case.prep_flag ;
+DP: _.nptype.number.poss.case.prep_flag.interog ;
+dP: _.nptype.number.poss.case.prep_flag.interog ;
 VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem ;
 RC: _ ;
 prn_pers: _.case.person.gender.number ;
@@ -270,7 +271,7 @@ DP ->
                [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
           ) _ 1 } |
       RC %dP.$number.$case.$poss { 2 _1 that@cnjsub _ 1 } |
-		VP.ger [$nptype=ger] { 1 } |
+		VP.ger [$nptype=ger,$interog=_] { 1 } |
       !!! ATTEMPT TO FIX NP.gen NP.px3 rules
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 1 _1 's@gen _ 2 } |
@@ -339,13 +340,13 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
             ((1.case = acc) and (2.case in might_get_pr))
           )
             { %3 _2 1 _1 2 } |
-      DP %vP.$lem
+      DP.$itg %vP.$lem [$$wh_word=(if (2.itg = itg) 2)]
          ?(not
             (
                ((2.passive = pass) or (2.transitivity = iv))
                and (1.case = nom)
             )
-          ) { %2 _1 1 } |
+          ) { %2 (if (2.itg not = itg) [ _1 1 ]) } |
       2: VP.ger %vP.$lem
          ?(not
             (
