@@ -79,7 +79,10 @@
       <program name="lrx-proc -m">
         <file name="kir-eng.autolex.bin"/>
       </program>
-      <program name="rtx-proc -F">
+      <program name="apertium-anaphora">
+        <file name="apertium-eng-kir.kir-eng.arx"/>
+      </program>
+      <program name="rtx-proc -Fa">
         <file name="kir-eng.rtx.bin"/>
       </program>
       <program name="lsx-proc" debug-suff="revautoseq">
