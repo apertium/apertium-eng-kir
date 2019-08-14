@@ -486,15 +486,11 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
 
 
 S -> 2: DP.*.nom.$lemcase VP.fin
-       { (if (2.interog = itg)
-               [ $$wh_word[lemcase=Aa] _ 2(qst_front) _ ]
-         )
-         1[lemcase=aa] _1
-         (if ((2.number = sg) and (1.number = pl))
-               2[number=pl,qst=(if (2.interog = itg) qst else NOqst)]
-          else 2[qst=(if (2.interog = itg) qst else NOqst)]
-         )
-       } |
+       (if (2.interog = itg)
+         { $$wh_word _ 2(qst_front) _ 1[lemcase=aa] _1
+           2[qst=qst, number=(if (2.number = sg and 1.number = pl) pl else 2.number)] }
+        else
+         { 1 _1 2[number=(if (2.number = sg and 1.number = pl) pl else 2.number)] } ) |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 }
 ;
