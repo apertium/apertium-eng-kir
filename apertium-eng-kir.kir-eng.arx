@@ -143,7 +143,7 @@
 				<pattern-item n="np"/>
 			</pattern>
 
-			<score n="1"/> <!-- This gives a +1 score to any antecedent that is part of a Proper Noun -->
+			<score n="2"/> <!-- This gives a +1 score to any antecedent that is part of a Proper Noun -->
 		</markable>
 
 	</section-markables>

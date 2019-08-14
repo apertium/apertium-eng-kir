@@ -106,7 +106,12 @@ VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem ;
 RC: _ ;
 !prn_pers: _.case.person.gender.number ;
 prn_pers_tags: _.case.person.gender.number ;
-prn_pers: (always 1(prn_pers_tags)[gender=(if (1.lem/ref incl en_nouns_f) f else-if (1.lem/ref incl en_nouns_m) m else nt)]);
+prn_pers: (always 1(prn_pers_tags)[
+   gender=(if ((1.lem/ref incl en_nouns_f) or (1.gender/ref = f)) f
+           else-if ((1.lem/ref incl en_nouns_m) or (1.gender/ref = m)) m
+           else nt
+          )
+   ]);
 prn_itg: _.<itg>.gender.number ;
 prn_ind: _.<ind>.gender.number ;
 prn: (if (1.prn_type = itg) 1(prn_itg) else-if (1.prn_type = ind) 1(prn_ind) else 1(prn_pers));
