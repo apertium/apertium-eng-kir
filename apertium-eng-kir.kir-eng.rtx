@@ -247,8 +247,19 @@ dP ->
 !      2: %NP.np.$number.$case.$prep_flag.$poss { 1 } |
 !      0: AP NP.$number.$case.$prep_flag.$poss { the@det.def.sp _ 1 _1 2 } |
 !      1: AP NP.$number.$case.$prep_flag.$poss { a@det.idf.sp _ 1 _1 2 } |
-      2: %prn [$gender=(if (1.lem/ref in en_nouns_f) f else-if (1.lem/ref in en_nouns_m) m else nt)] { (if (1.person = p1 and 1.number = sg) 1[lemcase=Aa]
-                      else 1[lemcase=$lemcase]) } |
+      2: %prn
+           [ $gender=
+              (if (1.lem/ref in en_nouns_f) f
+               else-if (1.lem/ref in en_nouns_m) m
+               else nt)
+           ]
+           {
+              (if (1.person = p1 and 1.number = sg)
+                  1[lemcase=Aa, gender=$gender]
+               else
+                  1[lemcase=$lemcase]
+              )
+           } |
 !      RC DP.$number.$case.$poss { 2 _1 that@cnjsub _ 1 } |
 !		VP.ger { 1 } |
       AP %NP { 1 _1 2 } |
