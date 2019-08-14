@@ -291,7 +291,7 @@ DP ->
          (if (2.lem in prep_nouns)
            ![ 2[lemh=2.lemh>preposition] _1 the@det.def.sp _ 1 ]
            [ *(pr)[lemh=2.lemh>preposition] _1 1 ]
-          else-if (2.lem/sl = prpers)
+          else-if (2.lem = prpers)
            [ 2[case=pos] _1 1 ]
           else
            [ 1 's@gen _1 2 ]
