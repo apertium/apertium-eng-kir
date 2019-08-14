@@ -53,6 +53,9 @@ en_nouns_loc_at = concert school club game address shore ;
 ! beach - on, at
 ! road - on, in
 
+en_nouns_m = boy man husband waiter annotator ;
+en_nouns_f = girl woman wife waitress annotatrix ;
+
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
 ky_verbs_abl_arg = өт аш;
@@ -76,6 +79,7 @@ might_get_pr = loc dat abl gen ;
 city = Нарын ;
 
 prep_nouns = арт алд жан үст аст орто маңдай түп ара ич ;
+
 
 
 !!! MAPPINGS !!!
@@ -243,7 +247,7 @@ dP ->
 !      2: %NP.np.$number.$case.$prep_flag.$poss { 1 } |
 !      0: AP NP.$number.$case.$prep_flag.$poss { the@det.def.sp _ 1 _1 2 } |
 !      1: AP NP.$number.$case.$prep_flag.$poss { a@det.idf.sp _ 1 _1 2 } |
-      2: %prn { (if (1.person = p1 and 1.number = sg) 1[lemcase=Aa]
+      2: %prn [$gender=(if (1.lem/ref in en_nouns_f) f else-if (1.lem/ref in en_nouns_m) m else nt)] { (if (1.person = p1 and 1.number = sg) 1[lemcase=Aa]
                       else 1[lemcase=$lemcase]) } |
 !      RC DP.$number.$case.$poss { 2 _1 that@cnjsub _ 1 } |
 !		VP.ger { 1 } |
@@ -466,11 +470,12 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
 
 
 S -> 2: DP.*.nom VP.fin
-       { 1 _1
-               (if ((2.number = sg) and (1.number = pl))
-                    2[number=pl]
-                else 2
-               )
+       { (if (2.interog = itg) [ $$wh_word _ ] )
+         1 _1
+         (if ((2.number = sg) and (1.number = pl))
+               2[number=pl]
+          else 2
+         )
        } |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 }
