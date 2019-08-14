@@ -15,6 +15,15 @@
 			<match lemma="айда" tags="v.*"/>
 		</or>
 	</def-seq>
+	<def-seq n="postposition-nouns">
+		<or>
+			<match lemma="алд" tags="n.*"/>
+			<match lemma="ич" tags="n.*"/>
+			<match lemma="арт" tags="n.*"/>
+			<match lemma="маңдай" tags="n.*"/>
+			<match lemma="сырт" tags="n.*"/>
+		</or>
+	</def-seq>
 </def-seqs>
 
 <rules>
@@ -56,6 +65,12 @@
 		<match lemma="үй" tags="n.*">
 			<select lemma="house" tags="n.*"/>
 		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="үй" tags="n.*">
+			<select lemma="house" tags="n.*"/>
+		</match>
+		<seq n="postposition-nouns"/>
 	</rule>
 
 	<rule>
