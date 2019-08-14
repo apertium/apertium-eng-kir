@@ -102,7 +102,7 @@ lemh > preposition : арт behind, алд "in front of", жан "next to", үс
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.nptype.number.poss.case.prep_flag.interog ;
 dP: _.nptype.number.poss.case.prep_flag.interog ;
-VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem ;
+VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem.interog ;
 RC: _ ;
 !prn_pers: _.case.person.gender.number ;
 prn_pers_tags_p3: _.case.<p3>.gender.number ;
@@ -360,13 +360,13 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
             ((1.case = acc) and (2.case in might_get_pr))
           )
             { %3 _2 1 _1 2 } |
-      DP.$itg %vP.$lem
+      DP.$interog %vP.$lem
          ?(not
             (
                ((2.passive = pass) or (2.transitivity = iv))
                and (1.case = nom)
             )
-          ) [$$wh_word=(if (2.interog = itg) 2)]
+          ) [$$wh_word=(if (1.interog = itg) 1)]
             { %2 (if (1.interog not = itg) [ _1 1 ]) } |
       2: VP.ger %vP.$lem
          ?(not
