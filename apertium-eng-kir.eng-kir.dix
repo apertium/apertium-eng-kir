@@ -243,6 +243,7 @@
       <e><p><l>school</l><r>мектеп</r></p><par n="par__n"/></e>
       <e><p><l>bus</l><r>автобус</r></p><par n="par__n"/></e>
       <e><p><l>concert</l><r>концерт</r></p><par n="par__n"/></e>
+      <e><p><l>hour</l><r>саат</r></p><par n="par__n"/></e>
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
@@ -372,6 +373,8 @@
 		<e><p><l>change<s n="vblex"/></l><r>өзгөр<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>be<b/>time<s n="vblex"/></l><r>маал<b/>кел<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>write<s n="vblex"/></l><r>жаз<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>wait<s n="vblex"/></l><r>күт<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>wait<g><b/>for</g><s n="vblex"/></l><r>күт<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -480,6 +483,8 @@
 		<e><p><l>all<s n="det"/><s n="qnt"/><s n="pl"/></l><r>бардык<s n="det"/><s n="qnt"/></r></p></e>
 
 		<e><p><l>which<s n="det"/><s n="itg"/><s n="sp"/></l><r>кай<s n="det"/><s n="dem"/></r></p></e>
+		<e><p><l>how<b/>many<s n="det"/><s n="itg"/><s n="pl"/></l><r>канча<s n="num"/><s n="itg"/></r></p></e>
+		<e><p><l>what<b/>kind<b/>of<s n="adv"/><s n="itg"/></l><r>кандай<s n="det"/><s n="itg"/></r></p></e>
 
 		<!-- cnj -->
 		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>

@@ -39,3 +39,5 @@
 Сен кимди көрдүң?|Who did you see?
 Сен ким менен сүйлөшүп жатасың?|Who are you speaking with?
 Сен кандай кагазга жаздың?|What kind of paper did you write on?
+Сен канча саат күттүң?|How many hours did you wait?
+Сен автобусту канча саат күттүң?|How many hours did you wait for the bus?
