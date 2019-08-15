@@ -37,5 +37,5 @@
 Мен кагаздарды таштаганмын.|I threw the papers away.
 Мугалимдер кагаздарды таштаган.|The teachers threw the papers away.
 Сен кимди көрдүң?|Who did you see?
-Сен ким менен сүйлөшүп жатасың?|Who are you talking with?
+Сен ким менен сүйлөшүп жатасың?|Who are you speaking with?
 Сен кандай кагазга жаздың?|What kind of paper did you write on?
