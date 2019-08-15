@@ -336,7 +336,9 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
                    []
                 )
                 1 } ) |
-      DP post { 2 _1 1 } |
+      ! DP post { 2 _1 1 } |
+      DP post [$$wh_word=(if (1.interog = itg) 1[lemcase=Aa])]
+            { 2 (if (1.interog not = itg) [ _1 1]) } |
 		! FIXME: deal with different prs depending on lemma of 2
       !DP.*.loc.attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
       DP.*.loc.attr %DP { (if ($prep_flag not = NOpr)
