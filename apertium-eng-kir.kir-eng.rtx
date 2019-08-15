@@ -287,7 +287,7 @@ DP ->
       1: %dP { a@det.idf.sp _ 1 } |
       1: %dP { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ 1[lemcase=aa] } |
       det %dP { 1[number=2.number] _1 2 } |
-      0: num %dP { 1 _1 2 } |
+      0: num %dP [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)] { 1 _1 2 } |
 		1: num %жаш@dP [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
       det num %dP { 1[number=3.number] _1 2 _2 3 } |
       2: %dP.np { 1 } |
