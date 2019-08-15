@@ -22,7 +22,7 @@ np_type = top cog ant ;
 prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
 aux_lem = (NOaux do) be do can NOaux ;
-interog = itg ;
+interog = (NOitg "") itg NOitg ;
 punct = sent cm ;
 
 fnf = fin prc vadj vadv ger ;
@@ -124,7 +124,7 @@ n: _.number ;
 adj: _.adjtype.adjlevel ;
 post: _;
 vP: _.transitivity.tense.fnf.person.number.negative.qst.en_nonfin.aux_lem ;
-PP: _.prep_flag ;
+PP: _.prep_flag.interog ;
 AP: _ ;
 det_dem: _.<dem>.number ;
 det_def: _.definiteness.number ;
@@ -211,7 +211,7 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep
       np.ant.$nptype n.$case/sl.$number.$poss ?((2.lem/sl in ky_titles) and (2.poss = noPOSS)) { 2 _1 1 }
    ;
 
-AP -> adj ?(1.adj_behaviour not = advl) { 1 } |
+AP -> adj ?(1.adj_behaviour not = advl) { 1[lemcase=$lemcase] } |
       adv.attr { 1 } |
       "# year-old" num жашар@adj { 1 _1 2 } |
       AP AP { 1 _1 2 } |
@@ -271,7 +271,7 @@ dP ->
            } |
 !      RC DP.$number.$case.$poss { 2 _1 that@cnjsub _ 1 } |
 !		VP.ger { 1 } |
-      AP %NP { 1 _1 2 } |
+      AP %NP { 1[lemcase=$lemcase] _1 2 } |
       %NP { 1[lemcase=$lemcase] }
    ;
 
@@ -337,7 +337,7 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
                 )
                 1 } ) |
       ! DP post { 2 _1 1 } |
-      DP post [$$wh_word=(if (1.interog = itg) 1[lemcase=Aa])]
+      DP.$interog post [$$wh_word=(if (1.interog = itg) 1[lemcase=Aa])]
             { 2 (if (1.interog not = itg) [ _1 1]) } |
 		! FIXME: deal with different prs depending on lemma of 2
       !DP.*.loc.attr %DP { 2 _1 that@cnjsub _ be@vbser.pres.p3.[2.number] _ at@pr _ 1 }
@@ -395,7 +395,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
             } |
       PP DP.*.acc %vP { %3 _2 2 _1 1 } |
       PP PP %vP { %3 _2 2 _1 1 } |
-      PP %vP.$lem
+      PP.$interog %vP.$lem
          { %2 _1
             (if (2.lem in ky_verbs_dat_arg)
                1[prep_flag=NOpr]
