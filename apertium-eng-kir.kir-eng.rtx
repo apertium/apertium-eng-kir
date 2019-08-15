@@ -349,6 +349,8 @@ PP -> 1: DP.$prep_flag ?(1.case in might_get_pr)
                           2 _1 1 }
 ;
 
+DP VP -> DP.*.nom DP.*.acc DP.*.nom %vP { 1 _1 { %4 _3 2 _2 3 } } ;
+
 VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       DP.[definiteness].prep_flag DP.[definiteness].prep_flag %vP { 3[number=$number] _2 2 _1 1 } |
 !      DP.oblique DP.acc %vP { 3 _2 2 _1 1 } |

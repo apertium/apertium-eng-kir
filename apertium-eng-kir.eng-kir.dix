@@ -484,7 +484,7 @@
 
 		<e><p><l>which<s n="det"/><s n="itg"/><s n="sp"/></l><r>кай<s n="det"/><s n="dem"/></r></p></e>
 		<e><p><l>how<b/>many<s n="det"/><s n="itg"/><s n="pl"/></l><r>канча<s n="num"/><s n="itg"/></r></p></e>
-		<e><p><l>what<b/>kind<b/>of<s n="adv"/><s n="itg"/></l><r>кандай<s n="det"/><s n="itg"/></r></p></e>
+		<e><p><l>what<b/>kind<b/>of<s n="adv"/><s n="itg"/></l><r>кандай<s n="det"/><s n="qnt"/></r></p></e>
 
 		<!-- cnj -->
 		<e><p><l>and<s n="cnjcoo"/></l><r>жана<s n="cnjcoo"/></r></p></e>
