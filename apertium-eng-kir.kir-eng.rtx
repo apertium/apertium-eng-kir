@@ -22,7 +22,7 @@ np_type = top cog ant ;
 prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
 aux_lem = (NOaux do) be do can NOaux ;
-interog = (NOitg "") itg NOitg ;
+interog = (NOitg NOitg) itg NOitg ;
 punct = sent cm ;
 
 fnf = fin prc vadj vadv ger ;
@@ -131,7 +131,8 @@ det_def: _.definiteness.number ;
 det: (if (1.det_type = dem) 1(det_dem) else 1(det_def));
 adv_attr: _ ;
 adv_default: _.advlevel ;
-adv: (if (1.adv_behaviour = attr) 1(adv_attr) else 1(adv_default));
+adv_itg: _.<itg> ;
+adv: (if (1.adv_behaviour = attr) 1(adv_attr) else-if (1.interog = itg) 1(adv_itg) else 1(adv_default));
 AdvP: _.advlevel ;
 np_top: _.<top> ;
 np_ant: _.<ant>.gender.number ;
