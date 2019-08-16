@@ -353,7 +353,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       DP %vP.cop { %2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
       AdvP AP %vP.cop { %3 _2 2 _1 1 } |
-      adv.itg %vP.cop { %2 _1 1 } |
+      adv.itg %vP.cop [$$wh_word=1, $interog=itg] { %2 } |
       DP DP %vP
 !         ?(~((1.case = nom) and (2.case = nom) and ((3.fnf = prc) or (3.transitivity = cop)))) ! don't match <nom> <nom> <prc> or <nom> <nom> <cop> → these are handled by other rules
          ?(
@@ -487,7 +487,7 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
            else
               { do@vbdo.$tense _ not@adv _ 1[tense=inf, negative=pos] } ) |
 
-      3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
+      3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense, $aux_lem=be]
           { (if ($qst not = qst) %1) } |
       4: %cop.neg.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { (if ($qst not = qst) %1) _ not@adv } |
