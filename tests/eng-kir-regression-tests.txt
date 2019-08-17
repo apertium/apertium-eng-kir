@@ -41,3 +41,4 @@
 Сен кандай кагазга жаздың?|What kind of paper did you write on?
 Сен канча саат күттүң?|How many hours did you wait?
 Сен автобусту канча саат күттүң?|How many hours did you wait for the bus?
+Мен автобусту үч саат күттүм.|I waited for the bus for three hours.
