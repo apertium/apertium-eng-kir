@@ -32,6 +32,7 @@
 Мен автобустамын.|I am on the bus.
 Мен концерттемин.|I am at the concert.
 Бул мектеп болуш керек!|This must be a school!
+Бул мектеп жакшы.|This school is good.
 Мен кагазды таштаганмын.|I threw the paper away.
 Мен кагаздарды алып кеткенмин.|I took the papers away.
 Мен кагаздарды таштаганмын.|I threw the papers away.

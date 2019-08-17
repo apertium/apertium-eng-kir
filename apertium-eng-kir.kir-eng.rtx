@@ -314,8 +314,8 @@ DP ->
            [ 1 's@gen _1 2 ]
          ) } |
       4: DP.*.gen %dP.*.[pxNot3] ?(((1.person = 2.poss>person) and (1.number = 2.poss>number))) [$prep_flag=(if (2.lem in prep_nouns) noPr else 2.prep_flag)]
-         { 1 _1 2 } |
-      %det.dem [$case=nom] { 1 }
+         { 1 _1 2 } !|
+!      %det.dem [$case=nom] { 1 }   ! The problem with this is that det.dem shouldn't be a DP.  If we have det.dem instead of prn, then it's a disambiguation issue.
    ;
 
 RC -> DP.*.nom VP.vadj { 1 _1 2 } |
@@ -498,7 +498,7 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
           { %1 _ not@adv } |
       5: %v.$transitivity.$lem/sl бар@v.iv.prc_impf жат@vaux [$fnf=3.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 3 _1 %1[tense=pprs] } |
-      6: %бол@v.iv.ger_pres.nom керек@adj э@cop [$transitivity=tv, $fnf=fin]
+      6: %бол@v.iv.ger_pres.nom керек@adj э@cop [$transitivity=cop, $fnf=fin]
           { must@vbmod.pres _ be@vbser.inf }
 ;
 
