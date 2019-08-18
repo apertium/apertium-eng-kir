@@ -88,7 +88,7 @@
       <program name="lsx-proc" debug-suff="revautoseq">
         <file name="eng-kir.revautoseq.bin"/>
       </program>
-      <program name="lt-proc $1">
+      <program name="lt-proc -N 1 $1">
         <file name="kir-eng.autogen.bin"/>
       </program>
 

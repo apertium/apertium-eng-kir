@@ -32,6 +32,7 @@
 Мен автобустамын.|I am on the bus.
 Мен концерттемин.|I am at the concert.
 Бул мектеп болуш керек!|This must be a school!
+Бул мектеп жакшы.|This school is good.
 Мен кагазды таштаганмын.|I threw the paper away.
 Мен кагаздарды алып кеткенмин.|I took the papers away.
 Мен кагаздарды таштаганмын.|I threw the papers away.
@@ -39,6 +40,6 @@
 Сен кимди көрдүң?|Who did you see?
 Сен ким менен сүйлөшүп жатасың?|Who are you speaking with?
 Сен кандай кагазга жаздың?|What kind of paper did you write on?
-Сен канча саат күттүң?|How many hours did you wait?
+Сен канча саат күттүң?|How many hours did you wait for?
 Сен автобусту канча саат күттүң?|How many hours did you wait for the bus?
 Мен автобусту үч саат күттүм.|I waited for the bus for three hours.
