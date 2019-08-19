@@ -356,7 +356,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
       8: бар@AP %vP.cop [$barjoq=barjoq] { have@vblex.$tense.$person.$number } |
       8: жок@AP %vP.cop [$barjoq=barjoq] { do@vbdo.$tense.$person.$number _ not@adv _ have@vblex.inf } |
-      8: керек@AP %vP.cop [$barjoq=barjoq] { %*(vblex)[lemh=need] } |
+      8: керек@AP %vP.cop [$barjoq=barjoq] { need@vblex.$tense.$person.$number } |
       AdvP AP %vP.cop { %3 _2 2 _1 1 } |
       adv.itg %vP.cop [$$wh_word=1, $interog=itg] { %2 } |
       DP DP %vP
@@ -520,5 +520,5 @@ S -> 2: DP.*.nom.$lemcase VP.fin
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 } |
      VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] } |
 !     %S punct { %1 _1 2 }
-     8: DP.*.gen %dP.*.[px3] VP.*.barjoq { 1 _1 3 _2 2 }
+     8: DP.*.gen.$number dP.*.[px3] VP.*.barjoq { 1 _1 3[number=$number] _2 2 }
 ;
