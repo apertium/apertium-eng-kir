@@ -354,7 +354,8 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
 !      DP.oblique DP.acc %vP { 3 _2 2 _1 1 } |
       DP %vP.cop { %2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
-      8: бар@AP %vP.cop [$barjoq=barjoq] { have@vblex.$tense.$person.$number } |
+!      8: бар@AP %vP.cop [$barjoq=barjoq] { have@vblex.$tense.$person.$number } |
+      8: бар@AP %vP.cop [$barjoq=barjoq] { %*(vblex)[lemh=have,pos_tag=vblex,number=$number] } |
       8: жок@AP %vP.cop [$barjoq=barjoq] { do@vbdo.$tense.$person.$number _ not@adv _ have@vblex.inf } |
       8: керек@AP %vP.cop [$barjoq=barjoq] { need@vblex.$tense.$person.$number } |
       AdvP AP %vP.cop { %3 _2 2 _1 1 } |
