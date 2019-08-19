@@ -151,7 +151,7 @@ cm: _ ;
 sent: _ ;
 
 cop: _.tense.person.number ;
-vbdo: _.tense.person.number ;
+vbdo: (always 1(verb)) ;
 vbser: _.tense.person.number ;
 
 verb_pers: pos_tag.tense.person.number;
@@ -356,7 +356,7 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
 !      8: бар@AP %vP.cop [$barjoq=barjoq] { have@vblex.$tense.$person.$number } |
       8: бар@AP %vP.cop [$barjoq=barjoq] { %have(vblex)[number=$number] } |
-      8: жок@AP %vP.cop [$barjoq=barjoq] { do@vbdo.$tense.$person.$number _ not@adv _ have@vblex.inf } |
+      8: жок@AP %vP.cop [$barjoq=barjoq] { %do(vbdo)[number=$number] _ not@adv _ have@vblex.inf } |
       8: керек@AP %vP.cop [$barjoq=barjoq] { need@vblex.$tense.$person.$number } |
       AdvP AP %vP.cop { %3 _2 2 _1 1 } |
       adv.itg %vP.cop [$$wh_word=1, $interog=itg] { %2 } |
