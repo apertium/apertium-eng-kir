@@ -1,5 +1,6 @@
 !!! ATTRIBUTE LISTS !!!
 
+POS = vblex vbser vbhaver vbdo n v prn det ij adj adv ;  ! keep thinking this will be useful and adding and then finding some other way and removing.  gonna leave it in this time -JNW
 number = (ND sg) sg pl sp ;
 case = (CD subj) nom acc acc-ind dat gen loc abl subj obj pos "loc.attr";
 oblique = (CD obj) acc acc dat loc abl obj ;
@@ -23,6 +24,7 @@ prn_type = itg rel ind ;
 negative = (pos pos) neg pos ;
 aux_lem = (NOaux do) be do can NOaux ;
 interog = (NOitg NOitg) itg NOitg ;
+barjoq = (NObarjoq NObarjoq) barjoq NObarjoq ;
 punct = sent cm ;
 
 fnf = fin prc vadj vadv ger ;
@@ -104,7 +106,7 @@ lemh > preposition : арт behind, алд "in front of", жан "next to", үс
 NP: _.nptype.number.poss.case.prep_flag ;
 DP: _.nptype.number.person.poss.case.prep_flag.interog ;
 dP: _.nptype.number.person.poss.case.prep_flag.interog ;
-VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem.interog ;
+VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem.interog.barjoq ;
 RC: _ ;
 !prn_pers: _.case.person.gender.number ;
 prn_pers_tags_p3: _.case.<p3>.gender.number ;
@@ -214,12 +216,12 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep
       np.ant.$nptype n.$case/sl.$number.$poss ?((2.lem/sl in ky_titles) and (2.poss = noPOSS)) { 2 _1 1 }
    ;
 
-AP -> adj ?(1.adj_behaviour not = advl) { 1[lemcase=$lemcase] } |
+AP -> %adj.$lem/sl ?(1.adj_behaviour not = advl) { 1[lemcase=$lemcase] } |
       adv.attr { 1 } |
       "# year-old" num жашар@adj { 1 _1 2 } |
-      AP AP { 1 _1 2 } |
+      AP %AP.$lem/sl { 1 _1 2 } |
       ! only count AdvP if an ad-adj adv
-      AdvP adj ?(1.lemh in en_adv_adadj) { 1 _1 2 } |
+      AdvP %adj.$lem/sl ?(1.lemh in en_adv_adadj) { 1 _1 2 } |
       ! FIXME: is there a way to make this more general?
       8: кубаныч@NP.*.loc { happy@adj.sint } |
       8: AdvP кубаныч@NP.*.loc { 1 _1 happy@adj.sint }
@@ -352,6 +354,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
 !      DP.oblique DP.acc %vP { 3 _2 2 _1 1 } |
       DP %vP.cop { %2 _1 1 } |
       AP %vP.cop { %2 _1 1 } |
+      8: бар@AP %vP.cop [$barjoq=barjoq] { have@vblex.$tense.$person.$number } |
+      8: жок@AP %vP.cop [$barjoq=barjoq] { do@vbdo.$tense.$person.$number _ not@adv _ have@vblex.inf } |
+      8: керек@AP %vP.cop [$barjoq=barjoq] { %*(vblex)[lemh=need] } |
       AdvP AP %vP.cop { %3 _2 2 _1 1 } |
       adv.itg %vP.cop [$$wh_word=1, $interog=itg] { %2 } |
       DP DP %vP
@@ -513,6 +518,7 @@ S -> 2: DP.*.nom.$lemcase VP.fin
          { 1 _1 2[number=(if (2.number = sg and 1.number = pl) pl else 2.number)] } ) |
      2: DP.*.nom.$lemcase VP qst { 2(qst_front)[lemcase=$lemcase] _ 1[lemcase=aa] _1 2[qst=qst] } |
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 } |
-     VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] }! |
+     VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] } |
 !     %S punct { %1 _1 2 }
+     8: DP.*.gen %dP.*.[px3] VP.*.barjoq { 1 _1 3 _2 2 }
 ;
