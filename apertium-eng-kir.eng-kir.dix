@@ -250,6 +250,8 @@
       <e><p><l>moon</l><r>ай</r></p><par n="par__n"/></e>
       <e><p><l>name</l><r>ат</r></p><par n="par__n"/></e>
       <e><p><l>protectorate</l><r>протекторат</r></p><par n="par__n"/></e>
+      <e><p><l>friend</l><r>дос</r></p><par n="par__n"/></e>
+
 
 		<!-- ADJECTIVES -->
 		<e><p><l>present<s n="adj"/></l><r>бар<s n="adj"/></r></p></e>
