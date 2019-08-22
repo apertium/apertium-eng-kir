@@ -298,7 +298,7 @@ DP ->
       0: num %dP [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
           { 1[lemcase=$lemcase] _1 2[number=1.number] } |
 		1: num %жаш@dP [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
-		1: num -@guio %dP ?(3.lem in ky_nouns_timeunit) { *(adj_ord)[lemh=1.lemh] _ %3 } |
+		1: num -@guio %dP ?(3.lem in ky_nouns_timeunit) { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ *(adj_ord)[lemh=1.lemh] _ %3 } |
       det num %dP { 1[number=3.number] _1 2 _2 3 } |
       2: %dP.np { 1 } |
       2: %dP.n {
