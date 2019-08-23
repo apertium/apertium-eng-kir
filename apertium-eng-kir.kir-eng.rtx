@@ -21,7 +21,7 @@ nptype = n np prn ;
 det_type = dem itg ;
 np_type = top cog ant ;
 prn_type = itg rel ind ;
-negative = (pos pos) neg pos ;
+negative = (aff aff) neg aff ;
 aux_lem = (NOaux do) be do can NOaux ;
 interog = (NOitg NOitg) itg NOitg ;
 barjoq = (NObarjoq NObarjoq) barjoq NObarjoq ;
@@ -154,6 +154,7 @@ punct: _ ;
 cm: _ ;
 sent: _ ;
 guio: _ ;
+quot: _ ;
 
 cop: _.tense.person.number ;
 vbdo: (always 1(verb)) ;
@@ -429,7 +430,8 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _2 2 _1 1 } |
       %vP { %1 } |
       S %де@vP { %2 _1 1 } |
       S %де@vP.*.prc %vP { %3 _1 1 } |
-      4: DP.*.abl S %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 } 
+      quot S quot %де@vP.*.prc %vP { %5 _4 1 _1 2 _2 3 } |
+      4: DP.*.abl S %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 }
 !      Speech %де@vP { %2 _1 1 } |
 !      Speech %де@vP.*.prc %vP { %3 _1 1 } |
 !      4: DP.*.abl Speech %де@vP.*.prc %сура@vP { %4 _1 1 _2 2 } 
@@ -459,11 +461,11 @@ prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
-vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else pos), $aux_lem=(if (2.lem/sl = жат or 2.lem/sl = э) be
+vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else aff), $aux_lem=(if (2.lem/sl = жат or 2.lem/sl = э) be
                          if (2.lem/sl = ал) can
                          else do)]
           (if (2.lem/tl in frontable and $qst = qst)
-              { (if (2.lem/tl = be) 1[tense=pprs, negative=pos] else 1[tense=inf, negative=pos]) }
+              { (if (2.lem/tl = be) 1[tense=pprs, negative=aff] else 1[tense=inf, negative=aff]) }
            else-if (2.lem/tl in en_vaux_ing)
               { 2[tense=$tense, qst=$qst, number=$number] _1 1[tense=pprs] }
            else-if (2.lem/tl in en_vaux_none)
@@ -496,9 +498,9 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
               { %1 } ) |
       2: %v.*.neg.$transitivity.$lem/sl [$fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense]
           (if ($qst = qst)
-              { 1[tense=inf, negative=pos] }
+              { 1[tense=inf, negative=aff] }
            else
-              { do@vbdo.$tense _ not@adv _ 1[tense=inf, negative=pos] } ) |
+              { do@vbdo.$tense _ not@adv _ 1[tense=inf, negative=aff] } ) |
 
       3: %cop.$lem/sl [$transitivity=cop, $fnf=1.fnfall>fnf, $tense=1.prc_or_tense>tense, $aux_lem=be]
           { (if ($qst not = qst) %1) } |
@@ -512,7 +514,8 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
       5: %v.$transitivity.$lem/sl бар@v.iv.prc_impf жат@vaux [$fnf=3.fnfall>fnf, $tense=1.prc_or_tense>tense]
           { 3 _1 %1[tense=pprs] } |
       6: %бол@v.iv.ger_pres.nom керек@adj э@cop [$transitivity=cop, $fnf=fin]
-          { must@vbmod.pres _ be@vbser.inf }
+          { must@vbmod.pres _ be@vbser.inf } |
+      %vP emph { %1 }
 ;
 
 
@@ -528,5 +531,8 @@ S -> 2: DP.*.nom.$lemcase VP.fin
      VP.fin { prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1 } |
      VP.fin qst { 1(qst_front)[lemcase=$lemcase] _ prpers@prn.subj.[1.person].[1.gender].[1.number] _ 1[qst=qst] } |
 !     %S punct { %1 _1 2 }
-     8: DP.*.gen.$number dP.*.[px3] VP.*.barjoq { 1 _1 3[number=1.number] _2 2 }
+     8: DP.*.gen.$number dP.*.[px3] VP.*.barjoq { 1 _1 3[number=1.number] _2 2 } |
+     S cm %S { 1 _1 2 _2 %3 } |
+     %S sent { %1 _1 2 } |
+     %VP { %1 }
 ;
