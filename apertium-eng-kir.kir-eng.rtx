@@ -126,7 +126,7 @@ prn: (if (1.prn_type = itg) 1(prn_itg) else-if (1.prn_type = ind) 1(prn_ind) els
 S: _ ;
 Speech: _ ;
 n: _.number ;
-adj_ord: lemh.<adj>.<ord> ;
+adj_ord: <adj>.<ord> ;
 adj: _.adjtype.adjlevel ;
 post: _;
 vP: _.transitivity.tense.fnf.person.number.negative.qst.en_nonfin.aux_lem ;
