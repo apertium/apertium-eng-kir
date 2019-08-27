@@ -169,7 +169,7 @@
 
 	<rule weight="1.2">
 		<match tags="*.dat"/>
-		<repeat upto="8"><match/></repeat>
+		<repeat upto="6"><match/></repeat>
 		<match lemma="айт" tags="v.*">
 			<select lemma="tell" tags="vblex.*"/>
 		</match>

@@ -18,7 +18,7 @@ adv_behaviour = (AdvBD NOadvB) attr ;
 adj_behaviour = advl subst ;
 advlevel = comp ;
 nptype = n np prn ;
-det_type = dem itg ;
+det_type = dem itg pos ;
 np_type = top cog ant ;
 prn_type = itg rel ind ;
 negative = (aff aff) neg aff ;
@@ -135,7 +135,12 @@ AP: _ ;
 det_dem: _.<dem>.number ;
 det_itg: _.<itg>.number ;
 det_def: _.definiteness.number ;
-det: (if (1.det_type = dem) 1(det_dem) else-if (1.pos_tag/tl = adv) 1(adv) else-if (1.det_type = itg) 1(det_itg) else 1(det_def));
+det_pos: _.<pos>.person.gender.number ;
+det: (if (1.det_type = dem) 1(det_dem)
+      else-if (1.pos_tag/tl = adv) 1(adv)
+      else-if (1.det_type = itg) 1(det_itg)
+      else-if (1.det_type = pos) 1(det_pos)
+      else 1(det_def));
 adv_attr: _ ;
 adv_default: _.advlevel ;
 adv_itg: _.<itg> ;
@@ -296,7 +301,7 @@ DP ->
       1: %dP { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ 1[lemcase=aa] } |
       det %dP [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
             { 1[number=2.number, lemcase=$lemcase] _1 2 } |
-      0: num %dP [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
+      0: num %dP ?(np_type not = prn) [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
           { 1[lemcase=$lemcase] _1 2[number=1.number] } |
 		1: num %жаш@dP [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
 		1: num -@guio %dP ?(3.lem in ky_nouns_timeunit) { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ *(adj_ord)[lemh=1.lemh] _ %3 } |
@@ -308,7 +313,19 @@ DP ->
              else
                [ prpers@det.pos.[1.poss>person].[1.poss>gender].[1.poss>number] ]
           ) _ 1[lemcase=aa] } |
-      RC %dP.$number.$case.$poss { 2 _1 that@cnjsub _ 1 } |
+      RC %dP.$number.$case.$poss {
+         (if (2.poss = noPOSS)
+              [ the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] ]
+            else
+              [ %prpers(det_pos)[pos_tag=det,
+                   ! FIXME: /ref values don't get passed up the tree (automatically / yet)
+                   gender=(if ((2.lem/ref incl en_nouns_f) or (2.gender/ref = f)) f
+                           else-if ((2.lem/ref incl en_nouns_m) or (2.gender/ref = m)) m
+                           else nt)
+                 ]
+              ]
+         )
+         _ 2 _1 that@cnjsub _ 1 } |
 		VP.ger [$nptype=ger,$interog=_] { 1 } |
       !!! ATTEMPT TO FIX NP.gen NP.px3 rules
       !4: DP.*.gen DP.*.[px3].$number.$case.$prep_flag { 2 _1 of@pr _ 1 } |
@@ -327,7 +344,7 @@ DP ->
 !      %det.dem [$case=nom] { 1 }   ! The problem with this is that det.dem shouldn't be a DP.  If we have det.dem instead of prn, then it's a disambiguation issue.
    ;
 
-RC -> DP.*.nom VP.vadj { 1 _1 2 } |
+RC -> DP.*.nom VP.vadj.tv { 1 _1 2 } |
       VP.vadj { 1 }
 ;
 

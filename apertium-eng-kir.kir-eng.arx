@@ -5,6 +5,8 @@
 		<anaphor>
 			<parameter-item has-tags="det pos"/>
 			<parameter-item has-tags="prn"/>
+			<parameter-item has-tags="px3sp"/>
+			<parameter-item has-tags="px3sg"/>
 		</anaphor>
 		<antecedent>
 			<parameter-item has-tags="n"/>
@@ -41,6 +43,13 @@
 		<def-cat n="ind">
 			<cat-item has-tags="ind"/>
     	</def-cat>
+
+		<def-cat n="px3">
+			<or>
+				<cat-item has-tags="px3sg"/>
+				<cat-item has-tags="px3sp"/>
+			</or>
+		</def-cat>
 
 	</section-def-cats>
 
