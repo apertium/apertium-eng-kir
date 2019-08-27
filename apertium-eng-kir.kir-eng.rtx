@@ -27,6 +27,7 @@ interog = (NOitg NOitg) itg NOitg ;
 barjoq = (NObarjoq NObarjoq) barjoq NObarjoq ;
 punct = sent cm ;
 ord = (NOord ord) ord ;
+REF_gender = (RGD noREFG) REF_m REF_f REF_nt REF_mf noREFG ;  ! antecedant gender
 
 fnf = fin prc vadj vadv ger ;
     ! finite, non-finite
@@ -102,13 +103,15 @@ case > case : nom subj, acc obj, dat obj, acc-ind obj, abl obj, gen pos;
 case > prep_flag : dat to, abl from, gen of, loc at, acc NOpr, nom NOpr, subj NOpr, obj NOpr;
 fnfall > fnf : [tense] fin, [prc] prc, [vadv] vadv, [ger] ger, [vadj] vadj ;
 lemh > preposition : арт behind, алд "in front of", жан "next to", үст "on top of", аст under, орто "in the middle of", маңдай "across from", түп "at the bottom of", ара between, ич inside ;
+REF_gender > gender : REF_m m, REF_f f, REF_nt nt, REF_mf mf, noREFG nt ;
+gender > REF_gender : m REF_m, f REF_f, nt REF_nt, mf REF_mf ;
 
 !!! PATTERN DEFINITIONS !!!
 ! when building chunk or lu of this type, put these tags in this order
 
-NP: _.nptype.number.poss.case.prep_flag ;
+NP: _.nptype.number.poss.case.prep_flag.REF_gender ;
 DP: _.nptype.number.person.poss.case.prep_flag.interog ;
-dP: _.nptype.number.person.poss.case.prep_flag.interog ;
+dP: _.nptype.number.person.poss.case.prep_flag.interog.REF_gender ;
 VP: _.fnf.transitivity.tense.person.number.negative.qst.en_nonfin.aux_lem.interog.barjoq ;
 RC: _ ;
 !prn_pers: _.case.person.gender.number ;
@@ -217,7 +220,9 @@ NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep
                       else-if (1.lem in en_nouns_loc_on) on
                       else-if (1.lem in en_nouns_loc_at) at
                       else 1.case/sl>prep_flag
-                     )] { 1[lemcase=$lemcase, number=$number] } |
+                     ),
+          $REF_gender=1.gender/ref>REF_gender
+         ] { 1[lemcase=$lemcase, number=$number] } |
       2: np.top.loc.$nptype.$poss ?(1.lem/sl in city) [$case=loc,$prep_flag=in,$number=sg] { 1 } |
       3: np.top.loc.$nptype.$poss                     [$case=loc,$prep_flag=on,$number=sg] { 1 } |
 !      2: np.top.loc.$nptype.$poss [$case=loc,$number=sg] { in@prep _ 1 } (1.lem/sl in city)
@@ -316,14 +321,15 @@ DP ->
       RC %dP.$number.$case.$poss {
          (if (2.poss = noPOSS)
               [ the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] ]
-            else
-              [ %prpers(det_pos)[pos_tag=det,
-                   ! FIXME: /ref values don't get passed up the tree (automatically / yet)
-                   gender=(if ((2.lem/ref incl en_nouns_f) or (2.gender/ref = f)) f
-                           else-if ((2.lem/ref incl en_nouns_m) or (2.gender/ref = m)) m
-                           else nt)
-                 ]
-              ]
+          else
+              [ %prpers(det_pos)[pos_tag=det,gender=2.REF_gender>gender] ]
+              ![ %prpers(det_pos)[pos_tag=det,
+              !     ! FIXME: /ref values don't get passed up the tree (automatically / yet)
+              !     gender=(if ((2.lem/ref incl en_nouns_f) or (2.gender/ref = f)) f
+              !             else-if ((2.lem/ref incl en_nouns_m) or (2.gender/ref = m)) m
+              !             else nt)
+              !   ]
+              !]
          )
          _ 2 _1 that@cnjsub _ 1 } |
 		VP.ger [$nptype=ger,$interog=_] { 1 } |
