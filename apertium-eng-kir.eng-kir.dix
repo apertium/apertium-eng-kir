@@ -251,6 +251,14 @@
       <e><p><l>name</l><r>ат</r></p><par n="par__n"/></e>
       <e><p><l>protectorate</l><r>протекторат</r></p><par n="par__n"/></e>
       <e><p><l>friend</l><r>дос</r></p><par n="par__n"/></e>
+      <e><p><l>president</l><r>президент</r></p><par n="par__n"/></e>
+      <e><p><l>council</l><r>совет</r></p><par n="par__n"/></e>
+      <e><p><l>issue</l><r>маселе</r></p><par n="par__n"/></e>
+      <e><p><l>problem</l><r>маселе</r></p><par n="par__n"/></e>
+      <e><p><l>challenge</l><r>маселе</r></p><par n="par__n"/></e>
+      <e><p><l>session</l><r>сессия</r></p><par n="par__n"/></e>
+      <e><p><l>line</l><r>кезек</r></p><par n="par__n"/></e>
+      <e><p><l>queue</l><r>кезек</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -290,6 +298,10 @@
 		<e><p><l>year-old<s n="adj"/></l><r>жашар<s n="adj"/></r></p></e>
 		<e><p><l>hard<s n="adj"/><s n="sint"/></l><r>катуу<s n="adj"/></r></p></e>
 		<e><p><l>fast<s n="adj"/><s n="sint"/></l><r>катуу<s n="adj"/></r></p></e>
+		<e><p><l>high<s n="adj"/><s n="sint"/></l><r>жогорку<s n="adj"/></r></p></e>
+		<e><p><l>high<s n="adj"/><s n="sint"/></l><r>өйдө<s n="adj"/></r></p></e>
+		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>бийик<s n="adj"/></r></p></e>
+		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>узун<b/>бойлуу<s n="adj"/></r></p></e>
 
 
 
@@ -474,6 +486,7 @@
 		<!-- PROPER NOUNS -->
 		<!-- np.top -->
 		<e><p><l>Naryn<s n="np"/><s n="top"/></l><r>Нарын<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>the<b/>Kyrgyz<b/>Republic<s n="np"/><s n="top"/><s n="sg"/></l><r>Кыргыз<b/>Республикасы<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>Tengir<b/>Too<s n="np"/><s n="top"/></l><r>Теңир<b/>Тоо<s n="np"/><s n="top"/></r></p></e>
 
 		<!-- np.ant -->

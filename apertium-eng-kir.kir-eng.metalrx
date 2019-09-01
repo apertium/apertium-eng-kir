@@ -24,6 +24,14 @@
 			<match lemma="сырт" tags="n.*"/>
 		</or>
 	</def-seq>
+	<def-seq n="bar-joq">
+		<or>
+			<match lemma="бар" tags="adj"/>
+			<match lemma="жок" tags="adj"/>
+			<match lemma="бар" tags="adj.*"/>
+			<match lemma="жок" tags="adj.*"/>
+		</or>
+	</def-seq>
 </def-seqs>
 
 <rules>
@@ -71,6 +79,12 @@
 			<select lemma="house" tags="n.*"/>
 		</match>
 		<seq n="postposition-nouns"/>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="үй" tags="n.*">
+			<select lemma="house" tags="n.*"/>
+		</match>
+		<seq n="bar-joq"/>
 	</rule>
 
 	<rule>
