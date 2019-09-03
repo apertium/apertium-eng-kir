@@ -215,7 +215,7 @@ qst_front: (always *(vaux)[lemh=1.aux_lem,
 !!! RULES !!!
 
 NP ->	0: np.$nptype.$lem/sl.$case/sl.$poss [$number=sg,$prep_flag=1.case/sl>prep_flag] { 1 } |
-      1: n.$nptype.$lem/sl.$case/sl.$number.$poss
+      1: n.$nptype.$lem/sl.$case/sl.$number/sl.$poss
          [$prep_flag=(if (1.lem in en_nouns_loc_in) in
                       else-if (1.lem in en_nouns_loc_on) on
                       else-if (1.lem in en_nouns_loc_at) at
