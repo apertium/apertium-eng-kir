@@ -265,6 +265,12 @@
       <e><p><l>state</l><r>абал</r></p><par n="par__n"/></e>
       <e><p><l>health</l><r>саламаттык</r></p><par n="par__n"/></e>
       <e><p><l>ministry</l><r>министрлик</r></p><par n="par__n"/></e>
+      <e><p><l>word</l><r>сөз</r></p><par n="par__n"/></e>
+      <e><p><l>deed</l><r>иш</r></p><par n="par__n"/></e>
+      <e><p><l>work</l><r>иш</r></p><par n="par__n"/></e>
+      <e><p><l>future</l><r>келечек</r></p><par n="par__n"/></e>
+      <e><p><l>knowledge</l><r>билим</r></p><par n="par__n"/></e>
+      <e><p><l>support</l><r>колдонмо</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -309,6 +315,8 @@
 		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>бийик<s n="adj"/></r></p></e>
 		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>узун<b/>бойлуу<s n="adj"/></r></p></e>
 		<e><p><l>communicable<s n="adj"/></l><r>жугуштуу<s n="adj"/></r></p></e>
+		<e><p><l>formal<s n="adj"/></l><r>формалдуу<s n="adj"/></r></p></e>
+		<e><p><l>methodological<s n="adj"/></l><r>методикалык<s n="adj"/></r></p></e>
 
 
 
@@ -409,6 +417,8 @@
 		<e><p><l>get<g><b/>hot</g><s n="vblex"/></l><r>ысы<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>discuss<s n="vblex"/></l><r>талкуула<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>save<s n="vblex"/></l><r>сакта<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>criticise<s n="vblex"/></l><r>сына<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>criticise<s n="vblex"/></l><r>сында<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -501,6 +511,7 @@
 		<e><p><l>Naryn<s n="np"/><s n="top"/></l><r>Нарын<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>the<b/>Kyrgyz<b/>Republic<s n="np"/><s n="top"/><s n="sg"/></l><r>Кыргыз<b/>Республикасы<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>Tengir<b/>Too<s n="np"/><s n="top"/></l><r>Теңир<b/>Тоо<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>Ajashe<s n="np"/><s n="top"/><s n="sg"/></l><r>Ажаче<s n="np"/><s n="top"/></r></p></e>
 
 		<!-- np.ant -->
 		<e><p><l>Azamat<s n="np"/><s n="ant"/><s n="m"/></l><r>Азамат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
