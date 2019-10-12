@@ -16,6 +16,9 @@
 		<sdef n="dem"/>
 		<sdef n="qnt"/>
 		<sdef n="itg"/>
+		<sdef n="ger"/>
+		<sdef n="px3sp"/>
+		<sdef n="cnjcoo"/>
 	</sdefs>
 	<pardefs>
 		<pardef n="adj">
@@ -134,14 +137,14 @@
 		<e lm="бардык жер" c="everywhere">
 			<p>
 				<l>бардык<s n="det"/><s n="qnt"/><j/>жер<s n="n"/></l>
-				<r>бардык жер<s n="adv"/></r>
+				<r>бардык<b/>жер<s n="adv"/></r>
 			</p>
 			<i><t/><j/></i>
 		</e>
 		<e lm="бардык жер" c="everywhere">
 			<p>
 				<l>кай<s n="det"/><s n="dem"/><j/>жер<s n="n"/></l>
-				<r>кай жер<s n="adv"/><s n="itg"/></r>
+				<r>кай<b/>жер<s n="adv"/><s n="itg"/></r>
 			</p>
 			<i><t/><j/></i>
 		</e>
@@ -153,5 +156,13 @@
 			</p>
 			<i><j/></i>
 		</e>
+		<e lm="саламаттык сактоо министрлигинде" c="health ministry">
+			<p>
+				<l>саламаттык<s n="n"/><s n="nom"/><j/>сакта<s n="v"/><s n="tv"/><s n="ger"/><s n="nom"/><j/>министрлик<s n="n"/><s n="px3sp"/></l>
+				<r>саламаттык<b/>сактоо<b/>министрлиги<s n="n"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
+
 	</section>
 </dictionary>

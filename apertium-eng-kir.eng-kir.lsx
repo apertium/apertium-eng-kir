@@ -5,6 +5,7 @@
 		<sdef n="adv"/>
 		<sdef n="pr"/>
 		<sdef n="n"/>
+		<sdef n="prn"/>
 		<sdef n="nom"/>
 		<sdef n="v"/>
 		<sdef n="vblex"/>
@@ -33,10 +34,14 @@
 		<pardef n="n">
 			<e><i><w/><s n="n"/><t/><j/></i></e>
 		</pardef>
+		<pardef n="prn">
+			<e><i><w/><s n="prn"/><t/><j/></i></e>
+		</pardef>
 		<pardef n="det">
 			<e><i><w/><s n="det"/><t/><j/></i></e>
 		</pardef>
 		<pardef n="SN">
+			<e><par n="prn"/></e>
 			<e><par n="n"/></e>
 			<e><par n="adj"/><par n="n"/></e>
 			<e><par n="adj"/><par n="adj"/><par n="n"/></e>
@@ -78,6 +83,33 @@
 			<par n="SN"/>
 			<p>
 				<l>away<s n="adv"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="make hot" c="ысыт">
+			<p>
+				<l>make<s n="vblex"/></l>
+				<r>make<b/>hot<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<p>
+				<l>hot<s n="adj"/><s n="sint"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+		<e lm="make really hot" c="ысыт">
+			<p>
+				<l>make<s n="vblex"/></l>
+				<r>make<b/>hot<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<par n="SAdv"/>
+			<p>
+				<l>hot<s n="adj"/><s n="sint"/><j/></l>
 				<r></r>
 			</p>
 		</e>

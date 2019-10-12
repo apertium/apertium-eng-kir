@@ -50,7 +50,7 @@ px3 = px3sp px3sg px3pl ;
 pxNot3 = px1sg px2sg px1pl px2pl;
 
 en_nouns_mass = bread paper ;
-en_nouns_count = window paper ;
+en_nouns_count = window paper tail house ;
 
 en_nouns_loc_in = garden taxi cab car house attic building cabinet agreement month year century millenium ;
 en_nouns_loc_on = bus floor roof shelf motorcycle bicycle plane airplane ship boat paper day ;
@@ -240,7 +240,8 @@ AP -> %adj.$lem/sl ?(1.adj_behaviour not = advl) { 1[lemcase=$lemcase] } |
       AdvP %adj.$lem/sl ?(1.lemh in en_adv_adadj) { 1 _1 2 } |
       ! FIXME: is there a way to make this more general?
       8: кубаныч@NP.*.loc { happy@adj.sint } |
-      8: AdvP кубаныч@NP.*.loc { 1 _1 happy@adj.sint }
+      8: AdvP кубаныч@NP.*.loc { 1 _1 happy@adj.sint } |
+		%adj.$lem/sl эмес@postadv ?(1.adj_behaviour not = advl) { not@adv _1 1 }
 ;
 !|
  !     AP { 1 } ;

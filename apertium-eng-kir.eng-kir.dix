@@ -259,6 +259,12 @@
       <e><p><l>session</l><r>сессия</r></p><par n="par__n"/></e>
       <e><p><l>line</l><r>кезек</r></p><par n="par__n"/></e>
       <e><p><l>queue</l><r>кезек</r></p><par n="par__n"/></e>
+      <e><p><l>fur<b/>coat</l><r>тон</r></p><par n="par__n"/></e>
+      <e><p><l>disease</l><r>оору</r></p><par n="par__n"/></e>
+      <e><p><l>situation</l><r>абал</r></p><par n="par__n"/></e>
+      <e><p><l>state</l><r>абал</r></p><par n="par__n"/></e>
+      <e><p><l>health</l><r>саламаттык</r></p><par n="par__n"/></e>
+      <e><p><l>ministry</l><r>министрлик</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -302,6 +308,7 @@
 		<e><p><l>high<s n="adj"/><s n="sint"/></l><r>өйдө<s n="adj"/></r></p></e>
 		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>бийик<s n="adj"/></r></p></e>
 		<e><p><l>tall<s n="adj"/><s n="sint"/></l><r>узун<b/>бойлуу<s n="adj"/></r></p></e>
+		<e><p><l>communicable<s n="adj"/></l><r>жугуштуу<s n="adj"/></r></p></e>
 
 
 
@@ -397,6 +404,11 @@
 		<e><p><l>wait<g><b/>for</g><s n="vblex"/></l><r>күт<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>found<s n="vblex"/></l><r>негизде<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>bear<s n="vblex"/></l><r>төрө<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>make<b/>hot<s n="vblex"/></l><r>ысы<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
+		<e><p><l>be<g><b/>hot</g><s n="vblex"/></l><r>ысы<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>get<g><b/>hot</g><s n="vblex"/></l><r>ысы<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>discuss<s n="vblex"/></l><r>талкуула<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>save<s n="vblex"/></l><r>сакта<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -444,6 +456,7 @@
 		<e><p><l>again<s n="adv"/></l><r>кайра<s n="adv"/></r></p></e>
 		<e><p><l>approximately<s n="adv"/></l><r>болжол<b/>менен<s n="adv"/></r></p></e>
 		<e><p><l>later<s n="adv"/></l><r>кийинчерээк<s n="adv"/></r></p></e>
+		<e><p><l>not<s n="adv"/></l><r>эмес<s n="postadv"/></r></p></e>
 
 
 
@@ -495,6 +508,7 @@
 
 		<!-- other np -->
 		<e><p><l>Kumtor<s n="np"/><s n="org"/></l><r>Кумтөр<s n="np"/><s n="org"/></r></p></e>
+		<e><p><l>Ministry<g><b/>of<b/>Health</g><s n="n"/></l><r>саламаттык<b/>сактоо<b/>министрлиги<s n="n"/></r></p></e>
 
       <!-- FUNCTION WORDS -->
       <!-- Determiners -->
@@ -531,6 +545,9 @@
 		<e><p><l>before<s n="pr"/></l><r>чейин<s n="post"/></r></p></e>
 		<e><p><l>towards<s n="pr"/></l><r>карай<s n="post"/></r></p></e>
 		<e><p><l>for<s n="pr"/></l><r>үчүн<s n="post"/></r></p></e>
+		<e><p><l>on<s n="pr"/></l><r>боюнча<s n="post"/></r></p></e>
+		<e><p><l>about<s n="pr"/></l><r>боюнча<s n="post"/></r></p></e>
+		<e><p><l>about<s n="pr"/></l><r>жөнүндө<s n="post"/></r></p></e>
 		<e r="LR"><p><l>in<s n="pr"/></l><r></r></p></e>
 		<e r="LR"><p><l>at<s n="pr"/></l><r></r></p></e>
 		<e r="LR"><p><l>on<s n="pr"/></l><r></r></p></e>
