@@ -271,6 +271,24 @@
       <e><p><l>future</l><r>келечек</r></p><par n="par__n"/></e>
       <e><p><l>knowledge</l><r>билим</r></p><par n="par__n"/></e>
       <e><p><l>support</l><r>колдонмо</r></p><par n="par__n"/></e>
+      <e><p><l>production</l><r>өндүрүш</r></p><par n="par__n"/></e>
+      <e><p><l>commerce</l><r>коммерция</r></p><par n="par__n"/></e>
+      <e><p><l>activity</l><r>аракет</r></p><par n="par__n"/></e>
+      <e><p><l>attempt</l><r>аракет</r></p><par n="par__n"/></e>
+      <e><p><l>process</l><r>процесс</r></p><par n="par__n"/></e>
+      <e><p><l>firm</l><r>фирма</r></p><par n="par__n"/></e>
+      <e><p><l>circulation</l><r>жүгүртүү</r></p><par n="par__n"/></e>
+      <e><p><l>asset</l><r>мүлк</r></p><par n="par__n"/></e>
+      <e><p><l>wealth</l><r>мүлк</r></p><par n="par__n"/></e>
+      <e><p><l>wealth</l><r>байлык</r></p><par n="par__n"/></e>
+      <e><p><l>resource</l><r>каражат</r></p><par n="par__n"/></e>
+      <e><p><l>accounting</l><r>эсеп</r></p><par n="par__n"/></e>
+      <e><p><l>account</l><r>эсеп</r></p><par n="par__n"/></e>
+      <e><p><l>account</l><r>эсеп-кысап</r></p><par n="par__n"/></e>
+      <e><p><l>rule</l><r>эреже</r></p><par n="par__n"/></e>
+      <e><p><l>requirement</l><r>талап</r></p><par n="par__n"/></e>
+      <e><p><l>demand</l><r>талап</r></p><par n="par__n"/></e>
+      <e><p><l>accountant</l><r>бухгалтер</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -317,6 +335,12 @@
 		<e><p><l>communicable<s n="adj"/></l><r>жугуштуу<s n="adj"/></r></p></e>
 		<e><p><l>formal<s n="adj"/></l><r>формалдуу<s n="adj"/></r></p></e>
 		<e><p><l>methodological<s n="adj"/></l><r>методикалык<s n="adj"/></r></p></e>
+		<e><p><l>governmental<s n="adj"/></l><r>мамлекеттик<s n="adj"/></r></p></e>
+		<e><p><l>separate<s n="adj"/></l><r>бөлөк<s n="adj"/></r></p></e>
+		<e><p><l>different<s n="adj"/></l><r>башка<s n="adj"/></r></p></e>
+		<e><p><l>exact<s n="adj"/></l><r>так<s n="adj"/></r></p></e>
+		<e><p><l>accountant<s n="adj"/></l><r>бухгалтердик<s n="adj"/></r></p></e>
+		<e><p><l>undisputed<s n="adj"/></l><r>талашсыз<s n="adj"/></r></p></e>
 
 
 
@@ -419,6 +443,7 @@
 		<e><p><l>save<s n="vblex"/></l><r>сакта<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>criticise<s n="vblex"/></l><r>сына<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>criticise<s n="vblex"/></l><r>сында<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>conduct<s n="vblex"/></l><r>жүргүз<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
