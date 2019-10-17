@@ -196,6 +196,25 @@
 		</match>
 	</rule>
 
+	<rule weight="1.0">
+		<match lemma="түзүлүш" tags="n.*">
+			<select lemma="shape" tags="n.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="мамлекеттик" tags="adj"/>
+		<match/>
+		<match lemma="түзүлүш" tags="n.*">
+			<select lemma="structure" tags="n.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="мамлекеттик" tags="adj"/>
+		<match lemma="түзүлүш" tags="n.*">
+			<select lemma="structure" tags="n.*"/>
+		</match>
+	</rule>
+
 </rules>
 </metalrx>
 <!--
