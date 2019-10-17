@@ -275,6 +275,8 @@
       <e><p><l>commerce</l><r>коммерция</r></p><par n="par__n"/></e>
       <e><p><l>activity</l><r>аракет</r></p><par n="par__n"/></e>
       <e><p><l>attempt</l><r>аракет</r></p><par n="par__n"/></e>
+      <e><p><l>action</l><r>иш-аракет</r></p><par n="par__n"/></e>
+      <e><p><l>movement</l><r>кыймыл-аракет</r></p><par n="par__n"/></e>
       <e><p><l>process</l><r>процесс</r></p><par n="par__n"/></e>
       <e><p><l>firm</l><r>фирма</r></p><par n="par__n"/></e>
       <e><p><l>circulation</l><r>жүгүртүү</r></p><par n="par__n"/></e>
