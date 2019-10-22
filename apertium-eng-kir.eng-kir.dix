@@ -456,6 +456,11 @@
 		<e><p><l>go<g><b/>bad</g><s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/><s n="pass"/></r></p></e>
 		<e><p><l>wreck<s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>spoil<s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>cook<s n="vblex"/></l><r>быш<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
+		<e><p><l>cook<s n="vblex"/></l><r>быш<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>ripen<s n="vblex"/></l><r>быш<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>melt<s n="vblex"/></l><r>эри<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
+		<e><p><l>melt<s n="vblex"/></l><r>эри<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
