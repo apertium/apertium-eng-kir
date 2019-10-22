@@ -215,6 +215,21 @@
 		</match>
 	</rule>
 
+	<rule weight="1.3">
+		<match lemma="күн" tags="n.*">
+			<select lemma="sun" tags="n.*"/>
+		</match>
+		<repeat upto="6"><match/></repeat>
+		<match lemma="ысы" tags="v.iv.caus.*"/>
+	</rule>
+	<rule weight="1.2">
+		<match lemma="күн" tags="n.*">
+			<select lemma="day" tags="n.*"/>
+		</match>
+		<repeat upto="6"><match/></repeat>
+		<match lemma="ысы" tags="v.iv.*"/>
+	</rule>
+
 </rules>
 </metalrx>
 <!--
