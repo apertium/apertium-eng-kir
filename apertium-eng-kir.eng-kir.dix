@@ -293,6 +293,9 @@
       <e><p><l>accountant</l><r>бухгалтер</r></p><par n="par__n"/></e>
       <e><p><l>structure</l><r>түзүлүш</r></p><par n="par__n"/></e>
       <e><p><l>shape</l><r>түзүлүш</r></p><par n="par__n"/></e>
+      <e><p><l>pen</l><r>калем</r></p><par n="par__n"/></e>
+      <e><p><l>pencil</l><r>карандаш</r></p><par n="par__n"/></e>
+      <e><p><l>cheese</l><r>сыр</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -345,6 +348,8 @@
 		<e><p><l>exact<s n="adj"/></l><r>так<s n="adj"/></r></p></e>
 		<e><p><l>accountant<s n="adj"/></l><r>бухгалтердик<s n="adj"/></r></p></e>
 		<e><p><l>undisputed<s n="adj"/></l><r>талашсыз<s n="adj"/></r></p></e>
+		<e><p><l>broken<s n="adj"/></l><r>сынык<s n="adj"/></r></p></e>
+		<e><p><l>broken<s n="adj"/></l><r>бузук<s n="adj"/></r></p></e>
 
 
 
@@ -448,6 +453,9 @@
 		<e><p><l>criticise<s n="vblex"/></l><r>сына<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>criticise<s n="vblex"/></l><r>сында<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>conduct<s n="vblex"/></l><r>жүргүз<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>go<g><b/>bad</g><s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/><s n="pass"/></r></p></e>
+		<e><p><l>wreck<s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/></r></p></e>
+		<e><p><l>spoil<s n="vblex"/></l><r>буз<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->
