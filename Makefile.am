@@ -26,7 +26,6 @@ TARGETS_COMMON =		\
 	$(PREFIX1).rtx.bin \
 	$(PREFIX2).automorf.bin	\
 	$(PREFIX2).prob		\
-	$(BASENAME).$(PREFIX2).lrx	\
 	$(PREFIX2).rlx.bin	\
 	$(PREFIX2).autobil.bin	\
 	$(PREFIX2).autolex.bin	\
@@ -121,11 +120,6 @@ $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 ###############################################################################
 ## Lexical sequences
 ###############################################################################
-
-%.lrx: metalrx-to-lrx.xslt %.metalrx
-	xsltproc $^ > $@.tmp
-	@xmllint --format $@.tmp > $@
-	@rm $@.tmp
 
 $(PREFIX1).autoseq.bin: $(BASENAME).$(PREFIX1).lsx
 	lsx-comp lr $< $@

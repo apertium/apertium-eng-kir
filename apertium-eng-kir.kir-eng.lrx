@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metalrx>
+<lrx>
 <def-seqs>
 	<def-seq n="state-change-motion-verbs">
 		<!-- distinguish between "house" and "home" -->
@@ -96,12 +96,12 @@
 		<match lemma="жакшы" tags="adj.*">
 			<select lemma="nice" tags="adj.*"/>
 		</match>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<match lemma="аба ырайы" tags="n.*"/>
 	</rule>
 	<rule weight="1.2">
 		<match lemma="аба ырайы" tags="n.*"/>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<match lemma="жакшы" tags="adj.*">
 			<select lemma="nice" tags="adj.*"/>
 		</match>
@@ -116,12 +116,12 @@
 		<match lemma="жакшы" tags="adj">
 			<select lemma="nice" tags="adj.*"/>
 		</match>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<match lemma="аба ырайы" tags="n.*"/>
 	</rule>
 	<rule weight="1.2">
 		<match lemma="аба ырайы" tags="n.*"/>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<match lemma="жакшы" tags="adj">
 			<select lemma="nice" tags="adj.*"/>
 		</match>
@@ -147,7 +147,7 @@
 		<match lemma="катуу" tags="adj">
 			<select lemma="fast" tags="adj.*"/>
 		</match>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<seq n="fast-not-hard-verbs"/>
 	</rule>
 	<rule>
@@ -159,7 +159,7 @@
 		<match lemma="катуу" tags="adj.*">
 			<select lemma="fast" tags="adj.*"/>
 		</match>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<seq n="fast-not-hard-verbs"/>
 	</rule>
 	<rule>
@@ -172,7 +172,7 @@
 		<match lemma="акырын" tags="adj.advl">
 			<select lemma="slowly" tags="adv"/>
 		</match>
-		<repeat upto="3"><match/></repeat>
+		<repeat from="0" upto="3"><match/></repeat>
 		<seq n="fast-not-hard-verbs"/>
 	</rule>
 	<rule>
@@ -183,7 +183,7 @@
 
 	<rule weight="1.2">
 		<match tags="*.dat"/>
-		<repeat upto="6"><match/></repeat>
+		<repeat from="0" upto="6"><match/></repeat>
 		<match lemma="айт" tags="v.*">
 			<select lemma="tell" tags="vblex.*"/>
 		</match>
@@ -219,19 +219,19 @@
 		<match lemma="күн" tags="n.*">
 			<select lemma="sun" tags="n.*"/>
 		</match>
-		<repeat upto="6"><match/></repeat>
+		<repeat from="0" upto="6"><match/></repeat>
 		<match lemma="ысы" tags="v.iv.caus.*"/>
 	</rule>
 	<rule weight="1.2">
 		<match lemma="күн" tags="n.*">
 			<select lemma="day" tags="n.*"/>
 		</match>
-		<repeat upto="6"><match/></repeat>
+		<repeat from="0" upto="6"><match/></repeat>
 		<match lemma="ысы" tags="v.iv.*"/>
 	</rule>
 
 </rules>
-</metalrx>
+</lrx>
 <!--
 Resources:
     http://wiki.apertium.org/wiki/How_to_get_started_with_lexical_selection_rules
