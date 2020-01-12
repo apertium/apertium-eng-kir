@@ -296,6 +296,8 @@
       <e><p><l>pen</l><r>калем</r></p><par n="par__n"/></e>
       <e><p><l>pencil</l><r>карандаш</r></p><par n="par__n"/></e>
       <e><p><l>cheese</l><r>сыр</r></p><par n="par__n"/></e>
+      <e><p><l>book</l><r>китеп</r></p><par n="par__n"/></e>
+      <e><p><l>letter</l><r>кат</r></p><par n="par__n"/></e>
 
 
 		<!-- ADJECTIVES -->
@@ -461,6 +463,7 @@
 		<e><p><l>ripen<s n="vblex"/></l><r>быш<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>melt<s n="vblex"/></l><r>эри<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
 		<e><p><l>melt<s n="vblex"/></l><r>эри<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>turn<b/>in<s n="vblex"/></l><r>тапшыр<s n="v"/><s n="tv"/></r></p></e>
 
 
 		<!-- vaux -->

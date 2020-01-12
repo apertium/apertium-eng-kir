@@ -87,6 +87,20 @@
 			</p>
 		</e>
 
+		<e lm="turn in" c="тапшыр">
+			<p>
+				<l>turn<s n="vblex"/></l>
+				<r>turn<b/>in<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<p>
+				<l>in<s n="adv"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
+
 		<e lm="make hot" c="ысыт">
 			<p>
 				<l>make<s n="vblex"/></l>
