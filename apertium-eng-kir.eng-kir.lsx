@@ -142,6 +142,19 @@
 			<i>at<s n="pr"/><j/></i>
 		</e>
 
+		<e lm="let by" c="өткөр">
+			<p>
+				<l>let<s n="vblex"/></l>
+				<r>let<b/>by<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="SN"/>
+			<p>
+				<l>by<s n="adv"/><j/></l>
+				<r></r>
+			</p>
+		</e>
+
 		<e lm="year-old" c="жашар">
 			<p>
 				<l>year<s n="n"/><s n="sg"/><j/>-<s n="guio"/><j/>old<s n="adj"/><s n="sint"/></l>
