@@ -172,6 +172,14 @@
 			</p>
 			<i><j/></i>
 		</e>
+		<e lm="бүгүнкү күндө" c="today">
+			<i><w/></i>
+			<p>
+				<l><s n="n"/><s n="nom"/><j/>тил<s n="n"/><s n="px3sp"/></l>
+				<r><b/>тили<s n="n"/></r>
+			</p>
+			<i><t/><j/></i>
+		</e>
 
 	</section>
 </dictionary>
