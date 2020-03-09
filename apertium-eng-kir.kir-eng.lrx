@@ -32,6 +32,24 @@
 			<match lemma="жок" tags="adj.*"/>
 		</or>
 	</def-seq>
+	<def-seq n="languages">
+		<or>
+			<match lemma="кыргыз тили" tags="n.*"/>
+			<match lemma="англис тили" tags="n.*"/>
+			<match lemma="орус тили" tags="n.*"/>
+			<match lemma="казак тили" tags="n.*"/>
+			<match lemma="түрк тили" tags="n.*"/>
+			<match lemma="арап тили" tags="n.*"/>
+		</or>
+	</def-seq>
+	<def-seq n="currency">
+		<or>
+			<match lemma="доллар" tags="n.*"/>
+			<match lemma="сом" tags="n.*"/>
+			<match lemma="рубль" tags="n.*"/>
+			<match lemma="евро" tags="n.*"/>
+		</or>
+	</def-seq>
 </def-seqs>
 
 <rules>
@@ -228,6 +246,22 @@
 		</match>
 		<repeat from="0" upto="6"><match/></repeat>
 		<match lemma="ысы" tags="v.iv.*"/>
+	</rule>
+
+
+	<rule weight="1.2">
+		<seq n="languages"/>
+		<repeat from="0" upto="6"><match/></repeat>
+		<match lemma="котор" tags="v.*">
+			<select lemma="translate" tags="vblex.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<seq n="currency"/>
+		<repeat from="0" upto="6"><match/></repeat>
+		<match lemma="котор" tags="v.*">
+			<select lemma="convert" tags="vblex.*"/>
+		</match>
 	</rule>
 
 </rules>
