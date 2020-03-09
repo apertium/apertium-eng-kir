@@ -18,6 +18,7 @@ tense > tense : pres aor ;
 
 !!! OUTPUT PATTERNS !!!
 
+pr: _ ;
 vb: _.transitivity.tense.person.formality.number ;
 vb_ger: _.transitivity.ger.case ;
 vblex: (if (1.tense = past)
@@ -33,6 +34,7 @@ cop: _.tense.person.number ;
 NP: _.number.poss.case ;
 DP: _.number.poss.case.det_type.person ;
 VP: _.transitivity.tense.person.formality.number ;
+PP: _ ;
 S: _ ;
 
 !!! MACROS !!!
@@ -44,7 +46,10 @@ NP -> %n { %1[number=(if ($number = sg) "" else $number), lemcase=$lemcase] } |
 
 DP -> %NP [$det_type=ind] { %1 } |
       det.$det_type/sl.$lemcase/sl %NP { %2[lemcase=$lemcase] } |
-      %prn [$det_type=def] { %1 } ;
+      %prn [$det_type=def] { %1 } |
+      %NP PP { 2 _1 %1 } ;
+
+PP -> %pr DP { %2 } ;
 
 VP -> %vblex ?(1.transitivity/tl = iv) { %1 } |
       %vblex DP ?(1.transitivity/tl = tv)
