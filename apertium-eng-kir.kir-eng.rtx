@@ -20,7 +20,7 @@ advlevel = comp ;
 nptype = n np prn ;
 det_type = dem itg pos ;
 np_type = top cog ant ;
-prn_type = itg rel ind ;
+prn_type = itg rel ind dem ;
 negative = (aff aff) neg aff ;
 aux_lem = (NOaux do) be do can NOaux ;
 interog = (NOitg NOitg) itg NOitg ;
@@ -125,7 +125,15 @@ prn_pers: (if (1.person = p3) 1(prn_pers_tags_p3) else 1(prn_pers_tags)[
    ]);
 prn_itg: _.<itg>.gender.number ;
 prn_ind: _.<ind>.gender.number ;
-prn: (if (1.prn_type = itg) 1(prn_itg) else-if (1.prn_type = ind) 1(prn_ind) else 1(prn_pers));
+prn_dem: _.<dem>.gender.number ;
+prn: (if (1.prn_type = itg)
+         1(prn_itg)
+      else-if (1.prn_type = ind)
+         1(prn_ind)
+      else-if (1.prn_type = dem)
+         1(prn_dem)
+      else 1(prn_pers)
+     );
 S: _ ;
 Speech: _ ;
 n: _.number ;
@@ -303,8 +311,8 @@ det dP -> AP det %NP { 2 _2 { 1 _1 3 } } ;
 
 DP ->
       0: %dP { 1[lemcase=$lemcase] } |
-      1: %dP { a@det.idf.sp _ 1 } |
-      1: %dP { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ 1[lemcase=aa] } |
+      1: %dP ?(np_type = n) { a@det.idf.sp _ 1 } |
+      1: %dP ?(np_type = n) { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ 1[lemcase=aa] } |
       det %dP [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
             { 1[number=2.number, lemcase=$lemcase] _1 2 } |
       0: num %dP ?(np_type not = prn) [$interog=(if (2.interog = NOitg) 1.interog else 2.interog)]
@@ -312,8 +320,8 @@ DP ->
 		1: num %жаш@dP [$prep_flag=NOpr] { 1 _1 year@n.pl _ old@adj.sint } |
 		1: num -@guio %dP ?(3.lem in ky_nouns_timeunit) { the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] _ *(adj_ord)[lemh=1.lemh] _ %3 } |
       det num %dP { 1[number=3.number] _1 2 _2 3 } |
-      2: %dP.np { 1 } |
-      2: %dP.n {
+      2: %dP ?(np_type = np) { 1 } |
+      2: %dP ?(np_type = n) {
           (if (1.poss = noPOSS)
                [ the(det_def)[pos_tag=det, definiteness=def, number=sp, lemcase=$lemcase] ]
              else
