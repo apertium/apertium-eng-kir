@@ -15,6 +15,7 @@ ger = ger ger_past ;
 
 case > case : subj nom, obj acc ;
 tense > tense : pres aor ;
+lemh > case : of gen, in loc, at loc, on loc ;
 
 !!! OUTPUT PATTERNS !!!
 
@@ -47,9 +48,10 @@ NP -> %n { %1[number=(if ($number = sg) "" else $number), lemcase=$lemcase] } |
 DP -> %NP [$det_type=ind] { %1 } |
       det.$det_type/sl.$lemcase/sl %NP { %2[lemcase=$lemcase] } |
       %prn [$det_type=def] { %1 } |
-      %NP PP { 2 _1 %1 } ;
+      4: %DP PP { 2 _1 %1 } ;
 
-PP -> %pr DP { %2 } ;
+PP -> 3: %pr DP { %2[case=1.lemh>case] } |
+      0: %pr DP { 1 %2 } ;
 
 VP -> %vblex ?(1.transitivity/tl = iv) { %1 } |
       %vblex DP ?(1.transitivity/tl = tv)
