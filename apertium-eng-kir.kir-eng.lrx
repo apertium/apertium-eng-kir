@@ -264,6 +264,17 @@
 		</match>
 	</rule>
 
+	<rule weight="1.2">
+		<match lemma="кыргыз тили" tags="n.nom">
+			<select lemma="Kyrgyz language" tags="n.nom"/>
+		</match>
+	</rule>
+	<rule weight="1.0">
+		<match lemma="кыргыз тили" tags="n.*">
+			<select lemma="Kyrgyz" tags="n.*"/>
+		</match>
+	</rule>
+
 </rules>
 </lrx>
 <!--
