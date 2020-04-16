@@ -304,6 +304,13 @@
       <e><p><l>language</l><r>тил</r></p><par n="par__n"/></e>
       <e><p><l>dollar</l><r>доллар</r></p><par n="par__n"/></e>
       <e><p><l>som</l><r>сом</r></p><par n="par__n"/></e>
+      <e><p><l>country</l><r>өлкө</r></p><par n="par__n"/></e>
+      <e><p><l>tiger</l><r>кабылан</r></p><par n="par__n"/></e>
+      <e><p><l>tiger</l><r>жолборс</r></p><par n="par__n"/></e>
+      <e><p><l>lion</l><r>арстан</r></p><par n="par__n"/></e>
+      <e><p><l>jaguar</l><r>ягуар</r></p><par n="par__n"/></e>
+      <e><p><l>region</l><r>аймак</r></p><par n="par__n"/></e>
+      <e><p><l>zoo</l><r>зоопарк</r></p><par n="par__n"/></e>
       
 
 		<e><p><l>Kyrgyz</l><r>кыргыз</r></p><par n="par__n"/></e>
@@ -481,6 +488,8 @@
 		<e><p><l>turn<b/>in<s n="vblex"/></l><r>тапшыр<s n="v"/><s n="tv"/></r></p></e>
 		<e><p><l>let<b/>by<s n="vblex"/></l><r>өт<s n="v"/><s n="iv"/><s n="caus"/></r></p></e>
 		<e r="LR"><p><l>let<s n="vblex"/></l><r></r></p></e>
+		<e><p><l>get<b/>out<b/>of<s n="vblex"/></l><r>кач<s n="v"/><s n="iv"/></r></p></e>
+		<e><p><l>flee<s n="vblex"/></l><r>кач<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
@@ -578,6 +587,9 @@
 		<e><p><l>the<b/>Kyrgyz<b/>Republic<s n="np"/><s n="top"/><s n="sg"/></l><r>Кыргыз<b/>Республикасы<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>Tengir<b/>Too<s n="np"/><s n="top"/></l><r>Теңир<b/>Тоо<s n="np"/><s n="top"/></r></p></e>
 		<e><p><l>Ajashe<s n="np"/><s n="top"/><s n="sg"/></l><r>Ажаче<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>Saudia<b/>Arabia<s n="np"/><s n="top"/><s n="sg"/></l><r>Сауд<b/>Арабстан<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>Tunisia<s n="np"/><s n="top"/><s n="sg"/></l><r>Тунис<s n="np"/><s n="top"/></r></p></e>
+		<e><p><l>Eifel<s n="np"/><s n="top"/><s n="sg"/></l><r>Айфель<s n="np"/><s n="top"/></r></p></e>
 
 		<!-- np.ant -->
 		<e><p><l>Azamat<s n="np"/><s n="ant"/><s n="m"/></l><r>Азамат<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
