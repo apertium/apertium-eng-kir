@@ -21,6 +21,7 @@
 		<sdef n="cnjcoo"/>
 		<sdef n="attr"/>
 		<sdef n="loc"/>
+		<sdef n="cop"/>
 	</sdefs>
 	<pardefs>
 		<pardef n="adj">
@@ -37,6 +38,10 @@
 			<e><par n="n"/></e>
 			<e><par n="adj"/><par n="n"/></e>
 			<e><par n="adj"/><par n="adj"/><par n="n"/></e>
+		</pardef>
+		<pardef n="optional_cop">
+			<e><i>+э<s n="cop"/><t/><j/></i></e>
+			<e><i><j/></i></e>
 		</pardef>
 	</pardefs>
 	<section id="main" type="standard">
@@ -170,7 +175,7 @@
 				<l>бүгүн<s n="adv"/><s n="attr"/><j/>күн<s n="n"/><s n="loc"/></l>
 				<r>бүгүнкү<b/>күндө<s n="adv"/></r>
 			</p>
-			<i><j/></i>
+			<par n="optional_cop"/>
 		</e>
 		<e lm="бүгүнкү күндө" c="today">
 			<i><w/></i>
