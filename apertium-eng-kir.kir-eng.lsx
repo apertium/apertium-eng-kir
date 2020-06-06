@@ -43,6 +43,10 @@
 			<e><i>+э<s n="cop"/><t/><j/></i></e>
 			<e><i><j/></i></e>
 		</pardef>
+		<pardef n="w_edge" c="word edge">
+			<e><i>+<w/><t/><j/></i></e>
+			<e><i><j/></i></e>
+		</pardef>
 	</pardefs>
 	<section id="main" type="standard">
 		<e lm="кабарда" c="хабар ет">
@@ -175,7 +179,7 @@
 				<l>бүгүн<s n="adv"/><s n="attr"/><j/>күн<s n="n"/><s n="loc"/></l>
 				<r>бүгүнкү<b/>күндө<s n="adv"/></r>
 			</p>
-			<par n="optional_cop"/>
+			<par n="w_edge"/>
 		</e>
 		<e lm="X тили" c="the X language">
 			<i><w/></i>
