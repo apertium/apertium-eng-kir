@@ -67,6 +67,7 @@ ky_nouns_timeunit = саат күн жума апта ай жыл кылым ;
 en_verbs_nopr = believe touch enter reach cross leave;
 ky_verbs_dat_arg = ишен тий кир жет;
 ky_verbs_abl_arg = өт аш;
+ky_verbs_stative = оору сасы ;
 
 en_vaux_ing = be finish start begin like ;
 en_vaux_to = want ;  ! FIXME: like
@@ -493,7 +494,7 @@ prc_or_tense = [prc] [tense] ;
 prc_or_tense > tense : prc_past past ;
 frontable = be can ;
 
-vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else aff), $aux_lem=(if (2.lem/sl = жат or 2.lem/sl = э) be
+vP -> 0: v.$transitivity.$lem/sl %vaux.$tense ?(1.lem/sl not in ky_verbs_stative) [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else aff), $aux_lem=(if (2.lem/sl = жат or 2.lem/sl = э) be
                          if (2.lem/sl = ал) can
                          else do)]
           (if (2.lem/tl in frontable and $qst = qst)
@@ -505,6 +506,10 @@ vP -> 0: v.$transitivity.$lem/sl %vaux.$tense [$fnf=2.fnfall>fnf, $negative=(if 
            else ! 2.lem in en_vaux_to
               { 2[person=1.person, number=1.number, tense=$tense, qst=$qst, number=$number] _1 to@pr _1 1[tense=inf] } )
        |
+       v.$transitivity.$lem/sl %vaux.$tense ?((1.lem/sl in ky_verbs_stative) and (2.lem/sl = жат)) [$fnf=2.fnfall>fnf, $negative=(if (1.negative = neg or 2.negative = neg) neg else aff), $aux_lem=do]
+              { %1 }
+       |
+
       !1: v.$transitivity.$tense [$fnf=1.fnfall>fnf]
       !    (if ((1.person=p3) and (1.number=sg))
       !        { 1[person=p3, number=sg] }

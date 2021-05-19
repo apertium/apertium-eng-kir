@@ -233,6 +233,18 @@
 			<i><j/></i>
 		</e>
 
+		<e lm="be sick" c="оору">
+			<p>
+				<l>be<s n="vbser"/></l>
+				<r>be<b/>sick<s n="vblex"/></r>
+			</p>
+			<i><t/><j/></i>
+			<par n="optSAdv"/>
+			<p>
+				<l>sick<s n="adj"/><s n="sint"/><j/></l>
+				<r></r>
+			</p>
+		</e>
 
 		<e lm="in front of" c="алдында">
 			<p>

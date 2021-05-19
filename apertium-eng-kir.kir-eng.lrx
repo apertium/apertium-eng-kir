@@ -50,6 +50,29 @@
 			<match lemma="евро" tags="n.*"/>
 		</or>
 	</def-seq>
+	<def-seq n="Npx">
+		<or>
+			<match tags="n.px1sg.*"/>
+			<match tags="n.*.px1sg.*"/>
+			<match tags="n.px2sg.*"/>
+			<match tags="n.*.px2sg.*"/>
+			<match tags="n.px3sp.*"/>
+			<match tags="n.*.px3sp.*"/>
+			<match tags="n.px1pl.*"/>
+			<match tags="n.*.px1pl.*"/>
+			<match tags="n.px2pl.*"/>
+			<match tags="n.*.px2pl.*"/>
+		</or>
+	</def-seq>
+	<def-seq n="animate-things">
+		<or>
+			<match tags="prn.pers.*"/>
+			<match tags="np.ant.*"/>
+			<match tags="np.cog.*"/>
+			<match lemma="мышык" tags="n.*"/>
+			<match lemma="күчүк" tags="n.*"/>
+		</or>
+	</def-seq>
 </def-seqs>
 
 <rules>
@@ -272,6 +295,19 @@
 	<rule weight="1.0">
 		<match lemma="кыргыз тили" tags="n.*">
 			<select lemma="Kyrgyz" tags="n.*"/>
+		</match>
+	</rule>
+
+	<rule weight="1.2">
+		<seq n="animate-things"/>
+		<match lemma="оору" tags="v.iv.*">
+			<select lemma="be sick" tags="vblex.*"/>
+		</match>
+	</rule>
+	<rule weight="1.2">
+		<seq n="Npx"/>
+		<match lemma="оору" tags="v.iv.*">
+			<select lemma="hurt" tags="vblex.*"/>
 		</match>
 	</rule>
 

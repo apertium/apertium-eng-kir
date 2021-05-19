@@ -490,6 +490,9 @@
 		<e r="LR"><p><l>let<s n="vblex"/></l><r></r></p></e>
 		<e><p><l>get<b/>out<b/>of<s n="vblex"/></l><r>кач<s n="v"/><s n="iv"/></r></p></e>
 		<e><p><l>flee<s n="vblex"/></l><r>кач<s n="v"/><s n="iv"/></r></p></e>
+      <e><p><l>hurt<s n="vblex"/></l><r>оору<s n="v"/><s n="iv"/></r></p></e>
+      <e><p><l>be<b/>sick<s n="vblex"/></l><r>оору<s n="v"/><s n="iv"/></r></p></e>
+      <e><p><l>stink<s n="vblex"/></l><r>сасы<s n="v"/><s n="iv"/></r></p></e>
 
 
 		<!-- vaux -->
