@@ -6,9 +6,9 @@ import requests
 import yaml
 
 #wikiurl = "https://wikis.swarthmore.edu/ling073/"
-#wikiurl = "http://wiki.apertium.org/wiki/"
+#wikiurl = "https://wiki.apertium.org/wiki/"
 #apiurl = "api.php?action=query&prop=revisions&rvprop=content&format=json&titles={}"
-wikiurl = "http://wiki.apertium.org/"
+wikiurl = "https://wiki.apertium.org/"
 apiurl = "w/index.php?action=raw&title={}"
 
 #sectionMatch = re.compile("\=+([^\=]+?)\=+")
