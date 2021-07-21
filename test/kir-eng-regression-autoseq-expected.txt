@@ -1,0 +1,100 @@
+[-Q-sb4eh_Bhw#0] ^Мен<prn><pers><p1><sg><nom>$ ^жаман<adj>$ ^турист<n><pl><dat>$ ^сулуу<adj>$ ^чымчык<n><acc>$ ^көрсөт<v><tv><ifi><p1><sg>$^.<sent>$
+[/-Q-sb4eh_Bhw]
+[0lFAmm4f3ZSV#0] ^Мышык<n><gen>$ ^куйрук<n><px3sp><nom>$ ^бар<adj>+э<cop><aor><p3><sg>$^.<sent>$
+[/0lFAmm4f3ZSV]
+[10KAXdkUc5sY#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><aor><p2><sg>+бы<qst>$^?<sent>$
+[/10KAXdkUc5sY]
+[1i_OAeTau4Tc#0] ^Мен<prn><pers><p1><sg><nom>$ ^үй<n><gen>$ ^ич<n><px3sp><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/1i_OAeTau4Tc]
+[2CQSxX3Ut4oK#0] ^Мен<prn><pers><p1><sg><nom>$ ^дос<n><px1sg><nom>$ ^бар<v><iv><aor><p3><sg>$ ^де<v><tv><prc_perf>$ ^айт<v><tv><ifi><p1><sg>$^.<sent>$
+[/2CQSxX3Ut4oK]
+[3-Mh8OiVuv9T#0] ^Мен<prn><pers><p1><sg><nom>$ ^чоң<adj>$ ^үй<n><gen>$ ^алд<n><px3sp><loc><attr>$ ^бакча<n><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/3-Mh8OiVuv9T]
+[4IydkZxSekgN#0] ^Мен<prn><pers><p1><sg><nom>$ ^тоок<n><gen>$ ^эт<n><px3sp><acc>$ ^жакшы көр<v><tv><aor><p1><sg>$^.<sent>$
+[/4IydkZxSekgN]
+[5bG3iw_dguuQ#0] ^Бул<det><dem>$ ^мектеп<n><nom>$ ^жакшы<adj>+э<cop><aor><p3><sg>$^.<sent>$
+[/5bG3iw_dguuQ]
+[82bP5XpOuLqx#0] ^Мен<prn><pers><p1><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><neg><ifi><p1><sg>$^.<sent>$
+[/82bP5XpOuLqx]
+[8Z0gpNjB4-S1#0] ^Олимпиада<n><nom>$ ^медал<n><px3sp><nom>$ ^таштанды<n><abl>$ ^жаса<v><tv><pass><aor><p3><sg>$^.<sent>$
+[/8Z0gpNjB4-S1]
+[A8LKa4yuqq-k#0] ^Сыйгалак<adj>$ ^чымчык<n><pl><nom>$ ^түш<v><iv><caus><pass><ifi><p3><pl>$^.<sent>$
+[/A8LKa4yuqq-k]
+[COeM63VNXdRA#0] ^Мен<prn><pers><p1><sg><nom>$ ^турист<n><pl><nom>$ ^түш<v><iv><caus><prc_past>$ ^сулуу<adj>$ ^чымчык<n><acc>$ ^көр<v><tv><ifi><p1><sg>$^.<sent>$
+[/COeM63VNXdRA]
+[DT6AzmKxOptf#0] ^Сен<prn><pers><p2><sg><nom>$ ^кандай<det><qnt>$ ^кагаз<n><dat>$ ^жаз<v><tv><ifi><p2><sg>$^?<sent>$
+[/DT6AzmKxOptf]
+[DiLuKLBgImBS#0] ^Мен<prn><pers><p1><sg><nom>$ ^кагаз<n><pl><acc>$ ^алып кет<v><tv><past><p1><sg>$^.<sent>$
+[/DiLuKLBgImBS]
+[EYy3sknWCNz4#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_perf>$ ^жат<vaux><neg><ifi><p2><sg>+бы<qst>$^?<sent>$
+[/EYy3sknWCNz4]
+[EfCrWt24v_ZB#0] ^Мен<prn><pers><p1><sg><nom>$ ^кагаз<n><acc>$ ^ташта<v><tv><past><p1><sg>$^.<sent>$
+[/EfCrWt24v_ZB]
+[IOeOu99VhssV#0] ^Мен<prn><pers><p1><sg><nom>$ ^жаман<adj>$ ^турист<n><nom>$ ^э<cop><aor><neg><p1><sg>$^.<sent>$
+[/IOeOu99VhssV]
+[JgyTpQ7tfBRm#0] ^Мен<prn><pers><p1><sg><nom>$ ^бар<adj>+э<cop><aor><p1><sg>$^.<sent>$
+[/JgyTpQ7tfBRm]
+[KA23yMroK_dN#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_impf>$ ^ал<vaux><aor><p2><sg>+бы<qst>$^?<sent>$
+[/KA23yMroK_dN]
+[LIWg1CW607Bn#0] ^Мен<prn><pers><p1><sg><nom>$ ^автобус<n><acc>$ ^үч<num>$ ^саат<n><nom>$ ^күт<v><iv><ifi><p1><sg>$^.<sent>$
+[/LIWg1CW607Bn]
+[LPmY0eEmT5jK#0] ^Мен<prn><pers><p1><sg><nom>$ ^муздаткыч<n><abl>$ ^тамак<n><acc>$ ^ал<v><tv><ifi><p1><sg>$^.<sent>$
+[/LPmY0eEmT5jK]
+[LxYRf8ewJKi0#0] ^Мен<prn><pers><p1><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_perf>$ ^жат<vaux><aor><p1><sg>$^.<sent>$
+[/LxYRf8ewJKi0]
+[Mz7lT7E1c8xw#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_vol><p2><sg>$ ^кел<vaux><ifi><p3><sg>+бы<qst>$^?<sent>$
+[/Mz7lT7E1c8xw]
+[NUa_HXY0eowk#0] ^Мен<prn><pers><p1><sg><nom>$ ^автобус<n><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/NUa_HXY0eowk]
+[OMmDLb8-e9Sl#0] ^Мен<prn><pers><p1><sg><nom>$ ^чоң<adj>$ ^үй<n><gen>$ ^алд<n><px3sp><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/OMmDLb8-e9Sl]
+[QizJEsOOoMDN#0] ^Сен<prn><pers><p2><sg><nom>$ ^ким<prn><itg><acc>$ ^көр<v><tv><ifi><p2><sg>$^?<sent>$
+[/QizJEsOOoMDN]
+[QlnVZ-YR8QOH#0] ^Мен<prn><pers><p1><sg><nom>$ ^кагаз<n><pl><acc>$ ^ташта<v><tv><past><p1><sg>$^.<sent>$
+[/QlnVZ-YR8QOH]
+[R-cUDMEb41pB#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_impf>$ ^ал<vaux><neg><aor><p2><sg>+бы<qst>$^?<sent>$
+[/R-cUDMEb41pB]
+[Sk6Mf2HZUhh6#0] ^1990<num>$^-<guio>$^жыл<n><px3sp><nom>$ ^22<num>$^–<guio>$^30<num>$^-<guio>$^*октябрдагы$ ^Кыргыз Республикасы<np><top><gen>$ ^Жогорку<adj>$ ^Совет<n><px3sp><gen>$ ^кезек<n>+сыз<post>$ ^сессия<n><px3sp><loc>$ ^бир<num><ord>$ ^жол<n><px3sp><nom>$ ^президент<n><acc-ind>$ ^маселе<n><px3sp><nom>$ ^кара<v><tv><pass><past><p3><sg>$^.<sent>$
+[/Sk6Mf2HZUhh6]
+[TTrdqRjQL3k5#0] ^Мен<prn><pers><p1><sg><nom>$ ^бакча<n><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/TTrdqRjQL3k5]
+[TiP1vSeT3soc#0] ^Мугалим<n><pl><nom>$ ^кагаз<n><pl><acc>$ ^ташта<v><tv><past><p3><sg>$^.<sent>$
+[/TiP1vSeT3soc]
+[W4BTIb5Lu0IV#0] ^Мышык<n><pl><gen>$ ^үй<n><px3sp><nom>$ ^жок<adj>+э<cop><aor><p3><sg>$^.<sent>$
+[/W4BTIb5Lu0IV]
+[WE93JQ2DfbHO#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><neg><aor><p2><sg>+бы<qst>$^?<sent>$
+[/WE93JQ2DfbHO]
+[XT8wbU4vp47l#0] ^Мен<prn><pers><p1><sg><nom>$ ^турист<n><pl><acc>$ ^көр<v><tv><ifi><p1><sg>$^.<sent>$
+[/XT8wbU4vp47l]
+[XaZMMsiBy_RA#0] ^Сен<prn><pers><p2><sg><nom>$ ^автобус<n><acc>$ ^канча<num><itg>$ ^саат<n><nom>$ ^күт<v><tv><ifi><p2><sg>$^?<sent>$
+[/XaZMMsiBy_RA]
+[Z4Fb3yPIrnKP#0] ^Бул<prn><dem><nom>$ ^мектеп<n><nom>$ ^бол<v><iv><ger_pres><nom>$ ^керек<adj>+э<cop><aor><p3><pl>$^!<sent>$
+[/Z4Fb3yPIrnKP]
+[__YjtD45hTIj#0] ^Мен<prn><pers><p1><sg><nom>$ ^концерт<n><loc>+э<cop><aor><p1><sg>$^.<sent>$
+[/__YjtD45hTIj]
+[a6yCIJ-8CgaQ#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_vol><p2><sg>$ ^кел<vaux><neg><ifi><p3><sg>+бы<qst>$^?<sent>$
+[/a6yCIJ-8CgaQ]
+[c01Lq_eN6tNe#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_perf>$ ^жат<vaux><aor><p2><sg>+бы<qst>$^?<sent>$
+[/c01Lq_eN6tNe]
+[dwrq-YNz5_XA#0] ^Сен<prn><pers><p2><sg><nom>$ ^ким<prn><itg><nom>$ ^менен<post>$ ^сүйлө<v><tv><coop><prc_perf>$ ^жат<vaux><aor><p2><sg>$^?<sent>$
+[/dwrq-YNz5_XA]
+[gZywsyQxTkRH#0] ^Мен<prn><pers><p1><sg><nom>$ ^тамак<n><acc>$ ^муздаткыч<n><abl>$ ^ал<v><tv><ifi><p1><sg>$^.<sent>$
+[/gZywsyQxTkRH]
+[hkUYBTBJAu7h#0] ^Мен<prn><pers><p1><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><prc_vol><p1><sg>$ ^кел<vaux><ifi><p3><sg>$^.<sent>$
+[/hkUYBTBJAu7h]
+[hn1dsLf3OKRz#0] ^Мышык<n><gen>$ ^куйрук<n><px3sp><nom>$ ^жок<adj>+э<cop><aor><p3><sg>$^.<sent>$
+[/hn1dsLf3OKRz]
+[iySBzYVyP9oJ#0] ^Мен<prn><pers><p1><sg><nom>$ ^жок<adj>+э<cop><aor><p1><sg>$^.<sent>$
+[/iySBzYVyP9oJ]
+[k9Qd3RFeCKLW#0] ^Сен<prn><pers><p2><sg><nom>$ ^канча<num><itg>$ ^саат<n><nom>$ ^күт<v><iv><ifi><p2><sg>$^?<sent>$
+[/k9Qd3RFeCKLW]
+[ow_g0arm-nB6#0] ^Шаар<n><nom>$ ^болжол менен<adv>$ ^17<num>$^-<guio>$^кылым<n><loc>$ ^Ажаче<np><top><nom>$ ^де<v><tv><gpr_past>$ ^ат<n><nom>$ ^менен<post>$ ^негизде<v><tv><pass><past><p3><sg>$^.<sent>$
+[/ow_g0arm-nB6]
+[t9vSlvZ90FKj#0] ^Мен<prn><pers><p1><sg><gen>$ ^ини<n><px1sg><nom>$ ^беш<num>$ ^жаш<n><loc>+э<cop><aor><p3><sg>$^.<sent>$
+[/t9vSlvZ90FKj]
+[ud1_HkIl5pwx#0] ^Сен<prn><pers><p2><sg><nom>$ ^дамдуу<adj>$ ^эт<n><acc>$ ^же<v><tv><neg><prc_perf>$ ^жат<vaux><aor><p2><sg>+бы<qst>$^?<sent>$
+[/ud1_HkIl5pwx]
+[zr01-tQtbQDV#0] ^Мышык<n><pl><gen>$ ^үй<n><px3sp><nom>$ ^бар<adj>+э<cop><aor><p3><sg>$^.<sent>$
+[/zr01-tQtbQDV]
+[zwH5QyjHSeTO#0] ^Мен<prn><pers><p1><sg><nom>$ ^турист<n><pl><acc>$ ^көр<v><tv><neg><ifi><p1><sg>$^.<sent>$
+[/zwH5QyjHSeTO]

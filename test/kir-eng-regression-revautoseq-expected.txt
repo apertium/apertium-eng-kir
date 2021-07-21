@@ -1,0 +1,100 @@
+[-Q-sb4eh_Bhw#0] ^Prpers<prn><subj><p1><mf><sg>$ ^show<vblex><past>$ ^pretty<adj><sint>$ ^bird<n><sg>$ ^to<pr>$ ^bad<adj><sint>$ ^tourist<n><pl>$ ^.<sent>$
+[/-Q-sb4eh_Bhw]
+[0lFAmm4f3ZSV#0] ^Cat<n><sg>$^'s<gen>$ ^tail<n><sg>$ ^be<vbser><pres><p3><sg>$ ^present<adj>$ ^.<sent>$
+[/0lFAmm4f3ZSV]
+[10KAXdkUc5sY#0] ^Do<vbdo><pres>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/10KAXdkUc5sY]
+[1i_OAeTau4Tc#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^at<pr>$ ^house<n><sg>$^'s<gen>$ ^inside<n><sg>$ ^.<sent>$
+[/1i_OAeTau4Tc]
+[2CQSxX3Ut4oK#0] ^Prpers<prn><subj><p1><mf><sg>$ ^friend<n><sg>$ ^go<vblex><pres><p3><sg>$ ^say<vblex><pres><p3><sg>$ ^prpers<prn><subj><p1><m><sg>$ ^say<vblex><past>$ ^.<sent>$
+[/2CQSxX3Ut4oK]
+[3-Mh8OiVuv9T#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^in<pr>$ ^garden<n><sg>$ ^big<adj><sint>$ ^house<n><sg>$^'s<gen>$ ^front<n><sg>$ ^.<sent>$
+[/3-Mh8OiVuv9T]
+[4IydkZxSekgN#0] ^Prpers<prn><subj><p1><mf><sg>$ ^like<vblex><pres>$ ^chicken<n><sg>$^'s<gen>$ ^meat<n><sg>$ ^.<sent>$
+[/4IydkZxSekgN]
+[5bG3iw_dguuQ#0] ^This<det><dem><sg>$ ^school<n><sg>$ ^be<vbser><pres><p3><sg>$ ^good<adj><sint>$ ^.<sent>$
+[/5bG3iw_dguuQ]
+[82bP5XpOuLqx#0] ^Prpers<prn><subj><p1><mf><sg>$ ^do<vbdo><past>$ ^not<adv>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^.<sent>$
+[/82bP5XpOuLqx]
+[8Z0gpNjB4-S1#0] ^Olympiad<n><sg>$ ^@медал<n><sg>$ ^be<vbser><pres><p3><sg>$ ^make<vblex><pp>$ ^from<pr>$ ^trash<n><sg>$ ^.<sent>$
+[/8Z0gpNjB4-S1]
+[A8LKa4yuqq-k#0] ^Slippery<adj>$ ^bird<n><pl>$ ^be<vbser><past><p3><pl>$ ^drop<vblex><pp>$ ^.<sent>$
+[/A8LKa4yuqq-k]
+[COeM63VNXdRA#0] ^Prpers<prn><subj><p1><mf><sg>$ ^tourist<n><pl>$ ^drop<vblex><pres><p3><sg>$ ^prpers<prn><subj><p1><m><sg>$ ^see<vblex><past>$ ^pretty<adj><sint>$ ^bird<n><sg>$ ^.<sent>$
+[/COeM63VNXdRA]
+[DT6AzmKxOptf#0] ^What Kind Of<adv><itg>$ ^paper<n><sg>$ ^do<vbdo><past>$ ^you<prn><subj><p2><mf><sg>$ ^write<vblex><inf>$ ^on<pr>$ ^?<sent>$
+[/DT6AzmKxOptf]
+[DiLuKLBgImBS#0] ^Prpers<prn><subj><p1><mf><sg>$ ^take<vblex><past>$ ^paper<n><pl>$ ^away<adv>$ ^.<sent>$
+[/DiLuKLBgImBS]
+[EYy3sknWCNz4#0] ^Do<vbdo><past>+not<adv>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><pprs>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/EYy3sknWCNz4]
+[EfCrWt24v_ZB#0] ^Prpers<prn><subj><p1><mf><sg>$ ^throw<vblex><past>$ ^paper<n><sg>$ ^away<adv>$ ^.<sent>$
+[/EfCrWt24v_ZB]
+[IOeOu99VhssV#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^bad<adj><sint>$ ^tourist<n><sg>$ ^.<sent>$
+[/IOeOu99VhssV]
+[JgyTpQ7tfBRm#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^present<adj>$ ^.<sent>$
+[/JgyTpQ7tfBRm]
+[KA23yMroK_dN#0] ^Do<vbdo><pres>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/KA23yMroK_dN]
+[LIWg1CW607Bn#0] ^Prpers<prn><subj><p1><mf><sg>$ ^wait<vblex><past>$ ^bus<n><sg>$ ^three<num><pl>$ ^hour<n><pl>$ ^.<sent>$
+[/LIWg1CW607Bn]
+[LPmY0eEmT5jK#0] ^Prpers<prn><subj><p1><mf><sg>$ ^get<vblex><past>$ ^food<n><sg>$ ^from<pr>$ ^refrigerator<n><sg>$ ^.<sent>$
+[/LPmY0eEmT5jK]
+[LxYRf8ewJKi0#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^eat<vblex><pprs>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^.<sent>$
+[/LxYRf8ewJKi0]
+[Mz7lT7E1c8xw#0] ^Do<vbdo><past>$ ^you<prn><subj><p2><mf><sg>$ ^want<vblex><inf>$ ^to<pr>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/Mz7lT7E1c8xw]
+[NUa_HXY0eowk#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^on<pr>$ ^bus<n><sg>$ ^.<sent>$
+[/NUa_HXY0eowk]
+[OMmDLb8-e9Sl#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^at<pr>$ ^big<adj><sint>$ ^house<n><sg>$^'s<gen>$ ^front<n><sg>$ ^.<sent>$
+[/OMmDLb8-e9Sl]
+[QizJEsOOoMDN#0] ^Who<prn><itg><mf><sp>$ ^do<vbdo><past>$ ^you<prn><subj><p2><mf><sg>$ ^see<vblex><inf>$ ^?<sent>$
+[/QizJEsOOoMDN]
+[QlnVZ-YR8QOH#0] ^Prpers<prn><subj><p1><mf><sg>$ ^throw<vblex><past>$ ^paper<n><pl>$ ^away<adv>$ ^.<sent>$
+[/QlnVZ-YR8QOH]
+[R-cUDMEb41pB#0] ^Do<vbdo><pres>+not<adv>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/R-cUDMEb41pB]
+[Sk6Mf2HZUhh6#0] ^1990<num>$ ^-<guio>$ ^year<n><sg>$ ^22<num>$ ^–<guio>$^30<num>$ ^-<guio>$^*октябрдагы$ ^of<pr>$ ^the Kyrgyz Republic<np><top>$^'s<gen>$ ^High<adj><sint>$ ^Council<n><sg>$ ^@сыз<post>$ ^line<n><sg>$ ^at<pr>$ ^session<n><sg>$ ^one<num><sg>$ ^time<n><sg>$ ^president<n><sg>$ ^issue<n><sg>$ ^be<vbser><past><p3><sg>$ ^watch<vblex><pp>$ ^.<sent>$
+[/Sk6Mf2HZUhh6]
+[TTrdqRjQL3k5#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^in<pr>$ ^garden<n><sg>$ ^.<sent>$
+[/TTrdqRjQL3k5]
+[TiP1vSeT3soc#0] ^Teacher<n><pl>$ ^throw<vblex><past>$ ^paper<n><pl>$ ^away<adv>$ ^.<sent>$
+[/TiP1vSeT3soc]
+[W4BTIb5Lu0IV#0] ^Cat<n><pl>$^'s<gen>$ ^house<n><sg>$ ^be<vbser><pres><p3><sg>$ ^absent<adj>$ ^.<sent>$
+[/W4BTIb5Lu0IV]
+[WE93JQ2DfbHO#0] ^Do<vbdo><pres>+not<adv>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/WE93JQ2DfbHO]
+[XT8wbU4vp47l#0] ^Prpers<prn><subj><p1><mf><sg>$ ^see<vblex><past>$ ^tourist<n><pl>$ ^.<sent>$
+[/XT8wbU4vp47l]
+[XaZMMsiBy_RA#0] ^How Many<det><itg><pl>$ ^hour<n><pl>$ ^do<vbdo><past>$ ^you<prn><subj><p2><mf><sg>$ ^wait<vblex><inf># for$ ^bus<n><sg>$ ^?<sent>$
+[/XaZMMsiBy_RA]
+[Z4Fb3yPIrnKP#0] ^This<prn><dem><mf><sg>$ ^school<n><sg>$ ^be<vbser><pres><p3><sg>$ ^prpers<prn><subj><p3><m><pl>$ ^be<vbser><pres><p3><pl>$ ^necessary<adj>$ ^!<sent>$
+[/Z4Fb3yPIrnKP]
+[__YjtD45hTIj#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^at<pr>$ ^concert<n><sg>$ ^.<sent>$
+[/__YjtD45hTIj]
+[a6yCIJ-8CgaQ#0] ^Do<vbdo><past>+not<adv>$ ^you<prn><subj><p2><mf><sg>$ ^want<vblex><inf>$ ^to<pr>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/a6yCIJ-8CgaQ]
+[c01Lq_eN6tNe#0] ^Do<vbdo><pres>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><pprs>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/c01Lq_eN6tNe]
+[dwrq-YNz5_XA#0] ^Who<prn><itg><mf><sp>$ ^do<vbdo><pres>$ ^you<prn><subj><p2><mf><sg>$ ^@сүйлө<v><pprs>$ ^with<pr>$ ^?<sent>$
+[/dwrq-YNz5_XA]
+[gZywsyQxTkRH#0] ^Prpers<prn><subj><p1><mf><sg>$ ^get<vblex><past>$ ^food<n><sg>$ ^from<pr>$ ^refrigerator<n><sg>$ ^.<sent>$
+[/gZywsyQxTkRH]
+[hkUYBTBJAu7h#0] ^Prpers<prn><subj><p1><mf><sg>$ ^want<vblex><past>$ ^to<pr>$ ^eat<vblex><inf>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^.<sent>$
+[/hkUYBTBJAu7h]
+[hn1dsLf3OKRz#0] ^Cat<n><sg>$^'s<gen>$ ^tail<n><sg>$ ^be<vbser><pres><p3><sg>$ ^absent<adj>$ ^.<sent>$
+[/hn1dsLf3OKRz]
+[iySBzYVyP9oJ#0] ^Prpers<prn><subj><p1><mf><sg>$ ^be<vbser><pres><p1><sg>$ ^absent<adj>$ ^.<sent>$
+[/iySBzYVyP9oJ]
+[k9Qd3RFeCKLW#0] ^You<prn><subj><p2><mf><sg>$ ^how many<det><itg><pl>$ ^hour<n><pl>$ ^wait<vblex><past>$ ^?<sent>$
+[/k9Qd3RFeCKLW]
+[ow_g0arm-nB6#0] ^City<n><sg>$ ^approximately<adv>$ ^17<num>$ ^-<guio>$ ^prpers<prn><subj><p3><m><sg>$ ^be<vbser><past><p3><sg>$ ^found<vblex><pp>$ ^with<pr>$ ^The<det><def><sp>$ ^name<n><sg>$ ^that<cnjsub>$ ^say<vblex><pres><p3><sg>$ ^Ajashe<np><top>$ ^in<pr>$ ^century<n><sg>$ ^.<sent>$
+[/ow_g0arm-nB6]
+[t9vSlvZ90FKj#0] ^Prpers<det><pos><p1><mf><sg>$ ^little<adj>$ ^brother<n><sg>$ ^be<vbser><pres><p3><sg>$ ^at<pr>$ ^five<num><pl>$ ^age<n><pl>$ ^.<sent>$
+[/t9vSlvZ90FKj]
+[ud1_HkIl5pwx#0] ^Do<vbdo><pres>+not<adv>$ ^you<prn><subj><p2><mf><sg>$ ^eat<vblex><pprs>$ ^tasty<adj><sint>$ ^meat<n><sg>$ ^?<sent>$
+[/ud1_HkIl5pwx]
+[zr01-tQtbQDV#0] ^Cat<n><pl>$^'s<gen>$ ^house<n><sg>$ ^be<vbser><pres><p3><sg>$ ^present<adj>$ ^.<sent>$
+[/zr01-tQtbQDV]
+[zwH5QyjHSeTO#0] ^Prpers<prn><subj><p1><mf><sg>$ ^do<vbdo><past>$ ^not<adv>$ ^see<vblex><inf>$ ^tourist<n><pl>$ ^.<sent>$
+[/zwH5QyjHSeTO]

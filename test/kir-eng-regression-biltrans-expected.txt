@@ -1,0 +1,100 @@
+[-Q-sb4eh_Bhw#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^жаман<adj>/bad<adj><sint>$ ^турист<n><pl><dat>/tourist<n><pl><dat>$ ^сулуу<adj>/pretty<adj><sint>/beautiful<adj><sint>$ ^чымчык<n><acc>/bird<n><acc>$ ^көрсөт<v><tv><ifi><p1><sg>/show<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/-Q-sb4eh_Bhw]
+[0lFAmm4f3ZSV#0] ^Мышык<n><gen>/Cat<n><gen>$ ^куйрук<n><px3sp><nom>/tail<n><px3sp><nom>$ ^бар<adj>/present<adj>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/0lFAmm4f3ZSV]
+[10KAXdkUc5sY#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><aor><p2><sg>/eat<vblex><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/10KAXdkUc5sY]
+[1i_OAeTau4Tc#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^үй<n><gen>/home<n><gen>/house<n><gen>$ ^ич<n><px3sp><loc>/inside<n><px3sp><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/1i_OAeTau4Tc]
+[2CQSxX3Ut4oK#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^дос<n><px1sg><nom>/friend<n><px1sg><nom>$ ^бар<v><iv><aor><p3><sg>/go<vblex><aor><p3><sg>$ ^де<v><tv><prc_perf>/say<vblex><prc_perf>$ ^айт<v><tv><ifi><p1><sg>/tell<vblex><ifi><p1><sg>/say<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/2CQSxX3Ut4oK]
+[3-Mh8OiVuv9T#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^чоң<adj>/big<adj><sint>/large<adj><sint>$ ^үй<n><gen>/home<n><gen>/house<n><gen>$ ^алд<n><px3sp><loc><attr>/front<n><px3sp><loc><attr>$ ^бакча<n><loc>/garden<n><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/3-Mh8OiVuv9T]
+[4IydkZxSekgN#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^тоок<n><gen>/chicken<n><gen>$ ^эт<n><px3sp><acc>/meat<n><px3sp><acc>$ ^жакшы көр<v><tv><aor><p1><sg>/like<vblex><aor><p1><sg>$^.<sent>/.<sent>$
+[/4IydkZxSekgN]
+[5bG3iw_dguuQ#0] ^Бул<det><dem>/This<det><dem>$ ^мектеп<n><nom>/school<n><nom>$ ^жакшы<adj>/good<adj><sint>/nice<adj><sint>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/5bG3iw_dguuQ]
+[82bP5XpOuLqx#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><neg><ifi><p1><sg>/eat<vblex><neg><ifi><p1><sg>$^.<sent>/.<sent>$
+[/82bP5XpOuLqx]
+[8Z0gpNjB4-S1#0] ^Олимпиада<n><nom>/Olympiad<n><nom>$ ^медал<n><px3sp><nom>/@медал<n><px3sp><nom>$ ^таштанды<n><abl>/trash<n><abl>/refuse<n><abl>/waste<n><abl>/garbage<n><abl>$ ^жаса<v><tv><pass><aor><p3><sg>/make<vblex><pass><aor><p3><sg>$^.<sent>/.<sent>$
+[/8Z0gpNjB4-S1]
+[A8LKa4yuqq-k#0] ^Сыйгалак<adj>/Slippery<adj>$ ^чымчык<n><pl><nom>/bird<n><pl><nom>$ ^түш<v><iv><caus><pass><ifi><p3><pl>/drop<vblex><pass><ifi><p3><pl>$^.<sent>/.<sent>$
+[/A8LKa4yuqq-k]
+[COeM63VNXdRA#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^турист<n><pl><nom>/tourist<n><pl><nom>$ ^түш<v><iv><caus><prc_past>/drop<vblex><prc_past>$ ^сулуу<adj>/pretty<adj><sint>/beautiful<adj><sint>$ ^чымчык<n><acc>/bird<n><acc>$ ^көр<v><tv><ifi><p1><sg>/see<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/COeM63VNXdRA]
+[DT6AzmKxOptf#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^кандай<det><qnt>/what kind of<adv><itg>$ ^кагаз<n><dat>/paper<n><dat>$ ^жаз<v><tv><ifi><p2><sg>/write<vblex><ifi><p2><sg>$^?<sent>/?<sent>$
+[/DT6AzmKxOptf]
+[DiLuKLBgImBS#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^кагаз<n><pl><acc>/paper<n><pl><acc>$ ^алып кет<v><tv><past><p1><sg>/take away<vblex><past><p1><sg>$^.<sent>/.<sent>$
+[/DiLuKLBgImBS]
+[EYy3sknWCNz4#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_perf>/eat<vblex><prc_perf>$ ^жат<vaux><neg><ifi><p2><sg>/be<vbser><neg><ifi><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/EYy3sknWCNz4]
+[EfCrWt24v_ZB#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^кагаз<n><acc>/paper<n><acc>$ ^ташта<v><tv><past><p1><sg>/throw away<vblex><past><p1><sg>$^.<sent>/.<sent>$
+[/EfCrWt24v_ZB]
+[IOeOu99VhssV#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^жаман<adj>/bad<adj><sint>$ ^турист<n><nom>/tourist<n><nom>$ ^э<cop><aor><neg><p1><sg>/be<vbser><aor><neg><p1><sg>$^.<sent>/.<sent>$
+[/IOeOu99VhssV]
+[JgyTpQ7tfBRm#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^бар<adj>/present<adj>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/JgyTpQ7tfBRm]
+[KA23yMroK_dN#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_impf>/eat<vblex><prc_impf>$ ^ал<vaux><aor><p2><sg>/can<vbmod><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/KA23yMroK_dN]
+[LIWg1CW607Bn#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^автобус<n><acc>/bus<n><acc>$ ^үч<num>/three<num><pl>$ ^саат<n><nom>/hour<n><nom>$ ^күт<v><iv><ifi><p1><sg>/wait<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/LIWg1CW607Bn]
+[LPmY0eEmT5jK#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^муздаткыч<n><abl>/refrigerator<n><abl>$ ^тамак<n><acc>/food<n><acc>$ ^ал<v><tv><ifi><p1><sg>/get<vblex><ifi><p1><sg>/take<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/LPmY0eEmT5jK]
+[LxYRf8ewJKi0#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_perf>/eat<vblex><prc_perf>$ ^жат<vaux><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/LxYRf8ewJKi0]
+[Mz7lT7E1c8xw#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_vol><p2><sg>/eat<vblex><prc_vol><p2><sg>$ ^кел<vaux><ifi><p3><sg>/want<vblex><ifi><p3><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/Mz7lT7E1c8xw]
+[NUa_HXY0eowk#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^автобус<n><loc>/bus<n><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/NUa_HXY0eowk]
+[OMmDLb8-e9Sl#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^чоң<adj>/big<adj><sint>/large<adj><sint>$ ^үй<n><gen>/home<n><gen>/house<n><gen>$ ^алд<n><px3sp><loc>/front<n><px3sp><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/OMmDLb8-e9Sl]
+[QizJEsOOoMDN#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^ким<prn><itg><acc>/who<prn><itg><mf><sp><acc>$ ^көр<v><tv><ifi><p2><sg>/see<vblex><ifi><p2><sg>$^?<sent>/?<sent>$
+[/QizJEsOOoMDN]
+[QlnVZ-YR8QOH#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^кагаз<n><pl><acc>/paper<n><pl><acc>$ ^ташта<v><tv><past><p1><sg>/throw away<vblex><past><p1><sg>$^.<sent>/.<sent>$
+[/QlnVZ-YR8QOH]
+[R-cUDMEb41pB#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_impf>/eat<vblex><prc_impf>$ ^ал<vaux><neg><aor><p2><sg>/can<vbmod><neg><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/R-cUDMEb41pB]
+[Sk6Mf2HZUhh6#0] ^1990<num>/1990<num>$^-<guio>/-<guio>$^жыл<n><px3sp><nom>/year<n><px3sp><nom>$ ^22<num>/22<num>$^–<guio>/–<guio>$^30<num>/30<num>$^-<guio>/-<guio>$^*октябрдагы/*октябрдагы$ ^Кыргыз Республикасы<np><top><gen>/the Kyrgyz Republic<np><top><sg><gen>$ ^Жогорку<adj>/High<adj><sint>$ ^Совет<n><px3sp><gen>/Council<n><px3sp><gen>$ ^кезек<n>/line<n>/queue<n>$ ^сыз<post>/@сыз<post>$ ^сессия<n><px3sp><loc>/session<n><px3sp><loc>$ ^бир<num><ord>/one<num><sg><ord>$ ^жол<n><px3sp><nom>/way<n><px3sp><nom>/time<n><px3sp><nom>/road<n><px3sp><nom>$ ^президент<n><acc-ind>/president<n><acc-ind>$ ^маселе<n><px3sp><nom>/issue<n><px3sp><nom>/problem<n><px3sp><nom>/challenge<n><px3sp><nom>$ ^кара<v><tv><pass><past><p3><sg>/watch<vblex><pass><past><p3><sg>/look# at<vblex><pass><past><p3><sg>$^.<sent>/.<sent>$
+[/Sk6Mf2HZUhh6]
+[TTrdqRjQL3k5#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^бакча<n><loc>/garden<n><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/TTrdqRjQL3k5]
+[TiP1vSeT3soc#0] ^Мугалим<n><pl><nom>/Teacher<n><pl><nom>$ ^кагаз<n><pl><acc>/paper<n><pl><acc>$ ^ташта<v><tv><past><p3><sg>/throw away<vblex><past><p3><sg>$^.<sent>/.<sent>$
+[/TiP1vSeT3soc]
+[W4BTIb5Lu0IV#0] ^Мышык<n><pl><gen>/Cat<n><pl><gen>$ ^үй<n><px3sp><nom>/home<n><px3sp><nom>/house<n><px3sp><nom>$ ^жок<adj>/absent<adj>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/W4BTIb5Lu0IV]
+[WE93JQ2DfbHO#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><neg><aor><p2><sg>/eat<vblex><neg><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/WE93JQ2DfbHO]
+[XT8wbU4vp47l#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^турист<n><pl><acc>/tourist<n><pl><acc>$ ^көр<v><tv><ifi><p1><sg>/see<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/XT8wbU4vp47l]
+[XaZMMsiBy_RA#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^автобус<n><acc>/bus<n><acc>$ ^канча<num><itg>/how many<det><itg><pl>$ ^саат<n><nom>/hour<n><nom>$ ^күт<v><tv><ifi><p2><sg>/wait# for<vblex><ifi><p2><sg>$^?<sent>/?<sent>$
+[/XaZMMsiBy_RA]
+[Z4Fb3yPIrnKP#0] ^Бул<prn><dem><nom>/This<prn><dem><mf><sg><nom>$ ^мектеп<n><nom>/school<n><nom>$ ^бол<v><iv><ger_pres><nom>/be<vbser><ger_pres><nom>/become<vblex><ger_pres><nom>/happen<vblex><ger_pres><nom>$ ^керек<adj>/necessary<adj>$ ^э<cop><aor><p3><pl>/be<vbser><aor><p3><pl>$^!<sent>/!<sent>$
+[/Z4Fb3yPIrnKP]
+[__YjtD45hTIj#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^концерт<n><loc>/concert<n><loc>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/__YjtD45hTIj]
+[a6yCIJ-8CgaQ#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_vol><p2><sg>/eat<vblex><prc_vol><p2><sg>$ ^кел<vaux><neg><ifi><p3><sg>/want<vblex><neg><ifi><p3><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/a6yCIJ-8CgaQ]
+[c01Lq_eN6tNe#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_perf>/eat<vblex><prc_perf>$ ^жат<vaux><aor><p2><sg>/be<vbser><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/c01Lq_eN6tNe]
+[dwrq-YNz5_XA#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^ким<prn><itg><nom>/who<prn><itg><mf><sp><nom>$ ^менен<post>/with<pr>$ ^сүйлө<v><tv><coop><prc_perf>/@сүйлө<v><tv><coop><prc_perf>$ ^жат<vaux><aor><p2><sg>/be<vbser><aor><p2><sg>$^?<sent>/?<sent>$
+[/dwrq-YNz5_XA]
+[gZywsyQxTkRH#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^тамак<n><acc>/food<n><acc>$ ^муздаткыч<n><abl>/refrigerator<n><abl>$ ^ал<v><tv><ifi><p1><sg>/get<vblex><ifi><p1><sg>/take<vblex><ifi><p1><sg>$^.<sent>/.<sent>$
+[/gZywsyQxTkRH]
+[hkUYBTBJAu7h#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><prc_vol><p1><sg>/eat<vblex><prc_vol><p1><sg>$ ^кел<vaux><ifi><p3><sg>/want<vblex><ifi><p3><sg>$^.<sent>/.<sent>$
+[/hkUYBTBJAu7h]
+[hn1dsLf3OKRz#0] ^Мышык<n><gen>/Cat<n><gen>$ ^куйрук<n><px3sp><nom>/tail<n><px3sp><nom>$ ^жок<adj>/absent<adj>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/hn1dsLf3OKRz]
+[iySBzYVyP9oJ#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^жок<adj>/absent<adj>$ ^э<cop><aor><p1><sg>/be<vbser><aor><p1><sg>$^.<sent>/.<sent>$
+[/iySBzYVyP9oJ]
+[k9Qd3RFeCKLW#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^канча<num><itg>/how many<det><itg><pl>$ ^саат<n><nom>/hour<n><nom>$ ^күт<v><iv><ifi><p2><sg>/wait<vblex><ifi><p2><sg>$^?<sent>/?<sent>$
+[/k9Qd3RFeCKLW]
+[ow_g0arm-nB6#0] ^Шаар<n><nom>/City<n><nom>$ ^болжол менен<adv>/approximately<adv>$ ^17<num>/17<num>$^-<guio>/-<guio>$^кылым<n><loc>/century<n><loc>$ ^Ажаче<np><top><nom>/Ajashe<np><top><sg><nom>$ ^де<v><tv><gpr_past>/say<vblex><gpr_past>$ ^ат<n><nom>/name<n><nom>$ ^менен<post>/with<pr>$ ^негизде<v><tv><pass><past><p3><sg>/found<vblex><pass><past><p3><sg>$^.<sent>/.<sent>$
+[/ow_g0arm-nB6]
+[t9vSlvZ90FKj#0] ^Мен<prn><pers><p1><sg><gen>/Prpers<det><pos><p1><mf><sg>$ ^ини<n><px1sg><nom>/little brother<n><px1sg><nom>$ ^беш<num>/five<num><pl>$ ^жаш<n><loc>/age<n><loc>/year<n><loc>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/t9vSlvZ90FKj]
+[ud1_HkIl5pwx#0] ^Сен<prn><pers><p2><sg><nom>/You<prn><pers><p2><mf><sg><nom>$ ^дамдуу<adj>/tasty<adj><sint>$ ^эт<n><acc>/meat<n><acc>$ ^же<v><tv><neg><prc_perf>/eat<vblex><neg><prc_perf>$ ^жат<vaux><aor><p2><sg>/be<vbser><aor><p2><sg>$ ^бы<qst>/$^?<sent>/?<sent>$
+[/ud1_HkIl5pwx]
+[zr01-tQtbQDV#0] ^Мышык<n><pl><gen>/Cat<n><pl><gen>$ ^үй<n><px3sp><nom>/home<n><px3sp><nom>/house<n><px3sp><nom>$ ^бар<adj>/present<adj>$ ^э<cop><aor><p3><sg>/be<vbser><aor><p3><sg>$^.<sent>/.<sent>$
+[/zr01-tQtbQDV]
+[zwH5QyjHSeTO#0] ^Мен<prn><pers><p1><sg><nom>/Prpers<prn><CD><p1><mf><sg><nom>$ ^турист<n><pl><acc>/tourist<n><pl><acc>$ ^көр<v><tv><neg><ifi><p1><sg>/see<vblex><neg><ifi><p1><sg>$^.<sent>/.<sent>$
+[/zwH5QyjHSeTO]

@@ -22,3 +22,5 @@
 /config.in
 /config
 /.*.swp
+/*.zhfst
+/test/*-output.txt

@@ -2,7 +2,6 @@
 ## Makefile for English--Kyrgyz
 ###############################################################################
 
-VERSION=0.1.0
 LANG1=eng
 LANG2=kir
 PREFIX1=$(LANG1)-$(LANG2)
@@ -257,11 +256,4 @@ clean-local:
 ###############################################################################
 
 test: all
-	cat tests/eng-kir-regression-tests.txt | sed -r 's/[^|]+\|//' > .test-ref
-	cat tests/eng-kir-regression-tests.txt | sed -r 's/\|[^|]+//' | apertium -d . kir-eng > .test-mt
-	@diff -u .test-ref .test-mt | colordiff
-	cat tests/eng-kir-regression-tests.txt | sed -r 's/\|[^|]+//' > .test-ref
-	cat tests/eng-kir-regression-tests.txt | sed -r 's/[^|]+\|//' | apertium -d . eng-kir > .test-mt
-	@diff -u .test-ref .test-mt | colordiff
-	@rm .test-ref .test-mt
-
+	apertium-regtest test

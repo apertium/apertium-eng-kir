@@ -1,0 +1,10 @@
+{
+    "eng-kir-regression": {
+        "input": "eng-kir-regression-input.txt",
+        "mode": "eng-kir"
+    },
+    "kir-eng-regression": {
+        "input": "kir-eng-regression-input.txt",
+        "mode": "kir-eng"
+    }
+}
