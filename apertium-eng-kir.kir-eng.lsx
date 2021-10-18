@@ -25,14 +25,14 @@
 	</sdefs>
 	<pardefs>
 		<pardef n="adj">
-			<e><i><w/><s n="adj"/><j/></i></e>
-			<e><i><w/><s n="adj"/><t/><j/></i></e>
+			<e><i><w/><s n="adj"/><d/></i></e>
+			<e><i><w/><s n="adj"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="SAdv">
-			<e><i><w/><s n="adv"/><j/></i></e>
+			<e><i><w/><s n="adv"/><d/></i></e>
 		</pardef>
 		<pardef n="n">
-			<e><i><w/><s n="n"/><t/><j/></i></e>
+			<e><i><w/><s n="n"/><t/><d/></i></e>
 		</pardef>
 		<pardef n="SN">
 			<e><par n="n"/></e>
@@ -40,32 +40,32 @@
 			<e><par n="adj"/><par n="adj"/><par n="n"/></e>
 		</pardef>
 		<pardef n="optional_cop">
-			<e><i>+э<s n="cop"/><t/><j/></i></e>
-			<e><i><j/></i></e>
+			<e><i>+э<s n="cop"/><t/><d/></i></e>
+			<e><i><d/></i></e>
 		</pardef>
 		<pardef n="w_edge" c="word edge">
-			<e><i>+<w/><t/><j/></i></e>
-			<e><i><j/></i></e>
+			<e><i>+<w/><t/><d/></i></e>
+			<e><i><d/></i></e>
 		</pardef>
 	</pardefs>
 	<section id="main" type="standard">
 		<e lm="кабарда" c="хабар ет">
 			<p><l>хабар<b/>ет<s n="v"/></l>
-				<r>хабар<s n="n"/><s n="nom"/><j/>ет<s n="v"/></r></p><i><t/><j/></i>
+				<r>хабар<s n="n"/><s n="nom"/><d/>ет<s n="v"/></r></p><i><t/><d/></i>
 		</e>
 		<e lm="абайла" c="абай бол">
 			<p><l>абай<b/>бол<s n="v"/></l>
-				<r>абай<s n="adj"/><j/>бол<s n="v"/></r></p><i><t/><j/></i>
+				<r>абай<s n="adj"/><d/>бол<s n="v"/></r></p><i><t/><d/></i>
 		</e>
 		<e lm="абайла" c="абай бол">
 			<p><l>абай<b/>бол<s n="v"/></l>
-				<r>абай<s n="adj"/><j/>бол<s n="v"/></r></p><i><t/>+ма<t/><j/></i>
-			<!-- p><l>абай<s n="adj"/><j/>бол<s n="v"/><t/></l>
+				<r>абай<s n="adj"/><d/>бол<s n="v"/></r></p><i><t/>+ма<t/><d/></i>
+			<!-- p><l>абай<s n="adj"/><d/>бол<s n="v"/><t/></l>
 				<r>абай<b/>бол<s n="v"/><t/></r></p -->
 		</e>
 		<e lm="сууга бат түш" c="тез шомыл">
 			<p>
-				<l>суу<s n="n"/><s n="dat"/><j/></l>
+				<l>суу<s n="n"/><s n="dat"/><d/></l>
 				<r></r>
 			</p>
 			<par n="SAdv"/>
@@ -73,91 +73,91 @@
 				<l>түш<s n="v"/></l>
 				<r>сууга<b/>түш<s n="v"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="сууга түш" c="шомылда">
 			<p>
-				<l>суу<s n="n"/><s n="dat"/><j/>түш<s n="v"/></l>
+				<l>суу<s n="n"/><s n="dat"/><d/>түш<s n="v"/></l>
 				<r>сууга<b/>түш<s n="v"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="жумуш жаса" c="жұмыс істе">
 			<p>
-				<l>жумуш<s n="n"/><s n="nom"/><j/>жаса<s n="v"/><s n="tv"/></l>
+				<l>жумуш<s n="n"/><s n="nom"/><d/>жаса<s n="v"/><s n="tv"/></l>
 				<r>жумуш<b/>жаса<s n="v"/><s n="iv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="маал кел" c="уақыт бол">
 			<p>
-				<l>маал<s n="n"/><s n="nom"/><j/>кел<s n="v"/><s n="iv"/></l>
+				<l>маал<s n="n"/><s n="nom"/><d/>кел<s n="v"/><s n="iv"/></l>
 				<r>маал<b/>кел<s n="v"/><s n="iv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="убакыт кел" c="уақыт бол">
 			<p>
-				<l>убакыт<s n="n"/><s n="nom"/><j/>кел<s n="v"/><s n="iv"/></l>
+				<l>убакыт<s n="n"/><s n="nom"/><d/>кел<s n="v"/><s n="iv"/></l>
 				<r>убакыт<b/>кел<s n="v"/><s n="iv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="убакыт бол" c="уақыт бол">
 			<p>
-				<l>убакыт<s n="n"/><s n="nom"/><j/>бол<s n="v"/><s n="iv"/></l>
+				<l>убакыт<s n="n"/><s n="nom"/><d/>бол<s n="v"/><s n="iv"/></l>
 				<r>убакыт<b/>бол<s n="v"/><s n="iv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="алып кет" c="take away">
 			<p>
-				<l>ал<s n="v"/><s n="tv"/><s n="prc_perf"/><j/>кет<s n="v"/><s n="iv"/></l>
+				<l>ал<s n="v"/><s n="tv"/><s n="prc_perf"/><d/>кет<s n="v"/><s n="iv"/></l>
 				<r>алып<b/>кет<s n="v"/><s n="tv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="жакшы бил" c="be good at">
 			<p>
-				<l>жакшы<s n="adj"/><s n="advl"/><j/>бил<s n="v"/><s n="tv"/></l>
+				<l>жакшы<s n="adj"/><s n="advl"/><d/>бил<s n="v"/><s n="tv"/></l>
 				<r>жакшы<b/>бил<s n="v"/><s n="tv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="жакшы көр" c="like">
 			<p>
-				<l>жакшы<s n="adj"/><s n="advl"/><j/>көр<s n="v"/><s n="tv"/></l>
+				<l>жакшы<s n="adj"/><s n="advl"/><d/>көр<s n="v"/><s n="tv"/></l>
 				<r>жакшы<b/>көр<s n="v"/><s n="tv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="быйыл" c="this year">
 			<p>
 				<l>быйыл<s n="adv"/></l>
-				<r>бул<s n="det"/><s n="dem"/><j/>жыл<s n="n"/><s n="nom"/></r>
+				<r>бул<s n="det"/><s n="dem"/><d/>жыл<s n="n"/><s n="nom"/></r>
 			</p>
-			<i><j/></i>
+			<i><d/></i>
 		</e>
 		<e lm="ооз тий" c="taste">
 			<p>
-				<l>ооз<s n="n"/><s n="nom"/><j/>тий<s n="v"/><s n="tv"/></l>
+				<l>ооз<s n="n"/><s n="nom"/><d/>тий<s n="v"/><s n="tv"/></l>
 				<r>ооз<b/>тий<s n="v"/><s n="tv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="бардык жер" c="everywhere">
 			<p>
-				<l>бардык<s n="det"/><s n="qnt"/><j/>жер<s n="n"/></l>
+				<l>бардык<s n="det"/><s n="qnt"/><d/>жер<s n="n"/></l>
 				<r>бардык<b/>жер<s n="adv"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="бардык жер" c="everywhere">
 			<p>
-				<l>кай<s n="det"/><s n="dem"/><j/>жер<s n="n"/></l>
+				<l>кай<s n="det"/><s n="dem"/><d/>жер<s n="n"/></l>
 				<r>кай<b/>жер<s n="adv"/><s n="itg"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="adj.comp.advl" c="rearrange to adj.advl.comp"><!-- so that adj.advl forms can be put in the dictionary -->
 			<i><w/><s n="adj"/></i>
@@ -165,18 +165,18 @@
 				<l><s n="comp"/><s n="advl"/></l>
 				<r><s n="advl"/><s n="comp"/></r>
 			</p>
-			<i><j/></i>
+			<i><d/></i>
 		</e>
 		<e lm="саламаттык сактоо министрлигинде" c="health ministry">
 			<p>
-				<l>саламаттык<s n="n"/><s n="nom"/><j/>сакта<s n="v"/><s n="tv"/><s n="ger"/><s n="nom"/><j/>министрлик<s n="n"/><s n="px3sp"/></l>
+				<l>саламаттык<s n="n"/><s n="nom"/><d/>сакта<s n="v"/><s n="tv"/><s n="ger"/><s n="nom"/><d/>министрлик<s n="n"/><s n="px3sp"/></l>
 				<r>саламаттык<b/>сактоо<b/>министрлиги<s n="n"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 		<e lm="бүгүнкү күндө" c="these days">
 			<p>
-				<l>бүгүн<s n="adv"/><s n="attr"/><j/>күн<s n="n"/><s n="loc"/></l>
+				<l>бүгүн<s n="adv"/><s n="attr"/><d/>күн<s n="n"/><s n="loc"/></l>
 				<r>бүгүнкү<b/>күндө<s n="adv"/></r>
 			</p>
 			<par n="w_edge"/>
@@ -184,10 +184,10 @@
 		<e lm="X тили" c="the X language">
 			<i><w/></i>
 			<p>
-				<l><s n="n"/><s n="nom"/><j/>тил<s n="n"/><s n="px3sp"/></l>
+				<l><s n="n"/><s n="nom"/><d/>тил<s n="n"/><s n="px3sp"/></l>
 				<r><b/>тили<s n="n"/></r>
 			</p>
-			<i><t/><j/></i>
+			<i><t/><d/></i>
 		</e>
 
 	</section>
