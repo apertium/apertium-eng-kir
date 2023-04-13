@@ -42,19 +42,17 @@ S: _ ;
 
 !!! RULES !!!
 
-NP -> %n { %1[number=(if ($number = sg) "" else $number), lemcase=$lemcase] } |
+NP -> %n.$lem/sl { %1[number=(if ($number = sg) "" else $number), lemcase=$lemcase] } |
       adj %NP { 1 _1 %2 } ;
 
 DP -> %NP [$det_type=ind] { %1 } |
       det.$det_type/sl.$lemcase/sl %NP { %2[lemcase=$lemcase] } |
-      %prn [$det_type=def] { %1 } |
+      %prn.$lem/sl [$det_type=def] { %1 } |
       4: %DP PP { 2 _1 %1 } ;
 
 PP -> 3: %pr DP { %2[case=1.lemh>case] } |
       0: %pr DP { 1 %2 } ;
 
-VP -> %vblex ?(1.transitivity/tl = iv) { %1 } |
-      %vblex DP ?(1.transitivity/tl = tv)
-            { 2[case=(if (2.det_type = def) acc else nom)] _1 %1 } ;
+VP -> %vblex.$lem/sl { %1 } ;
 
-S -> DP VP { 1 _1 2[number=1.number, person=1.person] } ;
+S -> DP %VP { 1 _1 2[number=1.number, person=1.person] } ;

@@ -462,9 +462,9 @@ VP -> PP DP.[definiteness].prep_flag %vP { %3 _ 2 _ 1 } |
       4: AdvP PP AdvP %vP { 1 _ %4 _ 3 _ 2 } |
       %vP { %1 } |
       S %де@vP { %2 _ 1 } |
-      S %де@vP.*.prc %vP { %3 _ 1 } |
-      quot S quot %де@vP.*.prc %vP { %5 _ 1 _ 2 _ 3 } |
-      4: DP.*.abl S %де@vP.*.prc %сура@vP { %4 _ 1 _ 2 }
+      S де@vP.*.prc %vP { %3 _ 1 } |
+      quot S quot де@vP.*.prc %vP { %5 _ 1 _ 2 _ 3 } |
+      4: DP.*.abl S де@vP.*.prc %сура@vP { %4 _ 1 _ 2 }
 !      Speech %де@vP { %2 _ 1 } |
 !      Speech %де@vP.*.prc %vP { %3 _ 1 } |
 !      4: DP.*.abl Speech %де@vP.*.prc %сура@vP { %4 _ 1 _ 2 } 
