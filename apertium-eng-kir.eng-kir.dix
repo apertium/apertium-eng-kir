@@ -249,6 +249,7 @@
       <e><p><l>month</l><r>ай</r></p><par n="par__n"/></e>
       <e><p><l>moon</l><r>ай</r></p><par n="par__n"/></e>
       <e><p><l>name</l><r>ат</r></p><par n="par__n"/></e>
+      <e><p><l>horse</l><r>ат</r></p><par n="par__n"/></e>
       <e><p><l>protectorate</l><r>протекторат</r></p><par n="par__n"/></e>
       <e><p><l>friend</l><r>дос</r></p><par n="par__n"/></e>
       <e><p><l>president</l><r>президент</r></p><par n="par__n"/></e>
@@ -296,6 +297,8 @@
       <e><p><l>pen</l><r>калем</r></p><par n="par__n"/></e>
       <e><p><l>pencil</l><r>карандаш</r></p><par n="par__n"/></e>
       <e><p><l>cheese</l><r>сыр</r></p><par n="par__n"/></e>
+      <e><p><l>secret</l><r>сыр</r></p><par n="par__n"/></e>
+      <e><p><l>paint</l><r>сыр</r></p><par n="par__n"/></e>
       <e><p><l>book</l><r>китеп</r></p><par n="par__n"/></e>
       <e><p><l>letter</l><r>кат</r></p><par n="par__n"/></e>
       <e><p><l>text</l><r>текст</r></p><par n="par__n"/></e>
