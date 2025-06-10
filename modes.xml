@@ -54,6 +54,14 @@
     </pipeline>
   </mode>
 
+  <mode name="kir-eng-bilsearch">
+    <pipeline>
+      <program name="lt-paradigm --sort">
+        <file name="kir-eng.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
   <!-- kir → eng -->
 
   <mode name="kir-eng" install="yes" gendebug="yes">
@@ -97,5 +105,14 @@
       </program>
     </pipeline>
   </mode>
+
+  <mode name="eng-kir-bilsearch">
+    <pipeline>
+      <program name="lt-paradigm --sort">
+        <file name="eng-kir.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
 </modes>
 
